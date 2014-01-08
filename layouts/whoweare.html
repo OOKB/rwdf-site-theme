@@ -1,0 +1,137 @@
+---
+layout: default
+---
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <!-- Top Hero -->
+  <div class="jumbotron">
+    <div class="jumbo-text inner">
+      <h1>{{ page.jumbohed }}</h1>
+      <p class="lead">{{ page.jumbodek }}</p>
+    </div>
+  </div>
+  
+  <!-- Who We Are Tabs!
+  ================================================== -->
+  <div class="row-fluid">
+    <div class="tabbable">
+      <!-- THIS WILL PROBABLY NEED TO BE AUTO CREATED? -->
+      <ul class="side-nav span2" id="myTab">
+        <li class="active"><a href="#tab-values" data-toggle="tab">Our Values</a></li>
+        <li><a href="#tab-founders" data-toggle="tab">Robert &amp; Florence</a></li>
+        <li><a class="staff" href="#tab-staff" data-toggle="tab">Directors &amp; Staff</a></li>
+        <li><a class="staff" href="#tab-fellows" data-toggle="tab">Fellows</a></li>
+      </ul>
+        
+      <!-- start tabbed "pages" column... -->
+      <div class="tab-content span10">
+  
+        <!-- VALUES!
+        ================================================== -->
+        <div class="tab-pane active" id="tab-values">
+          {{# whoweare.find_by_name.our-values }}
+            <div class="span8">
+              <h3>{{title}}</h3>
+              {{{ content }}}
+            </div>
+            <div class="span4 inline-image">
+              <img src="{{urls.media}}/{{image}}"/>
+            </div>     
+          {{/ whoweare.find_by_name.our-values }}
+        </div>
+    
+        <!-- FOUNDERS -->
+        <!-- ====================================== -->
+        <div class="tab-pane" id="tab-founders">
+            {{# whoweare.find_by_name.robert-florence }}
+            <div class="span8">
+              {{{ content }}}
+            </div>
+            <div class="span4 inline-image">
+              <img src="{{urls.media}}/{{image}}"/>
+            </div>     
+          {{/ whoweare.find_by_name.robert-florence }}
+        </div>
+        
+        <!-- STAFF -->
+        <!-- ====================================== -->
+        <div class="tab-pane" id="tab-staff">
+          <div class="span6">
+          
+            {{# whoweare.tags.director }}
+              {{# whoweare?to_whoweare }}
+              <div class="plain {{sortorder}}">
+<!--                 <img src="{{urls.media}}/{{image}}" class="span4 img-circle" /> -->
+                <div class=""> <!-- when images get added, make span8 instead -->
+                  <h4>{{title}}</h4>
+                  <h5>{{subhead}}</h5>
+                  {{{content}}}
+                  <div>
+                    <a href="mailto:{{email}}">{{email}}</a>
+                  </div>
+                </div>
+              </div>
+              {{/ whoweare?to_whoweare }}
+            {{/ whoweare.tags.director }}
+          </div>
+          
+          <div class="span6">
+          
+            {{# whoweare.tags.staff }}
+              {{# whoweare?to_whoweare }}
+              <div class="plain {{sortorder}}">
+<!--                 <img src="{{urls.media}}/{{image}}" class="span4 img-circle" /> -->
+                <div class=""> <!-- when images get added, make span8  -->
+                  <h4>{{title}}</h4>
+                  <h5>{{subhead}}</h5>
+                  {{{content}}}
+                  <div>
+                    <a href="mailto:{{email}}">{{email}}</a>
+                  </div>
+                </div>
+              </div>
+              {{/ whoweare?to_whoweare }}
+            {{/ whoweare.tags.staff }}
+          </div>
+        </div>
+
+        <!-- STAFF -->
+        <!-- ====================================== -->
+        <div class="tab-pane" id="tab-fellows">
+          {{# whoweare.find_by_name.fellows-intro }}
+            <h3>{{title}}</h3>
+            <div>
+              <div class="span8">
+                {{{ content }}}
+              </div>
+            </div>
+          {{/ whoweare.find_by_name.fellows-intro }}
+          
+          <div>
+          {{# whoweare.tags.fellow }}
+            {{# whoweare?to_whoweare }}
+            <div class="fellow span6">
+              <h4>{{title}}</h4>
+              {{{content}}}
+            </div>
+            {{/ whoweare?to_whoweare }}
+          {{/ whoweare.tags.fellow }}
+          </div>
+        </div>
+        
+        <!-- END VALUES, FOUNDERS, STAFF, FELLOWS -->
+        <!-- ====================================== -->
+        
+      </div>
+      <!-- end tabbed "pages" column... -->
+  
+    </div><!-- / END tabbable -->
+  </div><!-- / END Row-Fluid -->
+</div>
+
+<!-- END Main Content
+================================================== -->
+

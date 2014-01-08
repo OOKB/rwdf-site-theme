@@ -1,0 +1,39 @@
+---
+layout : default
+---
+
+<!-- from individual layout pages — spruceup, slideshow, textonly, singleimage -->
+{{{ content }}}
+<!-- /END individual layout pages — spruceup, slideshow, textonly, singleimage -->
+
+
+<!-- Navigation Prev/Next
+================================================== -->
+<div class="container inner">
+
+  <div class="row-fluid minus-top">
+  
+    {{# page.next }}
+      <div class="next span2 pager"><a href="{{ url }}" title="{{ title }}">Next &rarr;</a></div>
+    {{/ page.next }}
+    {{^ page.next }}
+      {{# page.collection.all.last}}
+        <div class="next span2 pager"><a href="{{ url }}" title="{{ title }}">Next &rarr;</a></div>
+      {{/ page.collection.all.last}}
+    {{/ page.next }}
+  
+    {{# page.previous }}
+      <div class="prev previous span2 offset8 pager"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></div>
+    {{/ page.previous }}
+    {{^ page.previous }}
+      {{# page.collection.all.first}}
+        <div class="prev previous span2 offset8 pager"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></div>
+      {{/ page.collection.all.first}}
+    {{/ page.previous }}
+  
+  </div>
+  <!-- this is presumably for each individual post -->
+  
+</div>
+<!-- Navigation Prev/Next
+================================================== -->

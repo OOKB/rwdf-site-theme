@@ -1,0 +1,42 @@
+---
+layout : project
+---
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <div class="row-fluid">
+    <div class="e-breadcrumb offset2">
+      <a href="/whatwedo/">&larr; Back to All Projects</a>
+    </div>
+  </div>  
+
+  
+  <!-- Content -->
+  <div class="row-fluid">
+  
+    <div class="span8 offset2">
+      <article class="project">
+        <div class="leadimage top text-center clearfix">
+          {{# page.image }}
+            <img class="img-rounded span4 offset4" src="{{ page.image }}" />
+          {{/ page.image }}
+        </div>
+        <h2>{{ page.title }}</h2>
+        {{{ page.content }}}
+
+        <div class="icons categories bottom text-center">
+          {{# page.categories }}
+            <a href="../whatwedo/" class="{{name}}" >{{name}}</a>
+          {{/ page.categories }}
+        </div>
+
+      </article>
+    </div>
+    
+  </div>
+      
+</div>
+<!-- END Main Content
+================================================== -->

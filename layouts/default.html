@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{# page.description }}
+    <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+    <meta name="author" content="{{ data.author.name }}">
+
+    <!-- Le styles -->
+    {{# stylesheets.load }}
+      bootstrap.css
+      bootstrap-responsive.css
+      layout.css
+      contactform.css
+      google_prettify/sons-of-obsidian.css
+      jquery.fancybox.css
+    {{/ stylesheets.load }}
+
+    <!-- JavaScript -->
+    {{# javascripts.load }}
+      wufoo.js
+    {{/ javascripts.load }}
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements --><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    {{# javascripts.load }}
+      respond.min.js
+    {{/ javascripts.load }}
+    <![endif]-->
+
+  
+  </head>
+
+  <body class="{{page.title}} {{page.classes}}">
+
+    <!-- Nav!
+    ================================================== -->
+    <nav class="navbar">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <p>Menu</p>
+        </a>
+        <a class="logo" href="{{urls.base_path}}"><img src="http://rwdf.ookb.co/img/rwdf-logo-lg.png" alt="{{ data.title }} Official Logo"></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+            <li><a href="/whoweare/" target="">Who We Are</a></li>
+            <li><a href="/whatwedo/" target="">What We Do</a></li>
+            <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
+            <li><a href="http://rwdfblog.com/" target="_blank">Read Our Blog &raquo;</a></li>
+            <!-- figure out something to do with these social media icons design wise -->
+            <li class="social"><a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongreen" ></a></li>
+            <li class="social last"><a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongreen" ></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- /Nav!
+    ================================================== -->
+    
+    {{{ content }}}
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="container">
+      <div class="diag-divider"></div>
+      <div class="row">
+        <p class="pull-right">&copy; Deutsch Foundation 2013</p>
+        <p class="span3">
+          The Robert W. Deutsch Foundation <br/>
+          Suite 201, The Exchange <br/>
+          1122 Kenilworth Drive <br/>
+          Towson, MD 21204
+        </p>
+        <p class="span3">
+          Email us at <a href="mailto:info@rwdfoundation.org" target="_blank">info@rwdfoundation.org</a> <br/>
+          Phone: 443-275-1144 / Fax: 410-321-4882 <br/>
+          <a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongray" ></a>
+          <a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongray" ></a>
+          <a href="http://rwdfblog.com/" target="_blank"><img src="{{urls.theme}}/media/socialmask_wpress.png" class="icongray" ></a>
+              <a href="http://www.flickr.com/photos/rwdf" target="_blank"><img src="{{urls.theme}}/media/socialmask_flickr.png" class="icongray" ></a>
+        </p>
+        <ul class="menu span2 offset1">
+          <li><a href="/" target="_blank">Home</a></li>
+          <li><a href="/whoweare/" target="">Who We Are</a></li>
+          <li><a href="/whatwedo/" target="">What We Do</a></li>
+          <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
+          <li><a href="/news/" target="">In The Press</a></li>
+          <li><a href="http://rwdfblog.com/" target="">Read Our Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- /footer -->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    {{# javascripts.load }}
+      bootstrap.min.js
+      bootstrap-tab.js
+      jquery.isotope.min.js
+      jquery.ba-bbq.min.js
+      jquery.cycle2.js
+      jquery.fancybox.js
+      rwdf.js
+    {{/ javascripts.load }}
+
+    {{{ widgets.analytics }}}
+
+    <!-- okay, so this is the main template -->    
+    
+  </body>
+</html>

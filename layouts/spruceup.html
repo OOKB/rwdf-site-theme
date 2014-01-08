@@ -1,0 +1,80 @@
+---
+layout : project
+---
+
+<div id="slideshow">
+  <!-- big image area -->
+  {{# page.featureimg }}
+    <div class="slide"><img src="{{ . }}" /></div>
+  {{/ page.featureimg }}
+</div>
+
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <!-- Content -->
+  <div class="row-fluid">
+    <div class="span8 offset2">
+      <article class="project">
+        <h2>{{ page.title }}</h2>
+
+        <aside class="lightbox-thumbs clearfix">    
+          <!-- IMAGES in the slideshow -->
+          {{# spruceups.all }}
+            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
+              <img alt="" src="{{ image }}" />
+            </a>
+          {{/ spruceups.all }}
+        </aside>
+
+        {{{ page.content }}}
+
+        <!-- Spruce Up Projects Tabs!
+        ================================================== -->
+        <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
+        <div class="tabbable spruceuptabs">
+          <div class="spruceuplist span4" id="myTab">
+            <ul class="side-nav">
+            {{# spruceups.all }}
+              <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
+            {{/ spruceups.all }}
+            </ul>
+          </div>
+          <!-- start tabbed "pages" column... -->
+          <div class="tab-content span8">
+            <!-- Spruceups All!!
+            ================================================== -->
+            {{# spruceups.all }}
+              <div class="tab-pane" id="tab-{{tabid}}">        
+                <div class="">
+                  <div class="clearfix leadimage"><img class="span8 offset2 " src="{{ image }}" /></div>
+                  <h3>{{title}}</h3>
+                  {{{ content }}}
+                </div>
+              </div>
+            {{/ spruceups.all }}
+    
+          </div>
+          <!-- end tabbed "pages" column... -->
+        </div><!-- / END tabbable -->
+        <!-- ==================================================
+             END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
+
+        <div class="icons categories bottom text-center">
+          {{# page.categories }}
+            <a href="../whatwedo/" class="{{name}}" >{{name}}</a>
+          {{/ page.categories }}
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- END Main Content
+================================================== -->

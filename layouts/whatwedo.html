@@ -1,0 +1,100 @@
+---
+layout : default
+---
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <!-- Top Hero -->
+  <div class="jumbotron">
+  <div class="jumbo-text inner">
+     <h1>{{ page.jumbohed }}</h1>
+     <p class="lead">{{ page.jumbodek }}</p>
+     </div>
+  </div>
+  
+  
+  <div class="row-fluid">
+    <div class="span2">
+      <ul class="side-nav" id="filters">
+        <li class="active textonly">
+          <div>
+            <a href="#filter=*" data-filter="*">
+              <p>View All Categories</p>
+            </a>
+          </div>
+        </li>
+        <li class="icons">
+          <div>
+            <a href="#filter=.science" >
+              <i class="icon-science icongreen iconsidenav"></i>
+              <p>Science &amp; Tech</p>
+            </a>
+          </div>
+        </li>
+        <li class="icons">
+          <div>
+            <a href="#filter=.scholars" >
+              <i class="icon-scholars icongreen iconsidenav"></i>
+              <p>Scholars &amp; Fellows</p>
+            </a>
+          </div>
+        </li>
+        <li class="icons">
+          <div>
+            <a href="#filter=.arts" >
+              <i class="icon-arts icongreen iconsidenav"></i>
+              <p>Arts &amp; Culture</p>
+            </a>
+          </div>
+        </li>
+        <li class="icons">
+          <div>
+            <a href="#filter=.justice" >
+              <i class="icon-justice icongreen iconsidenav"></i>
+              <p>Social Justice</p>
+            </a>
+          </div>
+        </li>
+        <li class="icons">
+          <div>
+            <a href="#filter=.community">
+              <i class="icon-community icongreen iconsidenav"></i>
+              <p>Community</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+          
+    <div class="span10 isotope-area" id="projects">
+      {{# whatwedo.all }}
+      <div class="project brick {{# categories }} {{name}} {{/ categories }}">
+        <ul class="icons categories pull-right">
+          {{# categories }}
+          <li class="{{name}}">
+            <a href="#">{{name}}</a>
+          </li>
+          {{/ categories }}
+        </ul>
+        <h3 class="project-title"><a href="{{url}}" data-disqus-identifier="{{url}}">{{ title }}</a></h3>
+        <div class="project-content">
+          {{{ summary }}}
+        </div>
+      </div>
+      {{/ whatwedo.all }}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <p class="span8 offset2 lead">
+        <a class="btn btn-large btn-info blog" href="http://rwdfblog.com" target="_blank">Additional information on many of these projects can be found on the blog</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- END Main Content
+================================================== -->
