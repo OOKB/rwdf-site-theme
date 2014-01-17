@@ -1,0 +1,35 @@
+---
+layout: default
+title: "The Robert W. Deutsch Foundation"
+---
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <!-- Top Hero -->
+  <div class="jumbotron">
+    <div class="jumbo-text inner">
+      <h1>{{ news/hed }}</h1>
+      <p class="lead">{{ news/dek }}</p>
+    </div>
+  </div>
+  
+  <!-- NEWS Page Content
+  ================================================== -->
+
+  <article class="newslist">
+    {{# news.all }}
+    <section class="row-fluid border-top">
+      <p class="span2 date"><time>{{ date }}</time></p>
+      <div class="span8">
+        <h4 class="external"><a href="{{ link }}">{{ title }}</a></h4>
+        {{{ content }}}
+      </div>
+    </section>
+    {{/ news.all }}
+  </article>
+
+</div><!-- END CONTAINER -->
+<!-- END Main Content
+================================================== -->

@@ -9,8 +9,8 @@ layout: default
   <!-- Top Hero -->
   <div class="jumbotron">
     <div class="jumbo-text inner">
-      <h1>{{ page.hed }}</h1>
-      <p class="lead">{{ page.dek }}</p>
+      <h1>{{ whoweare/hed.md }}</h1>
+      <p class="lead">{{ whoweare/dek.md }}</p>
     </div>
   </div>
   
@@ -32,7 +32,7 @@ layout: default
         <!-- VALUES!
         ================================================== -->
         <div class="tab-pane active" id="tab-values">
-          {{# whoweare.find_by_name.our-values }}
+          {{# whoweare/our-values.md }}
             <div class="span8">
               <h3>{{title}}</h3>
               {{{ content }}}
@@ -40,20 +40,20 @@ layout: default
             <div class="span4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>     
-          {{/ whoweare.find_by_name.our-values }}
+          {{/ whoweare/our-values.md }}
         </div>
     
         <!-- FOUNDERS -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-founders">
-            {{# whoweare.find_by_name.robert-florence }}
+            {{# whoweare/robert-florence.md }}
             <div class="span8">
               {{{ content }}}
             </div>
             <div class="span4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>     
-          {{/ whoweare.find_by_name.robert-florence }}
+          {{/ whoweare/robert-florence.md }}
         </div>
         
         <!-- STAFF -->
@@ -101,14 +101,14 @@ layout: default
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-fellows">
-          {{# whoweare.find_by_name.fellows-intro }}
+          {{# whoweare/fellows-intro.md }}
             <h3>{{title}}</h3>
             <div>
               <div class="span8">
                 {{{ content }}}
               </div>
             </div>
-          {{/ whoweare.find_by_name.fellows-intro }}
+          {{/ whoweare/fellows-intro.md }}
           
           <div>
           {{# whoweare.tags.fellow }}

@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{# page.description }}
-    <meta name="description" content="{{ . }}">
-  {{/ page.description }}
+    <meta name="description" content="{{ homepage/dek.md. }}">
     <meta name="author" content="{{ data.author.name }}">
 
     <!-- Le styles -->
@@ -50,14 +48,14 @@
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <p>Menu</p>
         </a>
-        <a class="logo" href="{{urls.base_path}}"><img src="http://rwdf.ookb.co/img/rwdf-logo-lg.png" alt="{{ data.title }} Official Logo"></a>
+        <a class="logo" href="{{urls.base_path}}"><img src="http://rwdf.ookb.co/img/rwdf-logo-lg.png" alt="{{ data.title }} Official Logo"></a> <!-- link to this image in the media folder? -->
         <div class="nav-collapse collapse">
           <ul class="nav pull-right">
             <li><a href="/whoweare/" target="">Who We Are</a></li>
             <li><a href="/whatwedo/" target="">What We Do</a></li>
             <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
             <li><a href="http://rwdfblog.com/" target="_blank">Read Our Blog &raquo;</a></li>
-            <!-- figure out something to do with these social media icons design wise -->
+            <!-- figure out something to do with these social media icons design wise, especially in mobile styles -->
             <li class="social"><a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongreen" ></a></li>
             <li class="social last"><a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongreen" ></a></li>
           </ul>
