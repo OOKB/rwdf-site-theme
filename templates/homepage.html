@@ -97,12 +97,12 @@ classes: "largelogosize"
     <!-- this needs to be spit out from the news feed -->
     {{# news }}
       <div class="span4 news">
-        <h3><a href="news">{{ news/hed }}</a></h3>
-        <p>{{ news/dek }}</p>
+        <h3><a href="news">{{ news.hed }}</a></h3>
+        <p>{{ news.dek }}</p>
         <ul class="newslist">
-        {{# news.all }}
+        {{# news._all }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ news.all }}
+        {{/ news._all }}
         </ul>
       </div>
     {{/ news }}
