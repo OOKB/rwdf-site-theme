@@ -8,9 +8,9 @@ title: "The Robert W. Deutsch Foundation"
 
 <article class="newslist">
   {{# news.all }}
-  <section class="row-fluid border-top">
-    <p class="span2 date"><time>{{ date }}</time></p>
-    <div class="span8">
+  <section class="row border-top">
+    <p class="col-xs-12 col-sm-2 date"><time>{{ date }}</time></p>
+    <div class="col-xs-12 col-sm-8">
       <h4 class="external"><a href="{{ link }}">{{ title }}</a></h4>
       {{{ content }}}
     </div>

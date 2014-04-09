@@ -15,8 +15,8 @@ layout : project
 <div class="container inner">
 
   <!-- Content -->
-  <div class="row-fluid">
-    <div class="span8 offset2">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <article class="project">
         <h2>{{ page.title }}</h2>
 
@@ -35,7 +35,7 @@ layout : project
         ================================================== -->
         <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
         <div class="tabbable spruceuptabs">
-          <div class="spruceuplist span4" id="myTab">
+          <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
             <ul class="side-nav">
             {{# spruceups.all }}
               <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
@@ -43,13 +43,13 @@ layout : project
             </ul>
           </div>
           <!-- start tabbed "pages" column... -->
-          <div class="tab-content span8">
+          <div class="tab-content col-xs-12 col-sm-8">
             <!-- Spruceups All!!
             ================================================== -->
             {{# spruceups.all }}
               <div class="tab-pane" id="tab-{{tabid}}">        
                 <div class="">
-                  <div class="clearfix leadimage"><img class="span8 offset2 " src="{{ image }}" /></div>
+                  <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
                   <h3>{{title}}</h3>
                   {{{ content }}}
                 </div>

@@ -11,21 +11,21 @@ classes: "largelogosize"
 <!-- Image Hero -->
 <div class="hero container">
   <div class="row">
-    <div class="span8 feature">
+    <div class="col-xs-12 col-sm-8 feature">
       <img src="http://rwdfruhoh.ookb.co/assets/media/masd/winterworkday.jpg">
-      <div class="text overlay span8">
+      <div class="text overlay col-xs-12 col-sm-8">
         <h2><a href="whatwedo/masd-fellows">Jonathan & Briony</a></h2>
         <p class="lead"><a href="whatwedo/masd-fellows">MASD Fellows at work improving Baltimore. &rarr;</a></p>
       </div>
     </div>
-    <div class="span4 tagline">
+    <div class="col-xs-12 col-sm-4 tagline">
       <div class="text">
           <h1>{{{ homepage.hed }}}</h1>
       </div>
     </div>
-    <div class="span4 other overlay">
+    <div class="col-xs-12 col-sm-4 other overlay">
       <img src="http://rwdfoundation.files.wordpress.com/2013/08/p1000640.jpg?w=600">
-      <div class="text span4">
+      <div class="text col-xs-12 col-sm-4">
         <h3><a href="whatwedo/biofab">BioFab &rarr;</a></h3>
       </div>
     </div>
@@ -35,21 +35,21 @@ classes: "largelogosize"
 <!-- Triptych -->
 <div class="triptych container">
   <div class="row">
-    <div class="span4 overlay trio">
+    <div class="col-xs-12 col-sm-4 overlay trio">
       <img src="{{urls.media}}/h2-stationnorth.jpg">
-      <div class="text span4">
+      <div class="text col-xs-12 col-sm-4">
         <h3><a href="whatwedo/greenmount-facade">Spruce Ups &rarr;</a></h3>
       </div>
     </div>
-    <div class="span4 overlay trio">
+    <div class="col-xs-12 col-sm-4 overlay trio">
       <img src="http://rwdfruhoh.ookb.co/assets/media/allosphere/allo1-hydrogen.jpg">
-      <div class="text span4">
+      <div class="text col-xs-12 col-sm-4">
         <h3><a href="whatwedo/allosphere">The Allosphere &rarr;</a></h3>
       </div>
     </div>
-    <div class="span4 overlay trio">
+    <div class="col-xs-12 col-sm-4 overlay trio">
       <img src="{{urls.media}}/irc/dan-nmca-sm.jpg">
-      <div class="text span4">
+      <div class="text col-xs-12 col-sm-4">
         <h3><a href="whatwedo/imaging-research-center">The IRC &rarr;</a></h3>
       </div>
     </div>
@@ -58,7 +58,7 @@ classes: "largelogosize"
 
 <div class="container">
   <div class="row">
-    <p class="span12 lead">
+    <p class="col-xs-12 lead">
       <a class="btn btn-large btn-info blog" href="http://rwdfblog.com" target="_blank">Additional information on many of these projects can be found on the blog</a>
     </p>
   </div>
@@ -68,7 +68,7 @@ classes: "largelogosize"
 <div class="index jumbotron container">
   <div class="diag-divider"></div>
   <div class="row">
-      <div class="span12 lead">
+      <div class="col-xs-12 lead">
         {{{ homepage.dek }}}
       </div>
   </div>
@@ -76,11 +76,11 @@ classes: "largelogosize"
 
 <!-- Page -->
 <div class="container add-bottom">
-  <div class="row-fluid home-content">
+  <div class="row home-content">
 
     <!-- just the legacy document stuff -->
     {{# homepage.legacy }}
-      <div class="span4">
+      <div class="col-xs-12 col-sm-4">
         <h3><a href="whoweare">{{ title }}</a></h3>
         {{{content}}}
       </div>
@@ -88,7 +88,7 @@ classes: "largelogosize"
 
     <!-- just the big idea document stuff -->
     {{# homepage.bigidea }}
-      <div class="span4">
+      <div class="col-xs-12 col-sm-4">
         <h3><a href="tellusaboutyou">{{ title }}</a></h3>
         {{{content}}}
       </div>
@@ -96,13 +96,13 @@ classes: "largelogosize"
 
     <!-- this needs to be spit out from the news feed -->
     {{# news }}
-      <div class="span4 news">
-        <h3><a href="news">{{ news.hed }}</a></h3>
-        <p>{{ news.dek }}</p>
+      <div class="col-xs-12 col-sm-4 news">
+        <h3><a href="news">{{ news/hed }}</a></h3>
+        <p>{{ news/dek }}</p>
         <ul class="newslist">
-        {{# news._all }}
+        {{# news.all }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ news._all }}
+        {{/ news.all }}
         </ul>
       </div>
     {{/ news }}
