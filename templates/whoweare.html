@@ -5,10 +5,10 @@ title: "Who We Are"
 
   <!-- Who We Are Tabs!
   ================================================== -->
-  <div class="row-fluid">
+  <div class="row">
     <div class="tabbable">
       <!-- THIS WILL PROBABLY NEED TO BE AUTO CREATED? -->
-      <ul class="side-nav span2" id="myTab">
+      <ul class="side-nav col-xs-12 col-sm-2" id="myTab">
         <li class="active"><a href="#tab-values" data-toggle="tab">Our Values</a></li>
         <li><a href="#tab-founders" data-toggle="tab">Robert &amp; Florence</a></li>
         <li><a class="staff" href="#tab-staff" data-toggle="tab">Directors &amp; Staff</a></li>
@@ -22,11 +22,11 @@ title: "Who We Are"
         ================================================== -->
         <div class="tab-pane active" id="tab-values">
           {{# whoweare/our-values.md }}
-            <div class="span8">
+            <div class="col-xs-12 col-sm-8">
               <h3>{{title}}</h3>
               {{{ content }}}
             </div>
-            <div class="span4 inline-image">
+            <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>     
           {{/ whoweare/our-values.md }}
@@ -36,10 +36,10 @@ title: "Who We Are"
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-founders">
             {{# whoweare/robert-florence.md }}
-            <div class="span8">
+            <div class="col-xs-12 col-sm-8">
               {{{ content }}}
             </div>
-            <div class="span4 inline-image">
+            <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>     
           {{/ whoweare/robert-florence.md }}
@@ -53,8 +53,8 @@ title: "Who We Are"
             {{# whoweare.tags.director }}
               {{# whoweare?to_whoweare }}
               <div class="plain {{sortorder}}">
-<!--                 <img src="{{urls.media}}/{{image}}" class="span4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make span8 instead -->
+<!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
+                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8 instead -->
                   <h4>{{title}}</h4>
                   <h5>{{subhead}}</h5>
                   {{{content}}}
@@ -72,8 +72,8 @@ title: "Who We Are"
             {{# whoweare.tags.staff }}
               {{# whoweare?to_whoweare }}
               <div class="plain {{sortorder}}">
-<!--                 <img src="{{urls.media}}/{{image}}" class="span4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make span8  -->
+<!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
+                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8  -->
                   <h4>{{title}}</h4>
                   <h5>{{subhead}}</h5>
                   {{{content}}}
@@ -93,7 +93,7 @@ title: "Who We Are"
           {{# whoweare/fellows-intro.md }}
             <h3>{{title}}</h3>
             <div>
-              <div class="span8">
+              <div class="col-xs-12 col-sm-8">
                 {{{ content }}}
               </div>
             </div>
@@ -118,4 +118,4 @@ title: "Who We Are"
       <!-- end tabbed "pages" column... -->
   
     </div><!-- / END tabbable -->
-  </div><!-- / END Row-Fluid -->
+  </div><!-- / END row -->
