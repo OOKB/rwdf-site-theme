@@ -20,7 +20,7 @@ classes: "largelogosize"
     </div>
     <div class="span4 tagline">
       <div class="text">
-          <h1>{{{ homepage/hed.md }}}</h1>
+          <h1>{{{ homepage.hed }}}</h1>
       </div>
     </div>
     <div class="span4 other overlay">
@@ -69,7 +69,7 @@ classes: "largelogosize"
   <div class="diag-divider"></div>
   <div class="row">
       <div class="span12 lead">
-        {{{ homepage/dek.md }}}
+        {{{ homepage.dek }}}
       </div>
   </div>
 </div>
@@ -77,23 +77,23 @@ classes: "largelogosize"
 <!-- Page -->
 <div class="container add-bottom">
   <div class="row-fluid home-content">
-    
+
     <!-- just the legacy document stuff -->
-    {{# homepage/legacy.md }}
+    {{# homepage.legacy }}
       <div class="span4">
         <h3><a href="whoweare">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ homepage/legacy.md }}
-    
+    {{/ homepage.legacy }}
+
     <!-- just the big idea document stuff -->
-    {{# homepage/bigidea.md }}
+    {{# homepage.bigidea }}
       <div class="span4">
         <h3><a href="tellusaboutyou">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ homepage/bigidea.md }}
-    
+    {{/ homepage.bigidea }}
+
     <!-- this needs to be spit out from the news feed -->
     {{# news }}
       <div class="span4 news">
