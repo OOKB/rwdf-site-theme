@@ -20,7 +20,7 @@ classes: "largelogosize"
     </div>
     <div class="col-xs-12 col-sm-4 tagline">
       <div class="text">
-          <h1>{{{ homepage.hed }}}</h1>
+          <h1>{{{ homepage.hed.content }}}</h1>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 other overlay">
@@ -69,7 +69,7 @@ classes: "largelogosize"
   <div class="diag-divider"></div>
   <div class="row">
       <div class="col-xs-12 lead">
-        {{{ homepage.dek }}}
+        {{{ homepage.dek.content }}}
       </div>
   </div>
 </div>
@@ -97,8 +97,8 @@ classes: "largelogosize"
     <!-- this needs to be spit out from the news feed -->
     {{# news }}
       <div class="col-xs-12 col-sm-4 news">
-        <h3><a href="news">{{ news/hed }}</a></h3>
-        <p>{{ news/dek }}</p>
+        <h3><a href="news">{{ hed.content }}</a></h3>
+        <p>{{ dek.content }}</p>
         <ul class="newslist">
         {{# news._all }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
