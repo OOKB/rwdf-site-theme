@@ -14,44 +14,43 @@ title: "Who We Are"
         <li><a class="staff" href="#tab-staff" data-toggle="tab">Directors &amp; Staff</a></li>
         <li><a class="staff" href="#tab-staff" data-toggle="tab">IRS Form 990</a></li>
       </ul>
-        
+
       <!-- start tabbed "pages" column... -->
       <div class="tab-content span10">
-  
+
         <!-- VALUES!
         ================================================== -->
         <div class="tab-pane active" id="tab-values">
-          {{# whoweare/our-values.md }}
+          {{# whoweare.our-values }}
             <div class="col-xs-12 col-sm-8">
               <h3>{{title}}</h3>
               {{{ content }}}
             </div>
             <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
-            </div>     
-          {{/ whoweare/our-values.md }}
+            </div>
+          {{/ whoweare.our-values }}
         </div>
-    
+
         <!-- FOUNDERS -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-founders">
-            {{# whoweare/robert-florence.md }}
+            {{# whoweare.robert-florence }}
             <div class="col-xs-12 col-sm-8">
               {{{ content }}}
             </div>
             <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
-            </div>     
-          {{/ whoweare/robert-florence.md }}
+            </div>
+          {{/ whoweare.robert-florence }}
         </div>
-        
+
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-staff">
           <div class="span6">
-          
-            {{# whoweare.tags.director }}
-              {{# whoweare?to_whoweare }}
+
+            {{# directors }}
               <div class="plain {{sortorder}}">
 <!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
                 <div class=""> <!-- when images get added, make col-xs-12 col-sm-8 instead -->
@@ -63,14 +62,12 @@ title: "Who We Are"
                   </div>
                 </div>
               </div>
-              {{/ whoweare?to_whoweare }}
-            {{/ whoweare.tags.director }}
+            {{/ directors }}
           </div>
-          
+
           <div class="span6">
-          
-            {{# whoweare.tags.staff }}
-              {{# whoweare?to_whoweare }}
+
+            {{# staff }}
               <div class="plain {{sortorder}}">
 <!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
                 <div class=""> <!-- when images get added, make col-xs-12 col-sm-8  -->
@@ -82,40 +79,37 @@ title: "Who We Are"
                   </div>
                 </div>
               </div>
-              {{/ whoweare?to_whoweare }}
-            {{/ whoweare.tags.staff }}
+            {{/ staff }}
           </div>
         </div>
 
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-fellows">
-          {{# whoweare/fellows-intro.md }}
+          {{# whoweare.fellows-intro }}
             <h3>{{title}}</h3>
             <div>
               <div class="col-xs-12 col-sm-8">
                 {{{ content }}}
               </div>
             </div>
-          {{/ whoweare/fellows-intro.md }}
-          
+          {{/ whoweare.fellows-intro }}
+
           <div>
-          {{# whoweare.tags.fellow }}
-            {{# whoweare?to_whoweare }}
+          {{# fellows }}
             <div class="fellow span6">
               <h4>{{title}}</h4>
               {{{content}}}
             </div>
-            {{/ whoweare?to_whoweare }}
-          {{/ whoweare.tags.fellow }}
+          {{/ fellows }}
           </div>
         </div>
-        
+
         <!-- END VALUES, FOUNDERS, STAFF, FELLOWS -->
         <!-- ====================================== -->
-        
+
       </div>
       <!-- end tabbed "pages" column... -->
-  
+
     </div><!-- / END tabbable -->
   </div><!-- / END row -->
