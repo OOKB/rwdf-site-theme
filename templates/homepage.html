@@ -95,17 +95,15 @@ classes: "largelogosize"
     {{/ homepage.bigidea }}
 
     <!-- this needs to be spit out from the news feed -->
-    {{# news }}
       <div class="col-xs-12 col-sm-4 news">
         <h3><a href="news">{{ hed.content }}</a></h3>
         <p>{{ dek.content }}</p>
         <ul class="newslist">
-        {{# news._all }}
+        {{# news }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ news._all }}
+        {{/ news }}
         </ul>
       </div>
-    {{/ news }}
 
   </div>
 </div>
