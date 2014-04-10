@@ -96,12 +96,12 @@ classes: "largelogosize"
 
     <!-- this needs to be spit out from the news feed -->
       <div class="col-xs-12 col-sm-4 news">
-        <h3><a href="news">{{ hed.content }}</a></h3>
-        <p>{{ dek.content }}</p>
+        <h3><a href="news">{{ news.hed }}</a></h3>
+        <p>{{ news.dek }}</p>
         <ul class="newslist">
-        {{# news }}
+        {{# news_articles }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ news }}
+        {{/ news_articles }}
         </ul>
       </div>
 
