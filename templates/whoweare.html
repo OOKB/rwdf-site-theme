@@ -1,5 +1,5 @@
 ---
-layout : page
+layout: page
 title: "Who We Are"
 ---
 
@@ -7,7 +7,8 @@ title: "Who We Are"
   ================================================== -->
   <div class="row">
     <div class="tabbable">
-      <!-- THIS WILL PROBABLY NEED TO BE AUTO CREATED? -->
+    
+      <!-- MENU - should we worry about auto creating this? -->
       <ul class="side-nav col-xs-12 col-sm-2" id="myTab">
         <li class="active"><a href="#tab-values" data-toggle="tab">Our Values</a></li>
         <li><a href="#tab-founders" data-toggle="tab">Robert &amp; Florence</a></li>
@@ -16,7 +17,7 @@ title: "Who We Are"
       </ul>
 
       <!-- start tabbed "pages" column... -->
-      <div class="tab-content span10">
+      <div class="tab-content col-xs-12 col-sm-10">
 
         <!-- VALUES!
         ================================================== -->
@@ -26,7 +27,7 @@ title: "Who We Are"
               <h3>{{title}}</h3>
               {{{ content }}}
             </div>
-            <div class="col-xs-12 col-sm-4 inline-image">
+            <div class="col-xs-12 col-sm-4">
               <img src="/media//{{image}}"/>
             </div>
           {{/ content.whoweare.our-values }}
@@ -39,7 +40,7 @@ title: "Who We Are"
             <div class="col-xs-12 col-sm-8">
               {{{ content }}}
             </div>
-            <div class="col-xs-12 col-sm-4 inline-image">
+            <div class="col-xs-12 col-sm-4">
               <img src="/media//{{image}}"/>
             </div>
           {{/ content.whoweare.robert-florence }}
@@ -48,64 +49,90 @@ title: "Who We Are"
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-staff">
-          <div class="span6">
-
-            {{# content.whoweare.bios.directors._all }}
-              <div class="plain {{sortorder}}">
-<!--                 <img src="/media//{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8 instead -->
-                  <h4>{{title}}</h4>
-                  <h5>{{subhead}}</h5>
-                  {{{content}}}
-                  <div>
-                    <a href="mailto:{{email}}">{{email}}</a>
+          
+          <article class="">
+          
+            <!-- Directors!
+            ================================================== -->
+            <div class="row">
+              <section class="directors col-xs-12 col-sm-8">
+                
+                <h3>Directors</h3>
+                  
+                {{# content.whoweare.bios.directors._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            {{/ content.whoweare.bios.directors._all }}
-          </div>
-
-          <div class="span6">
-
-            {{# content.whoweare.bios.staff._all }}
-              <div class="plain {{sortorder}}">
-<!--                 <img src="/media//{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8  -->
-                  <h4>{{title}}</h4>
-                  <h5>{{subhead}}</h5>
-                  {{{content}}}
-                  <div>
-                    <a href="mailto:{{email}}">{{email}}</a>
+                {{/ content.whoweare.bios.directors._all }}
+              </section>
+  
+              <aside class="col-xs-12 col-sm-4">
+                <img src="/media/rwdf-square.png"/>
+              </aside>
+              
+            </div>
+            
+    
+            <!-- Main Staff!
+            ================================================== -->
+            <div class="row">
+              <section class="staff col-xs-12 col-sm-8">
+              
+                <h3>Staff</h3>
+                
+                {{# content.whoweare.bios.staff._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            {{/ content.whoweare.bios.staff._all }}
-          </div>
-        </div>
-
-        <!-- STAFF -->
-        <!-- ====================================== -->
-        <div class="tab-pane" id="tab-fellows">
-          {{# content.whoweare.fellows-intro }}
-            <h3>{{title}}</h3>
-            <div>
-              <div class="col-xs-12 col-sm-8">
-                {{{ content }}}
-              </div>
+                {{/ content.whoweare.bios.staff._all }}
+              </section>
+  
+              <aside class="col-xs-12 col-sm-4">
+                <img src="/media/rwdf-square.png"/>
+              </aside>
+              
             </div>
-          {{/ content.whoweare.fellows-intro }}
+    
+            <!-- Fellows!
+            ================================================== -->
+            <div class="row">
+              <section class="fellows col-xs-12 col-sm-8">
+            
+                <h3>Fellows</h3>
+                
+                {{# content.whoweare.bios.fellows._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
+                  </div>
+                {{/ content.whoweare.bios.fellows._all }}
+                
+              </section>
 
-          <div>
-          {{# content.whoweare.bios.fellows._all }}
-            <div class="fellow span6">
-              <h4>{{title}}</h4>
-              {{{content}}}
+              <aside class="col-xs-12 col-sm-4">
+                <img src="/media/rwdf-square.png"/>
+              </aside>
+              
             </div>
-          {{/ content.whoweare.bios.fellows._all }}
-          </div>
-        </div>
+            
+          </article>
 
-        <!-- END VALUES, FOUNDERS, STAFF, FELLOWS -->
+        </div>
+        <!-- END VALUES, FOUNDERS, STAFF, -->
         <!-- ====================================== -->
 
       </div>
