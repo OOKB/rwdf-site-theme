@@ -21,7 +21,7 @@ title: "Who We Are"
         <!-- VALUES!
         ================================================== -->
         <div class="tab-pane active" id="tab-values">
-          {{# whoweare.our-values }}
+          {{# content.whoweare.our-values }}
             <div class="col-xs-12 col-sm-8">
               <h3>{{title}}</h3>
               {{{ content }}}
@@ -29,20 +29,20 @@ title: "Who We Are"
             <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>
-          {{/ whoweare.our-values }}
+          {{/ content.whoweare.our-values }}
         </div>
 
         <!-- FOUNDERS -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-founders">
-            {{# whoweare.robert-florence }}
+            {{# content.whoweare.robert-florence }}
             <div class="col-xs-12 col-sm-8">
               {{{ content }}}
             </div>
             <div class="col-xs-12 col-sm-4 inline-image">
               <img src="{{urls.media}}/{{image}}"/>
             </div>
-          {{/ whoweare.robert-florence }}
+          {{/ content.whoweare.robert-florence }}
         </div>
 
         <!-- STAFF -->
@@ -50,7 +50,7 @@ title: "Who We Are"
         <div class="tab-pane" id="tab-staff">
           <div class="span6">
 
-            {{# directors }}
+            {{# content.whoweare.bios.directors._all }}
               <div class="plain {{sortorder}}">
 <!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
                 <div class=""> <!-- when images get added, make col-xs-12 col-sm-8 instead -->
@@ -62,12 +62,12 @@ title: "Who We Are"
                   </div>
                 </div>
               </div>
-            {{/ directors }}
+            {{/ content.whoweare.bios.directors._all }}
           </div>
 
           <div class="span6">
 
-            {{# staff }}
+            {{# content.whoweare.bios.staff._all }}
               <div class="plain {{sortorder}}">
 <!--                 <img src="{{urls.media}}/{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
                 <div class=""> <!-- when images get added, make col-xs-12 col-sm-8  -->
@@ -79,29 +79,29 @@ title: "Who We Are"
                   </div>
                 </div>
               </div>
-            {{/ staff }}
+            {{/ content.whoweare.bios.staff._all }}
           </div>
         </div>
 
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-fellows">
-          {{# whoweare.fellows-intro }}
+          {{# content.whoweare.fellows-intro }}
             <h3>{{title}}</h3>
             <div>
               <div class="col-xs-12 col-sm-8">
                 {{{ content }}}
               </div>
             </div>
-          {{/ whoweare.fellows-intro }}
+          {{/ content.whoweare.fellows-intro }}
 
           <div>
-          {{# fellows }}
+          {{# content.whoweare.bios.fellows._all }}
             <div class="fellow span6">
               <h4>{{title}}</h4>
               {{{content}}}
             </div>
-          {{/ fellows }}
+          {{/ content.whoweare.bios.fellows._all }}
           </div>
         </div>
 
