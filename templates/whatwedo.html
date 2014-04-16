@@ -55,14 +55,14 @@ title: "What We Do"
         </li>
       </ul>
     </div>
-          
+
     <div class="col-xs-12 col-sm-10 isotope-area" id="projects">
-      {{# whatwedo.all }}
-      <div class="project brick {{# categories }} {{name}} {{/ categories }}">
+      {{# page.projects._all }}
+      <div class="project brick {{# categories }} {{.}} {{/ categories }}">
         <ul class="icons categories pull-right">
           {{# categories }}
           <li class="{{name}}">
-            <a href="#">{{name}}</a>
+            <a href="#">{{.}}</a>
           </li>
           {{/ categories }}
         </ul>
@@ -71,7 +71,7 @@ title: "What We Do"
           {{{ summary }}}
         </div>
       </div>
-      {{/ whatwedo.all }}
+      {{/ page.projects._all }}
     </div>
   </div>
 
