@@ -48,64 +48,90 @@ title: "Who We Are"
         <!-- STAFF -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-staff">
-          <div class="span6">
-
-            {{# content.whoweare.bios.directors._all }}
-              <div class="plain {{sortorder}}">
-<!--                 <img src="/media//{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8 instead -->
-                  <h4>{{title}}</h4>
-                  <h5>{{subhead}}</h5>
-                  {{{content}}}
-                  <div>
-                    <a href="mailto:{{email}}">{{email}}</a>
+          
+          <article class="">
+          
+            <!-- Directors!
+            ================================================== -->
+            <div class="row-fluid">
+              <section class="directors span8">
+                
+                <h3>Directors</h3>
+                  
+                {{# content.whoweare.bios.directors._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            {{/ content.whoweare.bios.directors._all }}
-          </div>
-
-          <div class="span6">
-
-            {{# content.whoweare.bios.staff._all }}
-              <div class="plain {{sortorder}}">
-<!--                 <img src="/media//{{image}}" class="col-xs-12 col-sm-4 img-circle" /> -->
-                <div class=""> <!-- when images get added, make col-xs-12 col-sm-8  -->
-                  <h4>{{title}}</h4>
-                  <h5>{{subhead}}</h5>
-                  {{{content}}}
-                  <div>
-                    <a href="mailto:{{email}}">{{email}}</a>
+                {{/ content.whoweare.bios.directors._all }}
+              </section>
+  
+              <aside class="span4 inline-image">
+                <img src="/assets/media/rwdf-square.png"/>
+              </aside>
+              
+            </div>
+            
+    
+            <!-- Main Staff!
+            ================================================== -->
+            <div class="row-fluid">
+              <section class="staff span8">
+              
+                <h3>Staff</h3>
+                
+                {{# content.whoweare.bios.staff._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            {{/ content.whoweare.bios.staff._all }}
-          </div>
-        </div>
-
-        <!-- STAFF -->
-        <!-- ====================================== -->
-        <div class="tab-pane" id="tab-fellows">
-          {{# content.whoweare.fellows-intro }}
-            <h3>{{title}}</h3>
-            <div>
-              <div class="col-xs-12 col-sm-8">
-                {{{ content }}}
-              </div>
+                {{/ content.whoweare.bios.staff._all }}
+              </section>
+  
+              <aside class="span4 inline-image">
+                <img src="/assets/media/rwdf-square.png"/>
+              </aside>
+              
             </div>
-          {{/ content.whoweare.fellows-intro }}
+    
+            <!-- Fellows!
+            ================================================== -->
+            <div class="row-fluid">
+              <section class="fellows span8">
+            
+                <h3>Fellows</h3>
+                
+                {{# content.whoweare.bios.fellows._all }}
+                  <div class="plain {{sortorder}}">
+                    <h4>{{title}}</h4>
+                    <h5>{{subhead}}</h5>
+                    {{{content}}}
+                    <div>
+                      <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
+                  </div>
+                {{/ content.whoweare.bios.fellows._all }}
+                
+              </section>
 
-          <div>
-          {{# content.whoweare.bios.fellows._all }}
-            <div class="fellow span6">
-              <h4>{{title}}</h4>
-              {{{content}}}
+              <aside class="span4 inline-image">
+                <img src="/assets/media/rwdf-square.png"/>
+              </aside>
+              
             </div>
-          {{/ content.whoweare.bios.fellows._all }}
-          </div>
-        </div>
+            
+          </article>
 
-        <!-- END VALUES, FOUNDERS, STAFF, FELLOWS -->
+        </div>
+        <!-- END VALUES, FOUNDERS, STAFF, -->
         <!-- ====================================== -->
 
       </div>
