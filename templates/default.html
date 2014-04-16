@@ -63,7 +63,28 @@
     <!-- /Nav!
     ================================================== -->
 
-    {{> page_html }}
+    <!-- Main Content
+    ================================================== -->
+    <div class="container inner">
+      {{#jumbotron}}
+      <!-- Top Hero -->
+      <div class="jumbotron">
+        <div class="jumbo-text inner">
+          <h1>{{ page.hed }}</h1>
+          <p class="lead">{{ page.dek }}</p>
+        </div>
+      </div>
+      {{/jumbotron}}
+
+      <!--Page Content
+      ================================================== -->
+        {{> page_html }}
+
+      <!-- END PAGE CONTENTS
+      ================================================== -->
+
+    </div><!-- END CONTAINER -->
+
 
     <!-- Footer
     ================================================== -->
