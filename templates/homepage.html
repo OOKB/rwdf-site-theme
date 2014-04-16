@@ -20,7 +20,7 @@ classes: "largelogosize"
     </div>
     <div class="col-xs-12 col-sm-4 tagline">
       <div class="text">
-          <h1>{{{ homepage.hed.content }}}</h1>
+          <h1>{{ page_info.homepage.hed }}</h1>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 other overlay">
@@ -69,7 +69,7 @@ classes: "largelogosize"
   <div class="diag-divider"></div>
   <div class="row">
       <div class="col-xs-12 lead">
-        {{{ homepage.dek.content }}}
+        {{{ page_info.homepage.dek }}}
       </div>
   </div>
 </div>
@@ -79,29 +79,32 @@ classes: "largelogosize"
   <div class="row home-content">
 
     <!-- just the legacy document stuff -->
-    {{# homepage.legacy }}
+    {{# content.homepage.legacy }}
       <div class="col-xs-12 col-sm-4">
         <h3><a href="whoweare">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ homepage.legacy }}
+    {{/ content.homepage.legacy }}
 
     <!-- just the big idea document stuff -->
-    {{# homepage.bigidea }}
+    {{# content.homepage.bigidea }}
       <div class="col-xs-12 col-sm-4">
         <h3><a href="tellusaboutyou">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ homepage.bigidea }}
+    {{/ content.homepage.bigidea }}
 
     <!-- this needs to be spit out from the news feed -->
       <div class="col-xs-12 col-sm-4 news">
-        <h3><a href="news">{{ news.hed }}</a></h3>
-        <p>{{ news.dek }}</p>
+        <h3><a href="news">{{ page_info.news.hed }}</a></h3>
+        <p>{{ page_info.news.dek }}</p>
         <ul class="newslist">
-        {{# news_articles }}
+        {{# content.news.articles.2014._all }}
           <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ news_articles }}
+        {{/ content.news.articles.2014._all }}
+        {{# content.news.articles.2013._all }}
+          <li><p><a href="{{link}}">{{ title }}</a></p></li>
+        {{/ content.news.articles.2013._all }}
         </ul>
       </div>
 
