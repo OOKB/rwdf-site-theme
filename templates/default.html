@@ -65,20 +65,22 @@
     <!-- Main Content
     ================================================== -->
     <div class="container inner">
-
+    
       {{#jumbotron}}
       <!-- Top Hero -->
       <div class="jumbotron row">
-        <div class="jumbo-text inner">
+        <div class="jumbo-text">
           <h1>{{ page._info.hed }}</h1>
           <p class="lead">{{ page._info.dek }}</p>
         </div>
       </div>
       {{/jumbotron}}
 
+      <div class="row">
       <!--Page Content
       ================================================== -->
       {{> page_html }}
+      </div>
 
       <!-- END PAGE CONTENTS
       ================================================== -->
