@@ -196,6 +196,11 @@ footer a {
 /* Footer ===================================*/
 footer { margin-top: 60px; }
 footer ul.menu { list-style: none; }
+footer text.right { text-align: left; }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  footer text.right { text-align: right; }
+}
 
 /* Icons, ETc. */
 /*===========================================*/
