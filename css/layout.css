@@ -59,15 +59,11 @@ ul.nav li {
 .side-nav ul li {
   font-size: 1.4rem; 
 }
-  
-.hero .tagline h1 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-      
+        
 p a.btn.blog {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px;
+  margin-top: 0 !important;
 }
 
 /* Page Styles */
@@ -81,12 +77,6 @@ h4 { /* Inner Page Subhead */
   margin: 15px 0 5px 0;
   }
 
-.hero .row .tagline div.text h1 {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 3em;
-}
-  
 /* Jumbotron */
 /* This is the big text areas on each of the sub-pages */
 /*=========================*/
@@ -95,96 +85,71 @@ h4 { /* Inner Page Subhead */
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
-  text-align: center;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
   }
 
 .index.jumbotron {
   background: none;
   border-bottom: none;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .index.jumbotron .diag-divider {
-  margin-bottom: 70px;
-}
-
-/* Jumbotron Styles */
-.jumbotron {
-  text-align: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  }
-
-.index.jumbotron .lead {
-  font-size: 4.4rem;
-  line-height: 1.3333;
-  }
-  
-.jumbo-text h1 {
-  font-size:5rem;
-  margin-bottom: 10px;
-  padding:0 50px;
-  line-height: 1.125;
-} 
-      
-.jumbo-text .lead {
-  font-size:2.4rem;
-  font-weight:300;
-  line-height:1.33;
+  margin-bottom: 30px;
 }
   
 .jumbo-text {
-  margin:0;
-  padding: 30px 100px;  
-  background-color: #fff;  
+  background: white;
 }
-  
+
 .jumbo-text .lead {
-  font-size:2.0rem;
+  font-size: 1.8rem;
+  line-height: 1.33;
 }
 
-.hero h1 { /* Homepage */
-  font-size:4rem;
-  margin-bottom:0;
-  line-height: 1.125;
-}
+.jumbo-text h1 {
+  font-size: 3.0rem;
+  padding: 0;
+} 
   
-.hero .lead {
-  font-size:2rem;
-  font-weight:300;
-  line-height:1.33;
-}
-  
-@media (max-width: 767px) {  
+h3 {
+  font-size:1.8rem;
+  margin:26px 0 10px 0;
+}  
 
-  .jumbo-text {
-    margin: 0 20px;
-    padding: 10px;
-    background-color: #fff; 
-    text-align: left;  
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .jumbotron {
+    text-align: center;
   }
-    
-  .jumbo-text h1 { /* Inner Page Hero Head */
-    font-size: 3.0rem;
-    padding: 0;
+  
+  .jumbo-text {
+    padding: 30px 100px;  
+    text-align: center;
+  }
+
+  .jumbo-text h1 {
+    font-size:5rem;
+    margin-bottom: 10px;
+    padding:0 50px;
+    line-height: 1.125;
   } 
 
-  .jumbo-text .lead { /* Inner Page Hero Subhead */
-    font-size: 1.8rem;
+  .jumbo-text .lead {
+    font-size: 2.4rem;
+    font-weight: 300;
     line-height: 1.33;
+    text-align: center;
   }
-    
-  .index.jumbotron .lead, 
-  .hero .row .tagline div.text h1 { /* Homepage Subheads */
-    font-size: 3.0rem;
-    line-height: 1.33;
-    text-align: left;
+
+  .index.jumbotron .diag-divider {
+    margin-bottom: 60px;
   }
-    
-  h3 { /* Inner Page Head, List Item Head */
-    font-size:1.8rem;
-    margin:26px 0 10px 0;
-  }  
+
 }
 
 /* Text */
@@ -224,6 +189,11 @@ footer a {
 /* Footer ===================================*/
 footer { margin-top: 60px; }
 footer ul.menu { list-style: none; }
+footer .text-right { text-align: left; }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  footer .text-right { text-align: right; }
+}
 
 /* Icons, ETc. */
 /*===========================================*/
@@ -291,7 +261,7 @@ ul.side-nav .active img {
 
 /*==============================*/
 main-content .row {
-  padding-top:25px;
+  padding-top:30px;
   padding-bottom:0;
 }
 
@@ -378,200 +348,179 @@ main-content .row {
 .tab-pane h3 { margin-top: 22px; }
 #tab-staff .span6 { margin-top: 15px; }
 
+
+
+
 /*=========================*/
 /*=========================*/
-/* Homepage */
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
 /*=========================*/
 /*=========================*/
 
-/* Hero */
-/* This is the big image area on the homepage */
+
+
+/* Homepage */
 /*=========================*/
-.hero { margin-top: 0; }
-.hero .text * { color: white;   margin: 0; }
+
+.hero .text * { color: white; margin: 0; }
 .tagline .text h1 { padding: 15px; }
-.hero .other { margin-top: 30px; }
 
 .hero,
 .hero .row,
 .hero .feature, 
 .hero .tagline,
 .hero .tagline .text,
-.hero .biglogo, 
-.hero .other, 
-.triptych .trio {
+#gridded .col-sm-4 {
+  margin-top: 0;
+  position: relative;
   overflow: hidden;
 }
 
-.hero,
-.hero .row,
-.hero .row img,
-.hero .feature,
-.hero .biglogo, 
-.hero .other, 
-.triptych .trio,
-.triptych .span4 img { 
-  position: relative;
-}
-
-.feature .text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 15px;
-}
-
 .tagline div.text,
-.feature .overlay,
-.overlay div.text {
+.overlay {
   background: #009CC1;
-}
-
-.feature .overlay,
-.overlay div.text {
-  background: rgba(0,156,193,.5);
-}
-
-.tagline div.text {
   background: rgba(0,156,193,1);
 }
 
-.feature .overlay,
-.overlay div.text {
-  position: absolute;
-  bottom: 0;
+.overlay {
+  background: rgba(0,156,193,.5);
   margin: 0;
+  min-height: 50px;
+  max-height: auto;
+  padding: 0;
+  position: absolute;
+  left: 15px;
+  right: 15px;
 }
 
-.hero .row div.span8 h2 {
+.feature .overlay  { bottom: 0; }
+.col-sm-4 .overlay { top: 0; }
+
+.hero .lead {
+  font-size:2rem;
+  font-weight:300;
+  line-height:1.33;
+}
+
+.hero h2 {
   padding-bottom: 5px;
   margin-bottom: 0;
 }
 
-.hero .row .tagline div.text {
-  display: table;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.triptych .span4 img,
-.hero .other img,
-.triptych .overlay img  {
-  height: auto;
-  width: 100%;
-}
-
-.overlay div.text {
-  top: 0;
-  height: 50px;
-}
-
-.overlay div.text h3 {
+.overlay h3 {
   margin: 0;
   padding: 10px;
 }
 
-.overlay div.text h3,
-.trio h3 a { 
+.overlay h3,
+.overlay h3 a { 
   color: white; 
   font-weight: 400; 
 }
 
- /** tweaks for @media queries */
-@media (max-width: 767px) {
-  .hero {
-    margin-bottom: 0;
-  }
-
-  .hero,
-  .hero .row,
-  .hero .feature {
-    height: auto;
-  }
-  
-  .hero .tagline,
-  .hero .tagline .text,
-  .hero .other,
-  .triptych .trio {
-    height: 150px;
-  }
-
-  .hero .tagline,
-  .hero .other,
-  .triptych .trio {
-    margin-top: 10px;
-  }
-
-  .hero .row .tagline div.text h1 { font-size: 2em; }
-
-  .hero img,
-  .hero .other img, 
-  .triptych .overlay img {
-    width: 100%;
-  }
-  
-  .pull-right {
-    float: none;
-  }
-
+.hero .tagline h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  .hero,
-  .hero .row,
-  .hero .feature {
+.hero .tagline div.text {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .tagline div.text h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5em;
+  line-height: 1.25;
+  text-align: center;
+}
+
+#gridded .feature,
+#gridded .col-sm-4 {
+  margin-bottom: 30px;
+  height: 150px
+}
+
+#gridded img  {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #gridded .feature {
     height: 250px;
   }
   
-  .hero .tagline,
-  .hero .tagline .text,
-  .hero .other,
-  .triptych .trio {
-    height: 110px;
+  #gridded .col-sm-4 {
+    height: 110px
   }
-
-  .hero .row .tagline div.text h1 { font-size: 1.5em; }
-
+  
+  .hero .tagline div.text h1 {
+    font-size: 1.5em;
+    text-align: left;
+  }
 }
 
-@media (min-width: 980px) and (max-width: 1199px) {
-  .hero,
-  .hero .row,
-  .hero .feature {
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #gridded .feature {
     height: 350px;
   }
   
-  .hero .tagline,
-  .hero .tagline .text,
-  .hero .other,
-  .triptych .trio {
-    height: 160px;
-  }
-
-  .hero .row .tagline div.text h1 { font-size: 2em; }
-
-}
-
-@media (min-width: 1200px) {
-  .hero,
-  .hero .row,
-  .hero .feature {
-    height: 480px;
+  #gridded .col-sm-4 {
+    height: 160px
   }
   
-  .hero .tagline,
-  .hero .tagline .text,
-  .hero .other,
-  .triptych .trio {
-    height: 225px;
+  .hero .tagline div.text h1 {
+    font-size: 2.25em;
+    line-height: 1.33;
   }
-
 }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #gridded .feature {
+    height: 490px;
+  }
+  
+  #gridded .col-sm-4 {
+    height: 230px
+  }
+  
+  .hero .tagline div.text h1 {
+    font-size: 3em;
+  }
+}
+
 
 /*=========================*/
 /* /END HOMEPAGE STYLES */
+
+
+
 /*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+
+
 
 /* Inner Pages */
 /*=========================*/
@@ -579,10 +528,6 @@ main-content .row {
   width:100%;
   margin-top: 30px;
 }
-
-.top-15 { padding-top:15px; }
-.top-25 { padding-top:25px; }
-.plain p { padding-right:15px; }
   
 .plain {
   margin-right:0 !important;
@@ -594,16 +539,9 @@ main-content .row {
   overflow:hidden;
   min-height: 275px; /* when images are used for staff bios make this 351px; */
 }
+
+.plain p { padding-right:15px; }
  
-#tab-fellows .fellow {
-  border-bottom: 3px solid; 
-  border-color: #f8f7f7; 
-  border-color: rgba(248,247,247,1); 
-  margin-bottom:15px; 
-  padding-bottom: 15px;
-  min-height: 350px; /* when images are used for staff bios make this 351px; */
-}
-     
 .sidebar {
   background-color:#f2f2f2;
   border: #eee solid 1px;
@@ -806,7 +744,7 @@ ul.side-nav .active i {
 }
 
 .leadimage {
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
  /** tweaks for @media queries */
@@ -843,7 +781,7 @@ ul.side-nav .active i {
   }
   .minus-top .prev, .minus-top .next {
     float:left;
-    margin-top:25px;
+    margin-top:30px;
     width: 50%;
   }
   .minus-top .pager a:hover { 
@@ -890,22 +828,6 @@ div.spruceup {
 
 .spruceuptitle:hover {
   text-decoration: underline;
-}
-
-/***********************************/
-/** What We Do Page & Icon Stuff... **/
-/***********************************/ 
-@media (max-width: 767px) {
-  .brick .project-title { margin-top: 30px; }
-  .brick .project-content { margin-right: 0; }
-}
-
-@media (min-width: 768px) {
-  .brick .project-content { margin-right: 104px; }
-}
-
-@media (min-width: 980px) {
-  .brick .project-content { margin-right: 170px; }
 }
 
 /*Icon Stuff*/
