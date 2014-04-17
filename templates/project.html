@@ -42,7 +42,51 @@ layout : default
         </aside>
         {{/ page.images.length }}
 
+        {{# page.spruceup}}
+          <aside class="lightbox-thumbs clearfix">
+            <!-- IMAGES in the slideshow -->
+            {{# spruceups }}
+              <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
+                <img alt="" src="{{ image }}" />
+              </a>
+            {{/ spruceups }}
+          </aside>
+        {{/ page.spruceup}}
+
         {{{ page.content }}}
+
+        {{# page.spruceup }}
+        <!-- Spruce Up Projects Tabs!
+        ================================================== -->
+        <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
+        <div class="tabbable spruceuptabs">
+          <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
+            <ul class="side-nav">
+            {{# spruceups }}
+              <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
+            {{/ spruceups }}
+            </ul>
+          </div>
+          <!-- start tabbed "pages" column... -->
+          <div class="tab-content col-xs-12 col-sm-8">
+            <!-- Spruceups All!!
+            ================================================== -->
+            {{# spruceups }}
+              <div class="tab-pane" id="tab-{{tabid}}">
+                <div class="">
+                  <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
+                  <h3>{{title}}</h3>
+                  {{{ content }}}
+                </div>
+              </div>
+            {{/ spruceups }}
+
+          </div>
+          <!-- end tabbed "pages" column... -->
+        </div><!-- / END tabbable -->
+        <!-- ==================================================
+             END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
+        {{/ page.spruceup }}
 
         <div class="icons categories bottom text-center">
           {{# page.categories }}
