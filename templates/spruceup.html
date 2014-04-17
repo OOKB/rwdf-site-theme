@@ -20,7 +20,7 @@ layout : project
       <article class="project">
         <h2>{{ page.title }}</h2>
 
-        <aside class="lightbox-thumbs clearfix">    
+        <aside class="lightbox-thumbs clearfix">
           <!-- IMAGES in the slideshow -->
           {{# spruceups.all }}
             <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
@@ -47,7 +47,7 @@ layout : project
             <!-- Spruceups All!!
             ================================================== -->
             {{# spruceups.all }}
-              <div class="tab-pane" id="tab-{{tabid}}">        
+              <div class="tab-pane" id="tab-{{tabid}}">
                 <div class="">
                   <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
                   <h3>{{title}}</h3>
@@ -55,7 +55,7 @@ layout : project
                 </div>
               </div>
             {{/ spruceups.all }}
-    
+
           </div>
           <!-- end tabbed "pages" column... -->
         </div><!-- / END tabbable -->
