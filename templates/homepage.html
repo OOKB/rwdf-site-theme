@@ -75,7 +75,7 @@ classes: "largelogosize"
 </div>
 
 <!-- Page -->
-<div class="container add-bottom">
+<div class="container add-top">
   <div class="row home-content">
 
     <!-- just the legacy document stuff -->
@@ -95,18 +95,18 @@ classes: "largelogosize"
     {{/ content.homepage.bigidea }}
 
     <!-- this needs to be spit out from the news feed -->
-      <div class="col-xs-12 col-sm-4 news">
-        <h3><a href="news">{{ page_info.news.hed }}</a></h3>
-        <p>{{ page_info.news.dek }}</p>
-        <ul class="newslist">
-        {{# content.news.articles.2014._all }}
-          <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ content.news.articles.2014._all }}
-        {{# content.news.articles.2013._all }}
-          <li><p><a href="{{link}}">{{ title }}</a></p></li>
-        {{/ content.news.articles.2013._all }}
-        </ul>
-      </div>
+    <div class="col-xs-12 col-sm-4 news">
+      <h3><a href="news">{{ page_info.news.hed }}</a></h3>
+      <p>{{ page_info.news.dek }}</p>
+      <ul class="newslist">
+      {{# content.news.articles.2014._all }}
+        <li><p><a href="{{link}}">{{ title }}</a></p></li>
+      {{/ content.news.articles.2014._all }}
+      {{# content.news.articles.2013._all }}
+        <li><p><a href="{{link}}">{{ title }}</a></p></li>
+      {{/ content.news.articles.2013._all }}
+      </ul>
+    </div>
 
   </div>
 </div>
