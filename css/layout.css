@@ -403,9 +403,8 @@ main-content .row {
 .hero .feature, 
 .hero .tagline,
 .hero .tagline .text,
-.hero .biglogo, 
 .hero .other, 
-.triptych .trio {
+.triptych .col-sm-4 {
   position: relative;
   overflow: hidden;
 }
@@ -456,7 +455,7 @@ main-content .row {
 }
 
 .overlay h3,
-.trio h3 a { 
+.col-sm-4 h3 a { 
   color: white; 
   font-weight: 400; 
 }
@@ -476,13 +475,13 @@ main-content .row {
   .hero .tagline,
   .hero .tagline .text,
   .hero .other,
-  .triptych .trio {
+  .triptych .col-sm-4 {
     height: 150px;
   }
 
   .hero .tagline,
   .hero .other,
-  .triptych .trio {
+  .triptych .col-sm-4 {
     margin-top: 10px;
   }
 
@@ -510,7 +509,7 @@ main-content .row {
   .hero .tagline,
   .hero .tagline .text,
   .hero .other,
-  .triptych .trio {
+  .triptych .col-sm-4 {
     height: 110px;
   }
 
@@ -528,7 +527,7 @@ main-content .row {
   .hero .tagline,
   .hero .tagline .text,
   .hero .other,
-  .triptych .trio {
+  .triptych .col-sm-4 {
     height: 160px;
   }
 
@@ -546,7 +545,7 @@ main-content .row {
   .hero .tagline,
   .hero .tagline .text,
   .hero .other,
-  .triptych .trio {
+  .triptych .col-sm-4 {
     height: 230px;
   }
 
