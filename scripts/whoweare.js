@@ -1,3 +1,6 @@
+// why is this doing this?
+// why are you not properly listening!
+
 // store the currently selected tab in the hash value
 $("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
     var id = $(e.target).attr("href").substr(1);
