@@ -9,12 +9,14 @@ title: "Who We Are"
     <div class="tabbable">
     
       <!-- MENU - should we worry about auto creating this? -->
-      <ul class="side-nav col-xs-12 col-sm-2" id="myTab">
-        <li class="active"><a href="#tab-values" data-toggle="tab">Our Values</a></li>
-        <li><a href="#tab-founders" data-toggle="tab">Robert &amp; Florence</a></li>
-        <li><a class="staff" href="#tab-staff" data-toggle="tab">Directors &amp; Staff</a></li>
-        <li><a class="staff" href="#tab-staff" data-toggle="tab">IRS Form 990</a></li>
-      </ul>
+      <div class="col-xs-12 col-sm-2">
+        <ul class="side-nav" id="myTab">
+          <li class="active"><a href="#tab-values" data-toggle="tab">Our Values</a></li>
+          <li><a href="#tab-founders" data-toggle="tab">Robert &amp; Florence</a></li>
+          <li><a class="staff" href="#tab-staff" data-toggle="tab">Directors &amp; Staff</a></li>
+          <li><a class="irs-forms" href="#tab-irs-forms" data-toggle="tab">IRS Form 990</a></li>
+        </ul>
+      </div>
 
       <!-- start tabbed "pages" column... -->
       <div class="tab-content col-xs-12 col-sm-10">
@@ -28,9 +30,9 @@ title: "Who We Are"
                 <h3>{{title}}</h3>
                 {{{ content }}}
               </div>
-              <div class="col-xs-12 col-sm-4">
+              <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/whoweare//{{image}}"/>
-              </div>
+              </aside>
             {{/ content.whoweare.our-values }}
           </div>
         </div>
@@ -43,9 +45,9 @@ title: "Who We Are"
               <div class="col-xs-12 col-sm-8">
                 {{{ content }}}
               </div>
-              <div class="col-xs-12 col-sm-4">
+              <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/whoweare//{{image}}"/>
-              </div>
+              </aside>
             {{/ content.whoweare.robert-florence }}
           </div>
         </div>
@@ -75,7 +77,7 @@ title: "Who We Are"
                 {{/ content.whoweare.bios.directors._all }}
               </section>
   
-              <aside class="col-xs-12 col-sm-4">
+              <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/rwdf-square.png"/>
               </aside>
               
@@ -101,7 +103,7 @@ title: "Who We Are"
                 {{/ content.whoweare.bios.staff._all }}
               </section>
   
-              <aside class="col-xs-12 col-sm-4">
+              <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/rwdf-square.png"/>
               </aside>
               
@@ -127,7 +129,7 @@ title: "Who We Are"
                 
               </section>
 
-              <aside class="col-xs-12 col-sm-4">
+              <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/rwdf-square.png"/>
               </aside>
               
@@ -138,6 +140,20 @@ title: "Who We Are"
         </div>
         <!-- END VALUES, FOUNDERS, STAFF, -->
         <!-- ====================================== -->
+
+        <!-- IRS FORMS -->
+        <!-- ====================================== -->
+        <div class="tab-pane" id="tab-irs-forms">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8">
+              <h3>IRS Form 990</h3>
+              <p>Form 990 is an annual report that federally tax-exempt organizations, like The Robert W. Deutsch Foundation, file with the IRS. It provides information on our finances, mission and programs.</p>
+            </div>
+            <aside class="col-xs-12 col-sm-4 accompany">
+              <img src="TK"/>
+            </aside>
+          </div>
+        </div>
 
       </div>
       <!-- end tabbed "pages" column... -->

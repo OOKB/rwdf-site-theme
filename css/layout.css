@@ -24,6 +24,7 @@ body {
 }
 
 img { max-width: 100%; }
+.accompany img { margin-top: 25%; }
 
 footer {
   font-size:1.2rem;
@@ -632,6 +633,7 @@ label {
 /*=========================*/
 .side-nav {
   list-style-type: none;
+  padding: 0;
   padding-top: 20px;
   margin:5px 0;
 }
