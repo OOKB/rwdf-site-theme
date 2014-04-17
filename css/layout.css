@@ -384,15 +384,26 @@ main-content .row {
 .tab-pane h3 { margin-top: 22px; }
 #tab-staff .span6 { margin-top: 15px; }
 
+
+
+
 /*=========================*/
 /*=========================*/
-/* Homepage */
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
 /*=========================*/
 /*=========================*/
 
-/* Hero */
-/* This is the big image area on the homepage */
+
+
+/* Homepage */
 /*=========================*/
+
 .hero { margin-top: 0; }
 .hero .text * { color: white;   margin: 0; }
 .tagline .text h1 { padding: 15px; }
@@ -426,20 +437,19 @@ main-content .row {
 
 .feature .overlay { bottom: 0; }
 
-.hero .row div h2 {
+.hero h2 {
   padding-bottom: 5px;
   margin-bottom: 0;
 }
 
-.hero .row .tagline div.text {
+.hero .tagline div.text {
   display: table;
   vertical-align: middle;
   width: 100%;
 }
 
-.triptych img,
-.hero .other img,
-.triptych .overlay img  {
+.hero .col-sm-4 img,
+.triptych .col-sm-4 img  {
   height: auto;
   width: 100%;
 }
@@ -457,7 +467,22 @@ main-content .row {
 
 /*=========================*/
 /* /END HOMEPAGE STYLES */
+
+
+
 /*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+/*=========================*/
+
+
 
 /* Inner Pages */
 /*=========================*/
@@ -465,10 +490,6 @@ main-content .row {
   width:100%;
   margin-top: 30px;
 }
-
-.top-15 { padding-top:15px; }
-.top-25 { padding-top:30px; }
-.plain p { padding-right:15px; }
   
 .plain {
   margin-right:0 !important;
@@ -480,16 +501,9 @@ main-content .row {
   overflow:hidden;
   min-height: 275px; /* when images are used for staff bios make this 351px; */
 }
+
+.plain p { padding-right:15px; }
  
-#tab-fellows .fellow {
-  border-bottom: 3px solid; 
-  border-color: #f8f7f7; 
-  border-color: rgba(248,247,247,1); 
-  margin-bottom:15px; 
-  padding-bottom: 15px;
-  min-height: 350px; /* when images are used for staff bios make this 351px; */
-}
-     
 .sidebar {
   background-color:#f2f2f2;
   border: #eee solid 1px;
