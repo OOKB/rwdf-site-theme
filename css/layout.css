@@ -697,13 +697,6 @@ ul.side-nav .active i {
   z-index: 999; 
 }
 
-/*
-.minus-top .prev.disabled, 
-.minus-top .next.disabled {
-  visibility: hidden !important;
-}
-*/
-
 .pager a {
   text-indent: 100%;
   white-space: nowrap;
@@ -715,7 +708,6 @@ ul.side-nav .active i {
   background-color: rgba(0,154,201,1);
   color: white;
   text-decoration: none;
-  /**/
   transition: all 300ms;
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
@@ -737,14 +729,6 @@ ul.side-nav .active i {
 .leadimage {
   margin-bottom:30px;
 }
-
- /** tweaks for @media queries */
-/* 1200 AND ABOVE // Biggie Browser */
-/* 980-1200 // Sm. Browser, Landscape Tablet */
-/* ----------- BEGIN COLLAPSED NAV ----------- */
-/* 768-979 // Portrait Tablet */
-/* 481-767 // Landscape Smartphone */
-/* 480 AND UNDER // Portrait Smartphone */
 
 @media (max-width: 767px) {
   .minus-top .pager { 
@@ -785,8 +769,6 @@ ul.side-nav .active i {
     -webkit-transition: all 300ms;
   } 
 }
-/*--- End Responsive Pager Business --*/
-/**************************************/
 
 /* JUST TEXT PAGES */
 .project .tags,
