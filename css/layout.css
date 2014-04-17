@@ -377,8 +377,7 @@ nav.navbar > .container {
 .largelogosize .navbar ul.nav { top: 77px; }
 .largelogosize .navbar > .container { border: none; }
 
-.navbar .nav li.social, 
-.navbar .nav li.social a {
+.navbar .nav li.social {
   margin: 0;
   padding: 0;
 }
@@ -685,7 +684,7 @@ label {
 /*=========================*/
 .side-nav {
   list-style-type: none;
-  padding-top: 20px 0 0 0;
+  padding: 20px 0 0 0;
   margin:5px 0;
 }
 
