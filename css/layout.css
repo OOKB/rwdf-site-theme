@@ -121,6 +121,11 @@ h3 {
   margin:26px 0 10px 0;
 }  
 
+.index.jumbotron .lead {
+  font-size: 2.4rem;
+  line-height: 1.3333;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .jumbotron {
@@ -149,7 +154,11 @@ h3 {
   .index.jumbotron .diag-divider {
     margin-bottom: 60px;
   }
-
+  
+  .index.jumbotron .lead {
+    font-size: 4.4rem;
+    line-height: 1.3333;
+  }
 }
 
 /* Text */
