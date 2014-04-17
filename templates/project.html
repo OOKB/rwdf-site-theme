@@ -70,23 +70,13 @@ layout : default
 
   <div class="row minus-top">
 
-    {{# page.next }}
+    {{# page._next }}
       <div class="next col-xs-12 col-sm-2 pager"><a href="{{ url }}" title="{{ title }}">Next &rarr;</a></div>
-    {{/ page.next }}
-    {{^ page.next }}
-      {{# page.collection.all.last}}
-        <div class="next col-xs-12 col-sm-2 pager"><a href="{{ url }}" title="{{ title }}">Next &rarr;</a></div>
-      {{/ page.collection.all.last}}
-    {{/ page.next }}
+    {{/ page._next }}
 
-    {{# page.previous }}
+    {{# page._previous }}
       <div class="prev previous col-xs-12 col-sm-2 col-sm-offset-8 pager"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></div>
-    {{/ page.previous }}
-    {{^ page.previous }}
-      {{# page.collection.all.first}}
-        <div class="prev previous col-xs-12 col-sm-2 col-sm-offset-8 pager"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></div>
-      {{/ page.collection.all.first}}
-    {{/ page.previous }}
+    {{/ page._previous }}
 
   </div>
   <!-- this is presumably for each individual post -->
