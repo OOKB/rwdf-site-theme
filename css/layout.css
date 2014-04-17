@@ -346,7 +346,6 @@ main-content .row {
 }
 
 .tab-pane h3 { margin-top: 22px; }
-#tab-staff .span6 { margin-top: 15px; }
 
 
 
@@ -502,7 +501,6 @@ main-content .row {
   }
 }
 
-
 /*=========================*/
 /* /END HOMEPAGE STYLES */
 
@@ -537,7 +535,6 @@ main-content .row {
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
   overflow:hidden;
-  min-height: 275px; /* when images are used for staff bios make this 351px; */
 }
 
 .plain p { padding-right:15px; }
@@ -558,17 +555,11 @@ main-content .row {
 form {
   margin-top:20px;
 }
-
-textarea {
-  width:90%
-}
   
 label {
   margin:10px 0 2px 0;
 }
 
-/* Side Nav */
-/*=========================*/
 .side-nav {
   list-style-type: none;
   padding: 0;
@@ -582,56 +573,6 @@ label {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-}
-  
-#filters li:first-child {
-  text-align: center;
-}
- 
-@media (max-width: 767px) {
-  #filters {
-    border-bottom: 3px solid; 
-    border-color: #f8f7f7; 
-    border-color: rgba(248,247,247,1); 
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 3px 0;
-    width: 100%;
-    zoom: 1;
-  }
-  #filters:before,
-  #filters:after {
-    display: table;
-    line-height: 0;
-    content: "";
-  }
-  
-  #filters:after {
-    clear: both;
-  }
-  
-  #filters li.icons  {
-    display: block;
-    float: left;
-    width: 20%;
-    margin: 5px 0;
-    padding: 0;
-    text-align: center;
-  }
-  #filters li.icons div, #filters li.icons a { display:block; margin: 0; padding: 0; }
-  #filters li.icons a { padding: 5px 0; }
-  #filters li.icons p { display: none; }
-  #filters li:first-child {
-    text-align: center;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (min-width: 767px) {
-  ul.side-nav .iconsidenav {
-    float:left;
-  }
 }
 
 .side-nav li a {
@@ -682,6 +623,56 @@ ul.side-nav .active i.icon-community { background-image: url("../media/category_
 
 ul.side-nav .active i {
   background-color:  #555555;
+}
+
+@media (max-width: 767px) {
+  #filters {
+    border-bottom: 3px solid; 
+    border-color: #f8f7f7; 
+    border-color: rgba(248,247,247,1); 
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 3px 0;
+    width: 100%;
+    zoom: 1;
+  }
+  #filters:before,
+  #filters:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  
+  #filters:after {
+    clear: both;
+  }
+  
+  #filters li.icons  {
+    display: block;
+    float: left;
+    width: 20%;
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+  }
+  #filters li.icons div, #filters li.icons a { display:block; margin: 0; padding: 0; }
+  #filters li.icons a { padding: 5px 0; }
+  #filters li.icons p { display: none; }
+  #filters li:first-child {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  #filters li:first-child {
+    text-align: center;
+  }
+   
+  ul.side-nav .iconsidenav {
+    float:left;
+  }
 }
 
 /* Project Pages */
