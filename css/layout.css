@@ -405,44 +405,21 @@ main-content .row {
 .hero .tagline .text,
 .hero .biglogo, 
 .hero .other, 
-.triptych .trio {
+.triptych .trio,
+.triptych img {
+  position: relative;
   overflow: hidden;
 }
 
-.hero,
-.hero .row,
-.hero .row img,
-.hero .feature,
-.hero .biglogo, 
-.hero .other, 
-.triptych .trio,
-.triptych .span4 img { 
-  position: relative;
-}
-
-.feature .text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 15px;
-}
-
 .tagline div.text,
-.feature .overlay,
-.overlay div.text {
-  background: #009CC1;
-}
-
 .overlay {
-  background: rgba(0,156,193,.5);
-}
-
-.tagline div.text {
+  background: #009CC1;
   background: rgba(0,156,193,1);
 }
 
 .overlay {
+  background: rgba(0,156,193,.5);
+  padding: 15px;
   position: absolute;
   margin: 0;
   left:0;
