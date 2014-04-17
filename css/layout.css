@@ -99,19 +99,12 @@ h4 { /* Inner Page Subhead */
 }
 
 .index.jumbotron .diag-divider {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
-.jumbo-text {
-  margin: 0 20px;
-  padding: 10px;
-  text-align: left;  
-}
-  
 .jumbo-text .lead {
   font-size: 1.8rem;
   line-height: 1.33;
-  text-align: left;
 }
 
 .jumbo-text h1 {
@@ -138,7 +131,6 @@ h3 {
   } 
 
   .jumbo-text {
-    margin:0;
     padding: 30px 100px;  
     text-align: center;
   }
@@ -149,7 +141,11 @@ h3 {
     line-height: 1.33;
     text-align: center;
   }
-    
+
+  .index.jumbotron .diag-divider {
+    margin-bottom: 60px;
+  }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
