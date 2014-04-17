@@ -9,7 +9,7 @@ title: "The Robert W. Deutsch Foundation"
 <article class="newslist">
   {{# page.articles.2014._all }}
   <section class="row border-top">
-    <p class="col-xs-12 col-sm-2 date"><time>{{ date }}</time></p>
+    <p class="col-xs-12 col-sm-2 date"><time>{{ date.custom }}</time></p>
     <div class="col-xs-12 col-sm-8">
       <h4 class="external"><a href="{{ link }}">{{ title }}</a></h4>
       {{{ content }}}
@@ -18,7 +18,7 @@ title: "The Robert W. Deutsch Foundation"
   {{/ page.articles.2014._all }}
   {{# page.articles.2013._all }}
   <section class="row border-top">
-    <p class="col-xs-12 col-sm-2 date"><time>{{ date }}</time></p>
+    <p class="col-xs-12 col-sm-2 date"><time>{{ date.custom }}</time></p>
     <div class="col-xs-12 col-sm-8">
       <h4 class="external"><a href="{{ link }}">{{ title }}</a></h4>
       {{{ content }}}
