@@ -87,7 +87,8 @@ h4 { /* Inner Page Subhead */
   font-size: 3em;
 }
 
-#gridded > .container > .row {
+#gridded .hero,
+#gridded .col-sm-4 {
   margin-bottom: 30px;
 }
   
@@ -428,11 +429,13 @@ main-content .row {
 
 .overlay {
   background: rgba(0,156,193,.5);
-  padding: 0;
-  position: absolute;
   margin: 0;
   min-height: 50px;
   max-height: auto;
+  padding: 0;
+  position: absolute;
+  left: 15px;
+  right: 15px;
 }
 
 .feature .overlay  { bottom: 0; }
