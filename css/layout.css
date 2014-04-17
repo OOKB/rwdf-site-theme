@@ -456,7 +456,7 @@ main-content .row {
   vertical-align: middle;
   font-size: 2.75em;
   line-height: 1.33;
-  text-align: left;
+  text-align: center;
 }
 
 #gridded .feature,
@@ -482,6 +482,7 @@ main-content .row {
   
   .hero .tagline div.text h1 {
     font-size: 1.5em;
+    text-align: left;
   }
 }
 
