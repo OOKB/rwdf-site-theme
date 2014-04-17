@@ -1,14 +1,4 @@
 $(document).ready(function() {
-  var ww = $(window).width();
-  var wh = $(window).height();
-
-  if (ww >= 767) {// set slideshow height cleverly
-    $('#slideshow').height(wh-400);
-    $('#slideshow .slide').height(wh-400);
-  } else {
-    $('#slideshow').height(200);
-    $('#slideshow .slide').css('height','100%');
-  }
 
   //prepare whatwedo feed for isotope...
   $('.icons.categories .science a').attr('href', '#filter=.science');
@@ -56,6 +46,20 @@ $(document).ready(function() {
   })
   // trigger hashchange to capture any hash data on init
   .trigger('hashchange');
+
+});
+
+$(document).ready(function() {
+  var ww = $(window).width();
+  var wh = $(window).height();
+
+  if (ww >= 767) {// set slideshow height cleverly
+    $('#slideshow').height(wh-400);
+    $('#slideshow .slide').height(wh-400);
+  } else {
+    $('#slideshow').height(200);
+    $('#slideshow .slide').css('height','100%');
+  }
 
 });
 
@@ -113,20 +117,13 @@ $(document).ready(function() {
   });
 });
 
-// why is this doing this?
-// why are you not properly listening!
-
-$(document).ready(function() {
-  
-  // store the currently selected tab in the hash value
-  $("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
-      var id = $(e.target).attr("href").substr(1);
-      window.location.hash = id;
-  });
-  
-  // on load of the page: switch to the currently selected tab
-  var hash = window.location.hash;
-  $('#myTab a[href="' + hash + '"]').tab('show');
-  
+// store the currently selected tab in the hash value
+$("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
+    var id = $(e.target).attr("href").substr(1);
+    window.location.hash = id;
 });
+
+// on load of the page: switch to the currently selected tab
+var hash = window.location.hash;
+$('#myTab a[href="' + hash + '"]').tab('show');
 
