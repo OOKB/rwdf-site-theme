@@ -107,18 +107,6 @@ h4 { /* Inner Page Subhead */
   padding-bottom: 0;
   }
 
-.index.jumbotron .lead {
-  font-size: 4.4rem;
-  line-height: 1.3333;
-  }
-  
-.jumbo-text h1 {
-  font-size:5rem;
-  margin-bottom: 10px;
-  padding:0 50px;
-  line-height: 1.125;
-} 
-      
 .jumbo-text .lead {
   font-size: 2.4rem;
   font-weight: 300;
@@ -126,56 +114,54 @@ h4 { /* Inner Page Subhead */
 }
   
 .jumbo-text {
-  margin:0;
-  padding: 30px 100px;  
-  background-color: #fff;  
+  margin: 0 20px;
+  padding: 10px;
+  text-align: left;  
 }
   
 .jumbo-text .lead {
-  font-size:2.0rem;
+  font-size: 1.8rem;
+  line-height: 1.33;
 }
 
-.hero h1 { /* Homepage */
-  font-size:4rem;
-  margin-bottom:0;
-  line-height: 1.125;
-}
+.jumbo-text h1 {
+  font-size: 3.0rem;
+  padding: 0;
+} 
   
-.hero .lead {
-  font-size:2rem;
-  font-weight:300;
-  line-height:1.33;
-}
-  
-@media (max-width: 767px) {  
+h3 {
+  font-size:1.8rem;
+  margin:26px 0 10px 0;
+}  
 
-  .jumbo-text {
-    margin: 0 20px;
-    padding: 10px;
-    background-color: #fff; 
-    text-align: left;  
-  }
-    
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
   .jumbo-text h1 {
-    font-size: 3.0rem;
-    padding: 0;
+    font-size:5rem;
+    margin-bottom: 10px;
+    padding:0 50px;
+    line-height: 1.125;
   } 
 
+  .jumbo-text {
+    margin:0;
+    padding: 30px 100px;  
+  }
+  
   .jumbo-text .lead {
-    font-size: 1.8rem;
-    line-height: 1.33;
+    font-size: 2rem;
   }
-    
-  .index.jumbotron .lead {
-    font-size: 3.0rem;
-    line-height: 1.33;
-    text-align: left;
-  }
-    
-  h3 {
-    font-size:1.8rem;
-    margin:26px 0 10px 0;
-  }  
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
 }
 
 /* Text */
@@ -422,6 +408,12 @@ main-content .row {
 
 .feature .overlay  { bottom: 0; }
 .col-sm-4 .overlay { top: 0; }
+
+.hero .lead {
+  font-size:2rem;
+  font-weight:300;
+  line-height:1.33;
+}
 
 .hero h2 {
   padding-bottom: 5px;
