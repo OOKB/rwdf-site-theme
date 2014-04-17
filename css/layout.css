@@ -217,19 +217,17 @@ footer a {
   color:rgba(185,186,184,1)
 }
 
-/* Footer */
-/*=========================*/
+/* Footer ===================================*/
 footer { margin-top: 60px; }
-
 footer ul.menu { list-style: none; }
 
+/* Icons, ETc. */
+/*===========================================*/
 .socialicon, .socialicon-color {
   float:left;
   margin: 5px 10px 20px 0;
   }
 
-/* Icons, ETc. */
-/*===========================================*/
 .iconblue { 
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
