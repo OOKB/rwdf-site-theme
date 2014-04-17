@@ -405,8 +405,7 @@ main-content .row {
 .hero .tagline .text,
 .hero .biglogo, 
 .hero .other, 
-.triptych .trio,
-.triptych img {
+.triptych .trio {
   position: relative;
   overflow: hidden;
 }
@@ -428,7 +427,7 @@ main-content .row {
 
 .feature .overlay { bottom: 0; }
 
-.hero .row div.span8 h2 {
+.hero .row div h2 {
   padding-bottom: 5px;
   margin-bottom: 0;
 }
@@ -439,24 +438,24 @@ main-content .row {
   width: 100%;
 }
 
-.triptych .span4 img,
+.triptych img,
 .hero .other img,
 .triptych .overlay img  {
   height: auto;
   width: 100%;
 }
 
-.overlay div.text {
+.overlay {
   top: 0;
   height: 50px;
 }
 
-.overlay div.text h3 {
+.overlay h3 {
   margin: 0;
   padding: 10px;
 }
 
-.overlay div.text h3,
+.overlay h3,
 .trio h3 a { 
   color: white; 
   font-weight: 400; 
