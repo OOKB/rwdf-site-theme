@@ -108,8 +108,6 @@ footer {
   line-height: 1.3333;
   }
   
-/** tweaks for @media queries */
-
 @media (max-width: 767px) {  
 
   .jumbo-text {
@@ -141,14 +139,6 @@ footer {
     margin:26px 0 10px 0;
   }  
 }
-
-/* CSS Document */
-
-/***** Base Styles ************************************/
-/*=========================*/
-.e-breadcrumb {
-  margin:0 0 10px 0;
-}
   
 body {
   padding-bottom:100px;
@@ -165,7 +155,6 @@ light gray:   rgba(248,247,247,1), #F8F7F7
   
 alts:
 orange        rgba(189,88,9,1), #BD5809
-
 **/
 
 /* Text */
@@ -263,8 +252,6 @@ ul.side-nav .active img {
   background-color: #555555;
 }
 
-/**/
-
 .index .hero .feature .text.green,
 .index .hero .row div.text.green,
 .overlay div.text.green {
@@ -272,14 +259,13 @@ ul.side-nav .active img {
   background: rgba(162,185,82,.75) !important;
 }
 
-
-/***** Main Stuff ************************************/
-/*=========================*/
+/********** Main Stuff **********/
+/*==============================*/
 .add-top    { margin-top: 75px; }
 .add-bottom { margin-bottom: 75px; }
 
 /* lower, more general stuff */
-.row-fluid {
+main-content .row {
   padding-top:25px;
   padding-bottom:0;
 }
@@ -367,6 +353,8 @@ nav.navbar > .container {
 
 /* Footer */
 /*=========================*/
+footer { margin-top: 60px; }
+
 .diag-divider {
   height:40px;  
   background: url("../media/diag.gif") repeat;

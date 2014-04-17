@@ -35,35 +35,37 @@
 
     <!-- Nav!
     ================================================== -->
-    <nav class="navbar" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
-            <span class="sr-only">Toggle navigation</span>
-            <p>Menu</p>
-          </button>
-          <a class="logo brand" href="/"><img src="http://rwdf.ookb.co/img/rwdf-logo-lg.png" alt="{{ data.title }} Official Logo"></a> <!-- link to this image in the media folder? -->
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="mainmenu">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/whoweare/" target="">Who We Are</a></li>
-            <li><a href="/whatwedo/" target="">What We Do</a></li>
-            <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
-            <li><a href="http://rwdfblog.com/" target="_blank">Read Our Blog &raquo;</a></li>
-            <!-- social media icons -->
-            <li class="social"><a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongreen" ></a></li>
-            <li class="social last"><a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongreen" ></a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+    <header>
+      <nav class="navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
+              <span class="sr-only">Toggle navigation</span>
+              <p>Menu</p>
+            </button>
+            <a class="logo brand" href="/"><img src="http://rwdf.ookb.co/img/rwdf-logo-lg.png" alt="{{ data.title }} Official Logo"></a> <!-- link to this image in the media folder? -->
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="mainmenu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/whoweare/" target="">Who We Are</a></li>
+              <li><a href="/whatwedo/" target="">What We Do</a></li>
+              <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
+              <li><a href="http://rwdfblog.com/" target="_blank">Read Our Blog &raquo;</a></li>
+              <!-- social media icons -->
+              <li class="social"><a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongreen" ></a></li>
+              <li class="social last"><a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongreen" ></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    </header>
     <!-- /Nav!
     ================================================== -->
 
     <!-- Main Content
     ================================================== -->
-    <div class="container inner">
+    <div class="container inner main-content">
     
       {{#jumbotron}}
       <!-- Top Hero -->
