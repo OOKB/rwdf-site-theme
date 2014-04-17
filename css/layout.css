@@ -418,11 +418,11 @@ main-content .row {
 
 .overlay {
   background: rgba(0,156,193,.5);
-  padding: 15px;
+  padding: 0;
   position: absolute;
   margin: 0;
-  left:0;
-  right:0;
+  left:15px;
+  right:15px;
 }
 
 .feature .overlay { bottom: 0; }
