@@ -134,7 +134,7 @@ h4 { /* Inner Page Subhead */
 }
   
 .jumbo-text {
-  margin:0 42px;
+  margin:0;
   padding: 30px 100px;  
   background-color: #fff;  
 }
