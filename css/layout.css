@@ -428,12 +428,6 @@ main-content .row {
   margin-bottom: 0;
 }
 
-.hero .tagline div.text {
-  display: table;
-  vertical-align: middle;
-  width: 100%;
-}
-
 .overlay h3 {
   margin: 0;
   padding: 10px;
@@ -448,6 +442,13 @@ main-content .row {
 .hero .tagline h1 {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+
+.hero .tagline div.text {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
 }
 
 .hero .tagline div.text h1 {
