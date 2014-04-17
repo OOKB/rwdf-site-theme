@@ -435,7 +435,8 @@ main-content .row {
   max-height: auto;
 }
 
-.feature .overlay { bottom: 0; }
+.feature .overlay  { bottom: 0; }
+.col-sm-4 .overlay { top: 0; }
 
 .hero h2 {
   padding-bottom: 5px;
