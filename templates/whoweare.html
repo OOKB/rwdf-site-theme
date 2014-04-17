@@ -22,28 +22,32 @@ title: "Who We Are"
         <!-- VALUES!
         ================================================== -->
         <div class="tab-pane active" id="tab-values">
-          {{# content.whoweare.our-values }}
-            <div class="col-xs-12 col-sm-8">
-              <h3>{{title}}</h3>
-              {{{ content }}}
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <img src="/media//{{image}}"/>
-            </div>
-          {{/ content.whoweare.our-values }}
+          <div class="row">
+            {{# content.whoweare.our-values }}
+              <div class="col-xs-12 col-sm-8">
+                <h3>{{title}}</h3>
+                {{{ content }}}
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <img src="/media//{{image}}"/>
+              </div>
+            {{/ content.whoweare.our-values }}
+          </div>
         </div>
 
         <!-- FOUNDERS -->
         <!-- ====================================== -->
         <div class="tab-pane" id="tab-founders">
+          <div class="row">
             {{# content.whoweare.robert-florence }}
-            <div class="col-xs-12 col-sm-8">
-              {{{ content }}}
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <img src="/media//{{image}}"/>
-            </div>
-          {{/ content.whoweare.robert-florence }}
+              <div class="col-xs-12 col-sm-8">
+                {{{ content }}}
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <img src="/media//{{image}}"/>
+              </div>
+            {{/ content.whoweare.robert-florence }}
+          </div>
         </div>
 
         <!-- STAFF -->
