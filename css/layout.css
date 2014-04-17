@@ -72,6 +72,8 @@ ul.nav li {
 /* Jumbotron Styles */
 .jumbotron {
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
   }
 
 p a.btn.blog {
