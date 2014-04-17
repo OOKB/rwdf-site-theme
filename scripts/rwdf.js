@@ -112,7 +112,6 @@ $(document).ready(function() {
       var relpos        = (containerheight-30)*-1;
       $('.minus-top .pager a').css('top',relpos);
       $('.minus-top .pager a').height(btnheight);
-      
     });
   });
 });
