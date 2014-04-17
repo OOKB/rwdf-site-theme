@@ -389,18 +389,16 @@ main-content .row {
 /* Homepage */
 /*=========================*/
 
-.hero { margin-top: 0; }
-.hero .text * { color: white;   margin: 0; }
+.hero .text * { color: white; margin: 0; }
 .tagline .text h1 { padding: 15px; }
-.hero .other { margin-top: 30px; }
 
 .hero,
 .hero .row,
 .hero .feature, 
 .hero .tagline,
 .hero .tagline .text,
-.hero .other, 
-.triptych .col-sm-4 {
+#gridded .col-sm-4 {
+  margin-top: 0;
   position: relative;
   overflow: hidden;
 }
