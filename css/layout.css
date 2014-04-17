@@ -100,7 +100,7 @@ h4 { /* Inner Page Subhead */
 }
 
 .index.jumbotron .diag-divider {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .jumbo-text {
@@ -835,22 +835,6 @@ div.spruceup {
 
 .spruceuptitle:hover {
   text-decoration: underline;
-}
-
-/***********************************/
-/** What We Do Page & Icon Stuff... **/
-/***********************************/ 
-@media (max-width: 767px) {
-  .brick .project-title { margin-top: 30px; }
-  .brick .project-content { margin-right: 0; }
-}
-
-@media (min-width: 768px) {
-  .brick .project-content { margin-right: 104px; }
-}
-
-@media (min-width: 980px) {
-  .brick .project-content { margin-right: 170px; }
 }
 
 /*Icon Stuff*/
