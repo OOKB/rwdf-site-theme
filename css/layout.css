@@ -59,12 +59,7 @@ ul.nav li {
 .side-nav ul li {
   font-size: 1.4rem; 
 }
-  
-.hero .tagline h1 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-      
+        
 p a.btn.blog {
   width: 100%;
   padding: 15px 0;
@@ -81,17 +76,6 @@ h4 { /* Inner Page Subhead */
   margin: 15px 0 5px 0;
   }
 
-.hero .row .tagline div.text h1 {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 3em;
-}
-
-#gridded .feature,
-#gridded .col-sm-4 {
-  margin-bottom: 30px;
-}
-  
 /* Jumbotron */
 /* This is the big text areas on each of the sub-pages */
 /*=========================*/
@@ -452,12 +436,6 @@ main-content .row {
   width: 100%;
 }
 
-.hero .col-sm-4 img,
-.triptych .col-sm-4 img  {
-  height: auto;
-  width: 100%;
-}
-
 .overlay h3 {
   margin: 0;
   padding: 10px;
@@ -468,6 +446,66 @@ main-content .row {
   color: white; 
   font-weight: 400; 
 }
+
+.hero .tagline h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.hero .tagline div.text h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+}
+
+#gridded .feature,
+#gridded .col-sm-4 {
+  margin-bottom: 30px;
+  height: 150px
+}
+
+.hero .col-sm-4 img,
+.triptych .col-sm-4 img  {
+  height: auto;
+  width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #gridded .feature {
+    height: 250px;
+  }
+  
+  #gridded .col-sm-4 {
+    height: 110px
+  }
+  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #gridded .feature {
+    height: 350px;
+  }
+  
+  #gridded .col-sm-4 {
+    height: 160px
+  }
+  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+  #gridded .feature {
+    height: 490px;
+  }
+  
+  #gridded .col-sm-4 {
+    height: 230px
+  }
+  
+}
+
 
 /*=========================*/
 /* /END HOMEPAGE STYLES */
