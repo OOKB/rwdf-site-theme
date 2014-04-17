@@ -7,7 +7,7 @@ title: "The Robert W. Deutsch Foundation"
 ================================================== -->
 
 <article class="newslist">
-  {{# news.all }}
+  {{# page.articles.2014._all }}
   <section class="row border-top">
     <p class="col-xs-12 col-sm-2 date"><time>{{ date }}</time></p>
     <div class="col-xs-12 col-sm-8">
@@ -15,5 +15,14 @@ title: "The Robert W. Deutsch Foundation"
       {{{ content }}}
     </div>
   </section>
-  {{/ news.all }}
+  {{/ page.articles.2014._all }}
+  {{# page.articles.2013._all }}
+  <section class="row border-top">
+    <p class="col-xs-12 col-sm-2 date"><time>{{ date }}</time></p>
+    <div class="col-xs-12 col-sm-8">
+      <h4 class="external"><a href="{{ link }}">{{ title }}</a></h4>
+      {{{ content }}}
+    </div>
+  </section>
+  {{/ page.articles.2013._all }}
 </article>
