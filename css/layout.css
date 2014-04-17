@@ -62,7 +62,8 @@ ul.nav li {
         
 p a.btn.blog {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px;
+  margin-top: 0 !important;
 }
 
 /* Page Styles */
@@ -155,24 +156,23 @@ h4 { /* Inner Page Subhead */
     text-align: left;  
   }
     
-  .jumbo-text h1 { /* Inner Page Hero Head */
+  .jumbo-text h1 {
     font-size: 3.0rem;
     padding: 0;
   } 
 
-  .jumbo-text .lead { /* Inner Page Hero Subhead */
+  .jumbo-text .lead {
     font-size: 1.8rem;
     line-height: 1.33;
   }
     
-  .index.jumbotron .lead, 
-  .hero .row .tagline div.text h1 { /* Homepage Subheads */
+  .index.jumbotron .lead {
     font-size: 3.0rem;
     line-height: 1.33;
     text-align: left;
   }
     
-  h3 { /* Inner Page Head, List Item Head */
+  h3 {
     font-size:1.8rem;
     margin:26px 0 10px 0;
   }  
@@ -454,7 +454,9 @@ main-content .row {
 .hero .tagline div.text h1 {
   display: table-cell;
   vertical-align: middle;
-  font-size: 3em;
+  font-size: 2.75em;
+  line-height: 1.33;
+  text-align: left;
 }
 
 #gridded .feature,
@@ -478,6 +480,9 @@ main-content .row {
     height: 110px
   }
   
+  .hero .tagline div.text h1 {
+    font-size: 1.5em;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -490,6 +495,9 @@ main-content .row {
     height: 160px
   }
   
+  .hero .tagline div.text h1 {
+    font-size: 2.25em;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -502,6 +510,9 @@ main-content .row {
     height: 230px
   }
   
+  .hero .tagline div.text h1 {
+    font-size: 3em;
+  }
 }
 
 
