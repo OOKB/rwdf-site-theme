@@ -308,13 +308,14 @@ main-content .row {
   margin-bottom: 0;
   }
   
-nav.navbar a.logo {
+.navbar a.logo {
   display: block;
   float:left;
   height: auto;
   width: 139px;
 }
-nav.navbar a.logo img {
+
+.navbar a.logo img {
   display: block;
   height: auto;
   width: 139px;
@@ -326,7 +327,7 @@ nav.navbar a.logo img {
   width: 180px !important;
 }
 
-nav.navbar > .container {
+.navbar > .container {
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
@@ -349,6 +350,14 @@ nav.navbar > .container {
 
 .navbar .nav li.social a {
   padding: 0 5px;
+}
+
+.navbar .btn-navbar p {
+  color: #009AC9;
+  color:rgba(0,154,201,1); 
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
 }
 
 /*** WHO WE ARE PAGE? ***/
@@ -1063,21 +1072,7 @@ div.spruceup {
   float: left;
 }
 
-/* Fixed up navbar styles */
-.largelogosize .navbar .btn-navbar {
-  margin-top: 56px;
-}
-
-.navbar .btn-navbar p {
-  color: #009AC9;
-  color:rgba(0,154,201,1); 
-  margin: 0;
-  padding: 0;
-  text-shadow: none;
-}
-
 /** NEWS PAGE/STYLES **/
-
 .newslist time {
   color: #009AC9;
   color:rgba(0,154,201,1); 
