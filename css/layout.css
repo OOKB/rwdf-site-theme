@@ -117,15 +117,7 @@ footer {
   line-height: 1.3333;
   }
   
-  
-
 /** tweaks for @media queries */
-/* 1200 AND ABOVE // Biggie Browser */
-/* 980-1200 // Sm. Browser, Landscape Tablet */
-/* ----------- BEGIN COLLAPSED NAV ----------- */
-/* 768-979 // Portrait Tablet */
-/* 481-767 // Landscape Smartphone */
-/* 480 AND UNDER // Portrait Smartphone */
 
 @media (max-width: 767px) {  
 
@@ -134,33 +126,33 @@ footer {
     padding: 10px;
     background-color: #fff; 
     text-align: left;  
-    }
+  }
     
   .jumbo-text.inner {
     margin: 0 20px;
     padding: 10px; 
-    }
+  }
 
   .jumbo-text.inner h1 { /* Inner Page Hero Head */
     font-size: 3.0rem;
     padding: 0;
-    } 
+  } 
 
   .jumbo-text.inner .lead { /* Inner Page Hero Subhead */
     font-size: 1.8rem;
     line-height: 1.33;
-    }
+  }
     
   .index.jumbotron .lead, .hero .row .tagline div.text h1 { /* Homepage Subheads */
     font-size: 3.0rem;
     line-height: 1.33;
     text-align: left;
-    }
+  }
     
   h3 { /* Inner Page Head, List Item Head */
     font-size:1.8rem;
     margin:26px 0 10px 0;
-    }  
+  }  
 }
 
 /* CSS Document */
@@ -169,18 +161,15 @@ footer {
 /*=========================*/
 .e-breadcrumb {
   margin:0 0 10px 0;
-  }
+}
   
 body {
   padding-bottom:100px;
-  }
-
+}
 
 /* main RWDF styles -> layout, design, etc. */
 
-/** Base RWDF Color Palette **/
-/**
-
+/** Base RWDF Color Palette
 Dk Green:     rgba(110,176,0,1), #6EB000
 Blue:         rgba(0,154,201,1), #009AC9
 Gray:         rgba(185,186,184,1), #B9BAB8
@@ -192,96 +181,92 @@ orange        rgba(189,88,9,1), #BD5809
 
 **/
 
-/** Secondary Color Palette **/
-/**
-**/
-
 /* Text */
 
 a { 
   color:#6EB000;
   color:rgba(110,176,0,1); 
-  }
+}
   
 a:hover { 
   color: #009AC9;
   color:rgba(0,154,201,1); 
-  }
+}
 
 .navbar ul.nav li.active a {
   color: #009AC9;
   color: rgba(0,154,201,1);
-  }
+}
 
 h3, h4 { /* Subheads */
   color: #009AC9;
   color: rgba(0,154,201,1);
-  }
+}
   
 .plain h5 { /* Subheads */
   color:#6EB000;
   color:rgba(110,176,0,1);
-  }
+}
 
 h3.project-title a { color: #0799C8; }
 
 footer {
   color: #B9BAB8;
   color: rgba(185,186,184,1);
-  }
+}
   
 footer a {
   color: #B9BAB8;
   color:rgba(185,186,184,1)
-  }
+}
 
 /* Graphic Elements */
 hr { 
   background-color: #F8F7F7;
   background-color:rgba(248,247,247,1); 
-  }
+}
   
 .iconblue { 
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
-  }
+}
   
 .icongreen { 
   background-color:#6EB000;
   background-color:rgba(110,176,0,1); 
-  }
+}
   
 .icongray { 
   background-color: #B9BAB8;
   background-color:rgba(185,186,184,1); 
-  }
+}
 
 .icongreen:hover, .icongray:hover,
 li:hover .icongreen, li:hover .icongray { 
   background-color:#009AC9;
   background-color:rgba(0,154,201,1); 
-  }
+}
   
 .icons.categories .science , .icons.categories .arts , .icons.categories .justice, .icons.categories .scholars, .icons.categories .community, .icons.categories.bottom a {
   background-color: #B9BAB8;
   background-color:rgba(185,186,184,1); 
-  }
+}
   
 .icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover , .icons.categories .scholars:hover , .icons.categories .community:hover, .icons.categories.bottom a:hover {
   background-color:#009AC9;
   background-color:rgba(0,154,201,1); 
-  }
+}
 
 .carousel-control { 
   color: #B9BAB8;
   color:rgba(185,186,184,1);
   background-color: transparent 
-  }
+}
     
 .carousel-control:hover { 
   color:#6EB000;
   color:rgba(110,176,0,1); 
-  }
+}
 
 ul.side-nav .active p {
   color: #555555;
@@ -293,19 +278,16 @@ ul.side-nav .active img {
 
 /**/
 
-.index .hero .feature .text.green
+.index .hero .feature .text.green,
 .index .hero .row div.text.green,
 .overlay div.text.green {
   background: #A2B952 !important;
   background: rgba(162,185,82,.75) !important;
-  }
+}
 
 
 /***** Main Stuff ************************************/
 /*=========================*/
-/* this needs to be tweaked based on the media-queries from the responsive CSS file */
-/* right now it is not optimal */
-.container { margin: 0 auto 30px auto; }
 .add-top    { margin-top: 75px; }
 .add-bottom { margin-bottom: 75px; }
 
@@ -313,29 +295,28 @@ ul.side-nav .active img {
 .row-fluid {
   padding-top:25px;
   padding-bottom:0;
-  }
+}
 
 .home-content h3 {
   padding-bottom:10px;
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
-  }
+}
   
 .home-content p {
   margin-top:10px;
-  }
+}
   
 .index.jumbotron {
   background: none;
   border-bottom: none;
   margin: 0 auto;
-  }
+}
 
 .index.jumbotron .diag-divider {
   margin-bottom: 70px;
-  }
-  
+}
 
 /* Navbar */
 .navbar {
@@ -367,11 +348,11 @@ nav.navbar > .container {
   border-color: rgba(248,247,247,1); 
   margin-bottom: 0;
   padding-bottom: 20px;
-  }
+}
 
 .navbar ul.nav {
   position: relative;
-  top: 54px;
+  top: 40px;
 }
 
 .largelogosize .navbar ul.nav { top: 77px; }
