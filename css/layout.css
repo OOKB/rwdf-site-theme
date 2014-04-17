@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700,700italic|Open+Sans:300italic,400italic,700italic,400,300,700);
-/* @Font-Face declarations and basic typographic rules */
+
+/* main RWDF styles -> layout, design, etc. */
+
+/** Base RWDF Color Palette
+Dk Green:     rgba(110,176,0,1), #6EB000
+Blue:         rgba(0,154,201,1), #009AC9
+Gray:         rgba(185,186,184,1), #B9BAB8
+light gray:   rgba(248,247,247,1), #F8F7F7
+orange        rgba(189,88,9,1), #BD5809
+**/
 
 /* Base Styles */
 html {
@@ -11,12 +20,30 @@ html {
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size:1.5rem;
+  padding-bottom:100px;
+}
+
+footer {
+  font-size:1.2rem;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.25em;  
 }
+
+.add-top    { margin-top: 75px; }
+.add-bottom { margin-bottom: 75px; }
+
+.diag-divider {
+  height:40px;  
+  background: url("../media/diag.gif") repeat;
+  border-bottom: 3px solid; 
+  border-color: #f8f7f7; 
+  border-color: rgba(248,247,247,1); 
+  margin-bottom: 20px;
+  }
 
 /* Nav Styles */
 
@@ -34,48 +61,6 @@ ul.nav li {
   font-weight: 300;
 }
       
-.jumbo-text h1 { /* Inner Pages */
-  font-size:5rem;
-  margin-bottom: 10px;
-  padding:0 50px;
-  line-height: 1.125;
-} 
-      
-.jumbo-text .lead {
-  font-size:2.4rem;
-  font-weight:300;
-  line-height:1.33;
-  }
-  
-.jumbo-text {
-  margin:0 42px;
-  padding: 30px 100px;  
-  background-color: #fff;  
-  }
-  
-.jumbo-text .lead {
-  font-size:2.0rem;
-  }
-  
-.hero h1 { /* Homepage */
-  font-size:4rem;
-  margin-bottom:0;
-  line-height: 1.125;
-  }
-  
-.hero .lead {
-  font-size:2rem;
-  font-weight:300;
-  line-height:1.33;
-  }
-  
-/* Jumbotron Styles */
-.jumbotron {
-  text-align: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  }
-
 p a.btn.blog {
   width: 100%;
   padding: 15px 0;
@@ -92,21 +77,79 @@ h4 { /* Inner Page Subhead */
   margin: 15px 0 5px 0;
   }
 
-footer {
-  font-size:1.2rem;
-  line-height: 1.5;
-  }
-  
 .hero .row .tagline div.text h1 {
   display: table-cell;
   vertical-align: middle;
   font-size: 3em;
 }
+  
+/* Jumbotron */
+/* This is the big text areas on each of the sub-pages */
+/*=========================*/
+.jumbotron {
+  background: url("../media/diag.gif") repeat;
+  border-bottom: 3px solid; 
+  border-color: #f8f7f7; 
+  border-color: rgba(248,247,247,1); 
+  text-align: center;
+  }
+
+.index.jumbotron {
+  background: none;
+  border-bottom: none;
+  margin: 0 auto;
+}
+
+.index.jumbotron .diag-divider {
+  margin-bottom: 70px;
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  }
 
 .index.jumbotron .lead {
   font-size: 4.4rem;
   line-height: 1.3333;
   }
+  
+.jumbo-text h1 {
+  font-size:5rem;
+  margin-bottom: 10px;
+  padding:0 50px;
+  line-height: 1.125;
+} 
+      
+.jumbo-text .lead {
+  font-size:2.4rem;
+  font-weight:300;
+  line-height:1.33;
+}
+  
+.jumbo-text {
+  margin:0 42px;
+  padding: 30px 100px;  
+  background-color: #fff;  
+}
+  
+.jumbo-text .lead {
+  font-size:2.0rem;
+}
+
+.hero h1 { /* Homepage */
+  font-size:4rem;
+  margin-bottom:0;
+  line-height: 1.125;
+}
+  
+.hero .lead {
+  font-size:2rem;
+  font-weight:300;
+  line-height:1.33;
+}
   
 @media (max-width: 767px) {  
 
@@ -139,26 +182,8 @@ footer {
     margin:26px 0 10px 0;
   }  
 }
-  
-body {
-  padding-bottom:100px;
-}
-
-/* main RWDF styles -> layout, design, etc. */
-
-/** Base RWDF Color Palette
-Dk Green:     rgba(110,176,0,1), #6EB000
-Blue:         rgba(0,154,201,1), #009AC9
-Gray:         rgba(185,186,184,1), #B9BAB8
-light gray:   rgba(248,247,247,1), #F8F7F7
-  color:rgba(0,160,208,1);
-  
-alts:
-orange        rgba(189,88,9,1), #BD5809
-**/
 
 /* Text */
-
 a { 
   color:#6EB000;
   color:rgba(110,176,0,1); 
@@ -186,22 +211,25 @@ h3, h4 { /* Subheads */
 
 h3.project-title a { color: #0799C8; }
 
-footer {
-  color: #B9BAB8;
-  color: rgba(185,186,184,1);
-}
-  
+footer, 
 footer a {
   color: #B9BAB8;
   color:rgba(185,186,184,1)
 }
 
-/* Graphic Elements */
-hr { 
-  background-color: #F8F7F7;
-  background-color:rgba(248,247,247,1); 
-}
-  
+/* Footer */
+/*=========================*/
+footer { margin-top: 60px; }
+
+footer ul.menu { list-style: none; }
+
+.socialicon, .socialicon-color {
+  float:left;
+  margin: 5px 10px 20px 0;
+  }
+
+/* Icons, ETc. */
+/*===========================================*/
 .iconblue { 
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
@@ -259,12 +287,7 @@ ul.side-nav .active img {
   background: rgba(162,185,82,.75) !important;
 }
 
-/********** Main Stuff **********/
 /*==============================*/
-.add-top    { margin-top: 75px; }
-.add-bottom { margin-bottom: 75px; }
-
-/* lower, more general stuff */
 main-content .row {
   padding-top:25px;
   padding-bottom:0;
@@ -279,16 +302,6 @@ main-content .row {
   
 .home-content p {
   margin-top:10px;
-}
-  
-.index.jumbotron {
-  background: none;
-  border-bottom: none;
-  margin: 0 auto;
-}
-
-.index.jumbotron .diag-divider {
-  margin-bottom: 70px;
 }
 
 /* Navbar */
@@ -339,37 +352,6 @@ nav.navbar > .container {
 .navbar .nav li.social a {
   padding: 0 5px;
 }
-
-/* Jumbotron */
-/* This is the big text areas on each of the sub-pages */
-/*=========================*/
-.jumbotron {
-  background: url("../media/diag.gif") repeat;
-  border-bottom: 3px solid; 
-  border-color: #f8f7f7; 
-  border-color: rgba(248,247,247,1); 
-  text-align: center;
-  }
-
-/* Footer */
-/*=========================*/
-footer { margin-top: 60px; }
-
-.diag-divider {
-  height:40px;  
-  background: url("../media/diag.gif") repeat;
-  border-bottom: 3px solid; 
-  border-color: #f8f7f7; 
-  border-color: rgba(248,247,247,1); 
-  margin-bottom: 20px;
-  } 
-
-footer ul.menu { list-style: none; }
-
-.socialicon, .socialicon-color {
-  float:left;
-  margin: 5px 10px 20px 0;
-  }
 
 /*** WHO WE ARE PAGE? ***/
 #tab-staff .socialicon-color {
