@@ -3,7 +3,63 @@ layout : default
 ---
 
 <!-- from individual layout pages — spruceup, slideshow, textonly, singleimage -->
-{{{ content }}}
+{{ #page.images.length }}
+  <div id="slideshow">
+    <!-- big image area -->
+    {{# page.featureimg }}
+      <div class="slide"><img src="{{ . }}" /></div>
+    {{/ page.featureimg }}
+  </div>
+{{ /page.images.length }}
+
+<!-- Main Content
+================================================== -->
+<div class="container inner">
+
+  <!-- Content -->
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+      <article class="project">
+
+        {{# page.image }}
+          <div class="leadimage top text-center clearfix">
+              <img class="img-rounded span4 offset4" src="{{ page.image }}" />
+          </div>
+        {{/ page.image }}
+
+        <h2>{{ page.title }}</h2>
+
+        {{# page.images.length }}
+        <aside class="lightbox-thumbs clearfix">
+          <!-- IMAGES in the slideshow -->
+          {{# page.images }}
+            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
+              <img alt="" src="{{ . }}" />
+            </a>
+          {{/ page.images }}
+        </aside>
+        {{/ page.images.length }}
+
+        {{{ page.content }}}
+
+        <div class="icons categories bottom text-center">
+          {{# page.categories }}
+            <a href="../whatwedo/" class="{{name}}" >{{name}}</a>
+          {{/ page.categories }}
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END Main Content
+================================================== -->
+
 <!-- /END individual layout pages — spruceup, slideshow, textonly, singleimage -->
 <!-- it would actually be really great to figure out how to get the variations of template to be smart — like we did on the MFA site where different situations cause different peices to show/hide... -->
 
