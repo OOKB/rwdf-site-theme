@@ -1,5 +1,10 @@
+
+div.phone {width: 100%;}
+
 div.phone input {
   margin: 0;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 div.phone input.three {
@@ -12,6 +17,19 @@ div.phone input.four {
 
 div.phone span.one {
   width: 6.333333333333%;
+}
+
+.controls-row {
+  width:90% !important;
+  }
+
+.controls-row input,
+.controls-row label, 
+.controls-row .span4 input,
+textarea {
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 #saveForm, .btn.blog {
@@ -42,6 +60,12 @@ div.phone span.one {
 }
 
  /** tweaks for @media queries */
+/* 1200 AND ABOVE // Biggie Browser */
+/* 980-1200 // Sm. Browser, Landscape Tablet */
+/* ----------- BEGIN COLLAPSED NAV ----------- */
+/* 768-979 // Portrait Tablet */
+/* 481-767 // Landscape Smartphone */
+/* 480 AND UNDER // Portrait Smartphone */
 
 @media (max-width: 979px) {
 
