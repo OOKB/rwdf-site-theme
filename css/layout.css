@@ -682,32 +682,32 @@ ul.side-nav .active i {
 /* Project Pages */
 /*=========================*/
 
-.minus-top { 
+.controls,
+.controls div { 
   padding-top: 0; 
-}
+  position: relative;
+  z-index: 999;
+  }
 
-.minus-top, .minus-top .pager { 
-  position: relative; z-index: 999; }
-
-.minus-top .pager { 
+.controls div { 
   margin-top:0; 
   margin-bottom: 0; 
   }
 
-.minus-top .pager a { 
+.controls div a { 
   position: absolute; 
   display: block; 
   width: 100%; 
   z-index: 999; 
 }
 
-.pager a {
+.controls a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.minus-top .pager a:hover {
+.controls a:hover {
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
   color: white;
@@ -717,16 +717,16 @@ ul.side-nav .active i {
   -webkit-transition: all 300ms;
 }
 
-.prev.pager a {
+.controls .prev a {
   background: url("../media/proj-p.png") center center no-repeat;
 }
-.prev.pager a:hover {
+.controls .prev a:hover {
   background-image: url("../media/proj-p-wh.png");
 }
-.next.pager a {
+.controls .next a {
   background: url("../media/proj-n.png") center center no-repeat;
 }
-.next.pager a:hover {
+.controls .next a:hover {
   background-image: url("../media/proj-n-wh.png");
 }
 
@@ -735,19 +735,19 @@ ul.side-nav .active i {
 }
 
 @media (max-width: 767px) {
-  .minus-top .pager { 
+  .controls div { 
     position: static; 
     z-index: 999; 
     height:200px;
     margin-bottom: -30px;  
   }
-  .minus-top .pager a { 
+ .controls div  a { 
     position: relative; 
     top:0 !important;
     display: block; 
     z-index: 999;
   }
-  .pager a {
+  .controls div  a {
     text-indent: 100%;
     white-space: nowrap;
     height: 100px !important;   
@@ -755,15 +755,15 @@ ul.side-nav .active i {
     margin-top:80px;
     border-top:3px solid #F8F7F7;
   }
-  .pager::after{
+  .controls div::after{
     clear:none;
   }
-  .minus-top .prev, .minus-top .next {
+  .controls div {
     float:left;
     margin-top:30px;
     width: 50%;
   }
-  .minus-top .pager a:hover { 
+  .controls div a:hover { 
     background-color: #009AC9;
     background-color: rgba(0,154,201,1);
     color: white;
