@@ -81,8 +81,8 @@ $(window).bind("load", function() {
   var containerheight = $('.container.inner').height();
   var btnheight     = containerheight+30;
   var relpos        = (containerheight-30)*-1;
-  $('.minus-top .pager a').css('top',relpos);
-  $('.minus-top .pager a').height(btnheight);
+  $('.controls div a').css('top',relpos);
+  $('.controls div a').height(btnheight);
   
   $('.spruceuptabs .spruceuplist ul li').first().addClass('active');
   $('.spruceuptabs .tab-content > div.tab-pane').first().addClass('active');
@@ -109,8 +109,8 @@ $(document).ready(function() {
       var containerheight = $('.container.inner').height();
       var btnheight     = containerheight+30;
       var relpos        = (containerheight-30)*-1;
-      $('.minus-top .pager a').css('top',relpos);
-      $('.minus-top .pager a').height(btnheight);
+      $('.controls div a').css('top',relpos);
+      $('.controls div a').height(btnheight);
     });
   });
 });
