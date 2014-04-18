@@ -61,10 +61,10 @@ js:
 
     <ul class="col-xs-12 col-sm-10" id="projects">
       {{# page.projects._all }}
-      <li class="project brick">
+      <li class="project brick {{# categories }}{{.}}{{/ categories }}">
         <ul class="icons categories pull-right">
           {{# categories }}
-          <li class="{{.}}">
+          <li class="{{# categories }}{{.}}{{/ categories }}">
             <a href="#">{{.}}</a>
           </li>
           {{/ categories }}
