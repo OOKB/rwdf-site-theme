@@ -700,7 +700,7 @@ ul.side-nav .active i {
   right: 0; 
   display: block; 
   z-index: 999; 
-  text-indent: 100%;
+  text-indent: 300%;
   white-space: nowrap;
   overflow: hidden;
 }
