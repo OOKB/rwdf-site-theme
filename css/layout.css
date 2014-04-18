@@ -23,14 +23,6 @@ body {
   padding-bottom:100px;
 }
 
-img { max-width: 100%; }
-.accompany img { margin-top: 30px; }
-
-footer {
-  font-size:1.2rem;
-  line-height: 1.5;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.25em;  
@@ -38,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .add-top    { margin-top: 75px; }
 .add-bottom { margin-bottom: 75px; }
-.row.double {margin-left: -30px;margin-right: -30px;}
 
 .diag-divider {
   height:40px;  
@@ -48,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(248,247,247,1); 
   margin-bottom: 20px;
   }
+  
+img { max-width: 100%; }
+.accompany img { margin-top: 30px; }
+
+footer {
+  font-size:1.2rem;
+  line-height: 1.5;
+}
 
 /* Nav Styles */
 
@@ -68,8 +67,8 @@ p a.btn.blog {
 
 /* Page Styles */
 h3 { /* Inner Page Head */
-  font-size:2.4rem;
-  margin:30px 0 10px 0;
+  font-size: 2.4rem;
+  margin: 30px 0 10px 0;
   }  
 
 h4 { /* Inner Page Subhead */
@@ -115,11 +114,6 @@ h4 { /* Inner Page Subhead */
   font-size: 3.0rem;
   padding: 0;
 } 
-  
-h3 {
-  font-size:1.8rem;
-  margin:26px 0 10px 0;
-}  
 
 .index.jumbotron .lead {
   font-size: 2.4rem;
@@ -311,6 +305,10 @@ main-content .row {
 }
 
 .navbar > .container {
+  margin-bottom: 0;
+}
+
+.navbar > .container > .border-bottom{
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
@@ -687,32 +685,30 @@ ul.side-nav .active i {
 /* Project Pages */
 /*=========================*/
 
-.minus-top { 
+.controls,
+.controls div { 
   padding-top: 0; 
-}
+  position: relative;
+  z-index: 999;
+  }
 
-.minus-top, .minus-top .pager { 
-  position: relative; z-index: 999; }
-
-.minus-top .pager { 
+.controls div { 
   margin-top:0; 
   margin-bottom: 0; 
   }
 
-.minus-top .pager a { 
-  position: absolute; 
+.controls div a { 
+  position: absolute;
+  left: 0;
+  right: 0; 
   display: block; 
-  width: 100%; 
   z-index: 999; 
-}
-
-.pager a {
-  text-indent: 100%;
+  text-indent: 300%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.minus-top .pager a:hover {
+.controls div a:hover {
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
   color: white;
@@ -722,37 +718,38 @@ ul.side-nav .active i {
   -webkit-transition: all 300ms;
 }
 
-.prev.pager a {
+.controls .prev a {
   background: url("../media/proj-p.png") center center no-repeat;
 }
-.prev.pager a:hover {
+.controls .prev a:hover {
   background-image: url("../media/proj-p-wh.png");
 }
-.next.pager a {
+.controls .next a {
   background: url("../media/proj-n.png") center center no-repeat;
 }
-.next.pager a:hover {
+.controls .next a:hover {
   background-image: url("../media/proj-n-wh.png");
 }
 
 .leadimage {
   margin-bottom:30px;
+  margin-top: 30px;
 }
 
 @media (max-width: 767px) {
-  .minus-top .pager { 
+  .controls div { 
     position: static; 
     z-index: 999; 
     height:200px;
     margin-bottom: -30px;  
   }
-  .minus-top .pager a { 
+ .controls div  a { 
     position: relative; 
     top:0 !important;
     display: block; 
     z-index: 999;
   }
-  .pager a {
+  .controls div  a {
     text-indent: 100%;
     white-space: nowrap;
     height: 100px !important;   
@@ -760,15 +757,15 @@ ul.side-nav .active i {
     margin-top:80px;
     border-top:3px solid #F8F7F7;
   }
-  .pager::after{
+  .controls div::after{
     clear:none;
   }
-  .minus-top .prev, .minus-top .next {
+  .controls div {
     float:left;
     margin-top:30px;
     width: 50%;
   }
-  .minus-top .pager a:hover { 
+  .controls div a:hover { 
     background-color: #009AC9;
     background-color: rgba(0,154,201,1);
     color: white;
@@ -875,11 +872,18 @@ div.spruceup {
   }
 
 /**************************************/
+#projects {
+  list-style: none;
+}
+
 .brick {
   padding-bottom:20px;
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
+  width: 90%;
+  width: calc(100% - 30px);
+  display: inline-block;
 }
   
 .brick:last-child {

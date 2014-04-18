@@ -1,9 +1,12 @@
 ---
 layout : page
 title: "What We Do"
+js:
+  - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"
 ---
 
-  <div class="row double">
+  <div class="row">
     <div class="col-xs-12 col-sm-2">
       <ul class="side-nav" id="filters">
         <li class="active textonly">
@@ -56,12 +59,12 @@ title: "What We Do"
       </ul>
     </div>
 
-    <div class="col-xs-12 col-sm-10 isotope-area" id="projects">
+    <ul class="col-xs-12 col-sm-10 isotope-area" id="projects">
       {{# page.projects._all }}
-      <div class="project brick {{# categories }} {{.}} {{/ categories }}">
+      <li class="project brick {{# categories }} {{.}} {{/ categories }}">
         <ul class="icons categories pull-right">
           {{# categories }}
-          <li class="{{name}}">
+          <li class="{{.}}">
             <a href="#">{{.}}</a>
           </li>
           {{/ categories }}
@@ -70,13 +73,13 @@ title: "What We Do"
         <div class="project-content">
           {{{ summary }}}
         </div>
-      </div>
+      </li>
       {{/ page.projects._all }}
-    </div>
+    </ul>
   </div>
 
-  <div class="row double">
-    <p class="col-xs-12 col-sm-8 col-sm-offset-2 lead ">
+  <div class="row">
+    <p class="col-xs-12 col-md-8 col-md-offset-2 lead ">
       <a class="btn btn-large btn-info blog" href="http://rwdfblog.com" target="_blank">Additional information on many of these projects can be found on the blog</a>
     </p>
   </div>

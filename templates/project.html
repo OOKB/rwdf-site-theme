@@ -2,104 +2,104 @@
 layout : default
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
-  - "//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140216/jquery.cycle2.min.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"
 ---
 
 <!-- from individual layout pages — spruceup, slideshow, textonly, singleimage -->
-{{ #page.images.length }}
-  <div id="slideshow">
-    <!-- big image area -->
-    {{# page.featureimg }}
-      <div class="slide"><img src="{{ page.featureimg }}" /></div>
-    {{/ page.featureimg }}
+{{# page.images.length }}
+  <div class="row">
+    <div id="slideshow">
+      <!-- big image area -->
+      {{# page.featureimg }}
+        <div class="slide"><img src="{{ page.featureimg }}" /></div>
+      {{/ page.featureimg }}
+    </div>
   </div>
-{{ /page.images.length }}
+{{/ page.images.length }}
 
 <!-- Main Content
 ================================================== -->
-<div class="container inner">
 
-  <!-- Content -->
-  <div class="row">
+<!-- Content -->
+<div class="row project">
 
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2">
 
-      <article class="project">
+    <article class="writeup">
 
-        {{# page.image }}
-          <div class="leadimage top text-center clearfix">
-              <img class="img-rounded span4 offset4" src="{{ page.image }}" />
-          </div>
-        {{/ page.image }}
+      {{# page.image }}
+        <div class="leadimage text-center row">
+            <img class="col-xs-12 col-sm-6 col-sm-offset-3" src="{{ page.image }}" />
+        </div>
+      {{/ page.image }}
 
-        <h2>{{ page.title }}</h2>
+      <h2>{{ page.title }}</h2>
 
-        {{# page.images.length }}
+      {{# page.images.length }}
+      <aside class="lightbox-thumbs clearfix">
+        <!-- IMAGES in the slideshow -->
+        {{# page.images }}
+          <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
+            <img alt="" src="{{ . }}" />
+          </a>
+        {{/ page.images }}
+      </aside>
+      {{/ page.images.length }}
+
+      {{# page.spruceup}}
         <aside class="lightbox-thumbs clearfix">
           <!-- IMAGES in the slideshow -->
-          {{# page.images }}
-            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
-              <img alt="" src="{{ . }}" />
+          {{# spruceups }}
+            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
+              <img alt="" src="{{ image }}" />
             </a>
-          {{/ page.images }}
+          {{/ spruceups }}
         </aside>
-        {{/ page.images.length }}
+      {{/ page.spruceup}}
 
-        {{# page.spruceup}}
-          <aside class="lightbox-thumbs clearfix">
-            <!-- IMAGES in the slideshow -->
-            {{# spruceups }}
-              <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
-                <img alt="" src="{{ image }}" />
-              </a>
-            {{/ spruceups }}
-          </aside>
-        {{/ page.spruceup}}
+      {{{ page.content }}}
 
-        {{{ page.content }}}
-
-        {{# page.spruceup }}
-        <!-- Spruce Up Projects Tabs!
-        ================================================== -->
-        <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
-        <div class="tabbable spruceuptabs">
-          <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
-            <ul class="side-nav">
-            {{# spruceups }}
-              <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
-            {{/ spruceups }}
-            </ul>
-          </div>
-          <!-- start tabbed "pages" column... -->
-          <div class="tab-content col-xs-12 col-sm-8">
-            <!-- Spruceups All!!
-            ================================================== -->
-            {{# spruceups }}
-              <div class="tab-pane" id="tab-{{tabid}}">
-                <div class="">
-                  <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
-                  <h3>{{title}}</h3>
-                  {{{ content }}}
-                </div>
-              </div>
-            {{/ spruceups }}
-
-          </div>
-          <!-- end tabbed "pages" column... -->
-        </div><!-- / END tabbable -->
-        <!-- ==================================================
-             END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
-        {{/ page.spruceup }}
-
-        <div class="icons categories bottom text-center">
-          {{# page.categories }}
-            <a href="/whatwedo/" class="{{.}}" >{{.}}</a>
-          {{/ page.categories }}
+      {{# page.spruceup }}
+      <!-- Spruce Up Projects Tabs!
+      ================================================== -->
+      <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
+      <div class="tabbable spruceuptabs">
+        <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
+          <ul class="side-nav">
+          {{# spruceups }}
+            <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
+          {{/ spruceups }}
+          </ul>
         </div>
+        <!-- start tabbed "pages" column... -->
+        <div class="tab-content col-xs-12 col-sm-8">
+          <!-- Spruceups All!!
+          ================================================== -->
+          {{# spruceups }}
+            <div class="tab-pane" id="tab-{{tabid}}">
+              <div class="">
+                <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
+                <h3>{{title}}</h3>
+                {{{ content }}}
+              </div>
+            </div>
+          {{/ spruceups }}
 
-      </article>
+        </div>
+        <!-- end tabbed "pages" column... -->
+      </div><!-- / END tabbable -->
+      <!-- ==================================================
+           END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
+      {{/ page.spruceup }}
 
-    </div>
+      <div class="icons categories bottom text-center">
+        {{# page.categories }}
+          <a href="/whatwedo/" class="{{.}}" >{{.}}</a>
+        {{/ page.categories }}
+      </div>
+
+    </article>
 
   </div>
 
@@ -107,27 +107,18 @@ js:
 <!-- END Main Content
 ================================================== -->
 
-<!-- /END individual layout pages — spruceup, slideshow, textonly, singleimage -->
-<!-- it would actually be really great to figure out how to get the variations of template to be smart — like we did on the MFA site where different situations cause different peices to show/hide... -->
-
-
 <!-- Navigation Prev/Next
 ================================================== -->
-<div class="container inner">
+<div class="row minus-top controls">
 
-  <div class="row minus-top">
+  {{# page._next }}
+    <div class="next col-xs-6 col-sm-2"><a href="/whatwedo/{{_filename}}" title="{{ title }}">Next &rarr;</a></div>
+  {{/ page._next }}
 
-    {{# page._next }}
-      <div class="next col-xs-6 col-sm-2 pager"><a href="/whatwedo/{{_filename}}" title="{{ title }}">Next &rarr;</a></div>
-    {{/ page._next }}
-
-    {{# page._previous }}
-      <div class="prev previous col-xs-6 col-sm-2 col-sm-offset-8 pager"><a href="/whatwedo/{{_filename}}" title="{{ title }}">&larr; Previous</a></div>
-    {{/ page._previous }}
-
-  </div>
-  <!-- this is presumably for each individual post -->
+  {{# page._previous }}
+    <div class="prev previous col-xs-6 col-sm-2 col-sm-offset-8"><a href="/whatwedo/{{_filename}}" title="{{ title }}">&larr; Previous</a></div>
+  {{/ page._previous }}
 
 </div>
-<!-- Navigation Prev/Next
+<!-- /end Navigation Prev/Next
 ================================================== -->
