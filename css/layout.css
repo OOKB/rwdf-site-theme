@@ -699,15 +699,12 @@ ul.side-nav .active i {
   display: block; 
   width: 100%; 
   z-index: 999; 
-}
-
-.controls a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.controls a:hover {
+.controls div a:hover {
   background-color: #009AC9;
   background-color: rgba(0,154,201,1);
   color: white;
