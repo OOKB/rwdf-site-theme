@@ -80,7 +80,7 @@ $(window).bind("load", function() {
   // subtract height of projects so prev/next buttons show up in right places
   var projectheight = $('.row.project').height();
   var btnheight     = projectheight+60;
-  var relpos        = (projectheight-60)*-1;
+  var relpos        = (projectheight)*-1;
   $('.controls div a').css('top',relpos);
   $('.controls div a').height(btnheight);
   
@@ -108,7 +108,7 @@ $(document).ready(function() {
       // subtract height of projects so prev/next buttons show up in right places
       var projectheight = $('.row.project').height();
       var btnheight     = projectheight+60;
-      var relpos        = (projectheight-60)*-1;
+      var relpos        = (projectheight)*-1;
       $('.controls div a').css('top',relpos);
       $('.controls div a').height(btnheight);
     });
