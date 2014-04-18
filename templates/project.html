@@ -18,89 +18,86 @@ js:
 
 <!-- Main Content
 ================================================== -->
-<div class="container inner">
 
-  <!-- Content -->
-  <div class="row">
+<!-- Content -->
+<div class="row">
 
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2">
 
-      <article class="project">
+    <article class="project">
 
-        {{# page.image }}
-          <div class="leadimage top text-center clearfix">
-              <img class="img-rounded span4 offset4" src="{{ page.image }}" />
-          </div>
-        {{/ page.image }}
+      {{# page.image }}
+        <div class="leadimage top text-center clearfix">
+            <img class="img-rounded span4 offset4" src="{{ page.image }}" />
+        </div>
+      {{/ page.image }}
 
-        <h2>{{ page.title }}</h2>
+      <h2>{{ page.title }}</h2>
 
-        {{# page.images.length }}
+      {{# page.images.length }}
+      <aside class="lightbox-thumbs clearfix">
+        <!-- IMAGES in the slideshow -->
+        {{# page.images }}
+          <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
+            <img alt="" src="{{ . }}" />
+          </a>
+        {{/ page.images }}
+      </aside>
+      {{/ page.images.length }}
+
+      {{# page.spruceup}}
         <aside class="lightbox-thumbs clearfix">
           <!-- IMAGES in the slideshow -->
-          {{# page.images }}
-            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
-              <img alt="" src="{{ . }}" />
+          {{# spruceups }}
+            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
+              <img alt="" src="{{ image }}" />
             </a>
-          {{/ page.images }}
+          {{/ spruceups }}
         </aside>
-        {{/ page.images.length }}
+      {{/ page.spruceup}}
 
-        {{# page.spruceup}}
-          <aside class="lightbox-thumbs clearfix">
-            <!-- IMAGES in the slideshow -->
-            {{# spruceups }}
-              <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
-                <img alt="" src="{{ image }}" />
-              </a>
-            {{/ spruceups }}
-          </aside>
-        {{/ page.spruceup}}
+      {{{ page.content }}}
 
-        {{{ page.content }}}
-
-        {{# page.spruceup }}
-        <!-- Spruce Up Projects Tabs!
-        ================================================== -->
-        <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
-        <div class="tabbable spruceuptabs">
-          <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
-            <ul class="side-nav">
-            {{# spruceups }}
-              <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
-            {{/ spruceups }}
-            </ul>
-          </div>
-          <!-- start tabbed "pages" column... -->
-          <div class="tab-content col-xs-12 col-sm-8">
-            <!-- Spruceups All!!
-            ================================================== -->
-            {{# spruceups }}
-              <div class="tab-pane" id="tab-{{tabid}}">
-                <div class="">
-                  <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
-                  <h3>{{title}}</h3>
-                  {{{ content }}}
-                </div>
-              </div>
-            {{/ spruceups }}
-
-          </div>
-          <!-- end tabbed "pages" column... -->
-        </div><!-- / END tabbable -->
-        <!-- ==================================================
-             END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
-        {{/ page.spruceup }}
-
-        <div class="icons categories bottom text-center">
-          {{# page.categories }}
-            <a href="/whatwedo/" class="{{.}}" >{{.}}</a>
-          {{/ page.categories }}
+      {{# page.spruceup }}
+      <!-- Spruce Up Projects Tabs!
+      ================================================== -->
+      <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
+      <div class="tabbable spruceuptabs">
+        <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
+          <ul class="side-nav">
+          {{# spruceups }}
+            <li><a href="#tab-{{tabid}}" data-disqus-identifier="{{url}}" data-toggle="tab">{{ title }}</a></li>
+          {{/ spruceups }}
+          </ul>
         </div>
+        <!-- start tabbed "pages" column... -->
+        <div class="tab-content col-xs-12 col-sm-8">
+          <!-- Spruceups All!!
+          ================================================== -->
+          {{# spruceups }}
+            <div class="tab-pane" id="tab-{{tabid}}">
+              <div class="">
+                <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
+                <h3>{{title}}</h3>
+                {{{ content }}}
+              </div>
+            </div>
+          {{/ spruceups }}
 
-      </article>
+        </div>
+        <!-- end tabbed "pages" column... -->
+      </div><!-- / END tabbable -->
+      <!-- ==================================================
+           END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
+      {{/ page.spruceup }}
 
-    </div>
+      <div class="icons categories bottom text-center">
+        {{# page.categories }}
+          <a href="/whatwedo/" class="{{.}}" >{{.}}</a>
+        {{/ page.categories }}
+      </div>
+
+    </article>
 
   </div>
 
