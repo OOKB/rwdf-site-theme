@@ -16,6 +16,11 @@ js:
             </a>
           </div>
         </li>
+          {{# categories }}
+          <li class="{{.}}">
+            <a href="#">{{.}}</a>
+          </li>
+          {{/ categories }}
         <li class="icons">
           <div>
             <a href="#filter=.science" >
