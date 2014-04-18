@@ -62,7 +62,7 @@ $(document).ready(function() {
 
 });
 
-$(window).resize(function() {
+$(window).bind("load", function() {
   var ww = $(window).width();
   var wh = $(window).height();
 
@@ -76,6 +76,17 @@ $(window).resize(function() {
   
 });
 
+//Working on making sidebar navigation follow active trail.
+$("#filters a").click(function() {
+  $("#filters").find('li.active').removeClass('active');
+  $(this).parent().parent().addClass('active');
+});
+
+// FancyBox
+$(document).ready(function() {
+  $('.fancybox').fancybox();
+});
+
 $(window).bind("load", function() {
   // subtract height of projects so prev/next buttons show up in right places
   var projectheight = $('.row.project').height();
@@ -86,17 +97,6 @@ $(window).bind("load", function() {
   
   $('.spruceuptabs .spruceuplist ul li').first().addClass('active');
   $('.spruceuptabs .tab-content > div.tab-pane').first().addClass('active');
-});
-
-//Working on making sidebar navigation follow active trail.
-$("#filters a").click(function() {
-  $("#filters").find('li.active').removeClass('active');
-  $(this).parent().parent().addClass('active');
-});
-
-// FancyBox
-$(document).ready(function() {
-  $('.fancybox').fancybox();
 });
 
 // spruceup box behaviors
