@@ -1,5 +1,4 @@
 $(document).ready(function() {
-/* temporarily disable
   //prepare whatwedo feed for isotope...
   $('.icons.categories .science a').attr('href', '#filter=.science');
   $('.icons.categories .scholars a').attr('href', '#filter=.scholars');
@@ -46,7 +45,6 @@ $(document).ready(function() {
   })
   // trigger hashchange to capture any hash data on init
   .trigger('hashchange');
-*/
 
 });
 
@@ -129,9 +127,3 @@ $('#myTab a[href="' + hash + '"]').tab('show');
 
 ////////////////////
 
-//trying out list.js
-var options = {
-    valueNames: [ 'category', 'project-title' ]
-};
-
-var projectList = new List('projects', options);
