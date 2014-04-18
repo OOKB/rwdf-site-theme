@@ -22,12 +22,6 @@ js:
           </li>
           {{/ categories }}
         <li class="icons">
-          <button class="sort" data-sort="category">
-            Sort by Category
-          </button>
-          <button class="sort" data-sort="project-title">
-            Sort by Title
-          </button>
           <div>
             <a href="#filter=.science" >
               <i class="icon-science icongreen iconsidenav"></i>
@@ -71,6 +65,12 @@ js:
     </div>
 
     <ul class="col-xs-12 col-sm-10" id="projects">
+      <button class="sort" data-sort="category">
+        Sort by Category
+      </button>
+      <button class="sort" data-sort="project-title">
+        Sort by Title
+      </button>
       {{# page.projects._all }}
       <li class="project brick {{# categories }}{{.}}{{/ categories }}">
         <ul class="icons categories pull-right">
