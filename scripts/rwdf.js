@@ -126,3 +126,11 @@ $("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
 var hash = window.location.hash;
 $('#myTab a[href="' + hash + '"]').tab('show');
 
+////////////////////
+
+//trying out list.js
+var options = {
+    valueNames: [ 'name', 'city' ]
+};
+
+var hackerList = new List('hacker-list', options);

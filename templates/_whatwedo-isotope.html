@@ -3,6 +3,7 @@ layout : page
 title: "What We Do"
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"
   - "//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"
 ---
 
@@ -59,9 +60,9 @@ js:
       </ul>
     </div>
 
-    <ul class="col-xs-12 col-sm-10" id="projects">
+    <div class="col-xs-12 col-sm-10 isotope-area" id="projects">
       {{# page.projects._all }}
-      <li class="project brick">
+      <div class="project brick {{# categories }} {{.}} {{/ categories }}">
         <ul class="icons categories pull-right">
           {{# categories }}
           <li class="{{name}}">
@@ -73,9 +74,9 @@ js:
         <div class="project-content">
           {{{ summary }}}
         </div>
-      </li>
+      </div>
       {{/ page.projects._all }}
-    </uk=l>
+    </div>
   </div>
 
   <div class="row double">
