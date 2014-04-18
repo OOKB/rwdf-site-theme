@@ -23,14 +23,6 @@ body {
   padding-bottom:100px;
 }
 
-img { max-width: 100%; }
-.accompany img { margin-top: 30px; }
-
-footer {
-  font-size:1.2rem;
-  line-height: 1.5;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.25em;  
@@ -48,6 +40,14 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(248,247,247,1); 
   margin-bottom: 20px;
   }
+  
+img { max-width: 100%; }
+.accompany img { margin-top: 30px; }
+
+footer {
+  font-size:1.2rem;
+  line-height: 1.5;
+}
 
 /* Nav Styles */
 
