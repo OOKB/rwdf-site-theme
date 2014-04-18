@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+/* temporarily disable
   //prepare whatwedo feed for isotope...
   $('.icons.categories .science a').attr('href', '#filter=.science');
   $('.icons.categories .scholars a').attr('href', '#filter=.scholars');
@@ -46,6 +46,7 @@ $(document).ready(function() {
   })
   // trigger hashchange to capture any hash data on init
   .trigger('hashchange');
+*/
 
 });
 
