@@ -79,8 +79,8 @@ $(window).resize(function() {
 $(window).bind("load", function() {
   // subtract height of projects so prev/next buttons show up in right places
   var projectheight = $('.row.project').height();
-  var btnheight     = projectheight+30;
-  var relpos        = (projectheight-30)*-1;
+  var btnheight     = projectheight+60;
+  var relpos        = (projectheight-60)*-1;
   $('.controls div a').css('top',relpos);
   $('.controls div a').height(btnheight);
   
@@ -107,8 +107,8 @@ $(document).ready(function() {
     $('.spruceuptabs').toggle('slow', function() {
       // subtract height of projects so prev/next buttons show up in right places
       var projectheight = $('.row.project').height();
-      var btnheight     = projectheight+30;
-      var relpos        = (projectheight-30)*-1;
+      var btnheight     = projectheight+60;
+      var relpos        = (projectheight-60)*-1;
       $('.controls div a').css('top',relpos);
       $('.controls div a').height(btnheight);
     });
