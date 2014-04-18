@@ -22,6 +22,12 @@ js:
           </li>
           {{/ categories }}
         <li class="icons">
+          <button class="sort" data-sort="category">
+            Sort by Category
+          </button>
+          <button class="sort" data-sort="project-title">
+            Sort by Title
+          </button>
           <div>
             <a href="#filter=.science" >
               <i class="icon-science icongreen iconsidenav"></i>
@@ -70,7 +76,7 @@ js:
         <ul class="icons categories pull-right">
           {{# categories }}
           <li class="{{.}}">
-            <a href="#">{{.}}</a>
+            <a href="#" class="category">{{.}}</a>
           </li>
           {{/ categories }}
         </ul>

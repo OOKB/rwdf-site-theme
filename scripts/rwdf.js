@@ -131,7 +131,7 @@ $('#myTab a[href="' + hash + '"]').tab('show');
 
 //trying out list.js
 var options = {
-    valueNames: [ 'name', 'city' ]
+    valueNames: [ 'category', 'project-title' ]
 };
 
-var hackerList = new List('hacker-list', options);
+var projectList = new List('projects', options);
