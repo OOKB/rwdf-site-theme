@@ -8,11 +8,13 @@ js:
 
 <!-- from individual layout pages — spruceup, slideshow, textonly, singleimage -->
 {{ #page.images.length }}
-  <div id="slideshow">
-    <!-- big image area -->
-    {{# page.featureimg }}
-      <div class="slide"><img src="{{ page.featureimg }}" /></div>
-    {{/ page.featureimg }}
+  <div class="row">
+    <div id="slideshow">
+      <!-- big image area -->
+      {{# page.featureimg }}
+        <div class="slide"><img src="{{ page.featureimg }}" /></div>
+      {{/ page.featureimg }}
+    </div>
   </div>
 {{ /page.images.length }}
 
