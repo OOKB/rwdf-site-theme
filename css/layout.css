@@ -297,21 +297,33 @@ ul.nav li {
   float:left;
 }
 
+.navbar-nav > li > a {
+  padding: 5px 10px;
+}
+
 .navbar .nav li.social, 
 .navbar .nav li.social a {
   margin: 0;
   padding: 0;
 }
 
-.navbar-nav > li > a {
-  padding: 0px 15px;
-}
+@media (max-width: 768px) {
+  .navbar .nav li.social {
+    display: inline-block;
+    padding-left: 5px
+  }
 
-.navbar .nav li.social a {
-  padding: 0px 15px;
+  .navbar .nav li.social a {
+    padding: 5px;
+  }
 }
 
 @media (min-width: 768px) {
+  .navbar ul.nav {
+    position: relative;
+    top: 40px;
+  }
+  
   .navbar-nav > li > a {
     padding: 15px 5px;
   }
@@ -349,11 +361,6 @@ ul.nav li {
   border-color: rgba(248,247,247,1); 
   margin-bottom: 0;
   padding-bottom: 20px;
-}
-
-.navbar ul.nav {
-  position: relative;
-  top: 40px;
 }
 
 .navbar .btn-navbar p {
