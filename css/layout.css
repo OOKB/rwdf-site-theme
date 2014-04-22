@@ -306,6 +306,10 @@ main-content .row {
   padding: 0;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+}
+
 .navbar > .container {
   margin-bottom: 0;
 }
