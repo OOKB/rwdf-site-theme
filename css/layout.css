@@ -371,6 +371,18 @@ ul.nav li {
   text-shadow: none;
 }
 
+.navbar-toggle {
+  border: 3px solid #f8f7f7;
+  border-radius: 6px;
+  top: 32px;
+  margin: 0;
+}
+
+.navbar-toggle p {
+  margin: 0;
+  text-transform: uppercase;
+}
+
 /*** WHO WE ARE PAGE? ***/
 #tab-staff .socialicon-color {
   float:none;
