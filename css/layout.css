@@ -298,12 +298,17 @@ main-content .row {
 }
 
 .navbar-nav > li > a {
-  padding: 0 15px;
+  padding: 10px 15px;
 }
 
 .navbar .nav li.social, 
 .navbar .nav li.social a {
+  margin: 0;
   padding: 0;
+}
+
+.navbar .nav li.social a {
+  padding: 10px 5px;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -324,7 +329,7 @@ main-content .row {
 
 .navbar ul.nav {
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 
 .largelogosize .navbar ul.nav { top: 77px; }
