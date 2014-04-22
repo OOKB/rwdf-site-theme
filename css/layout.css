@@ -304,11 +304,21 @@ ul.nav li {
 }
 
 .navbar-nav > li > a {
-  padding: 15px 5px;
+  padding: 0px 15px;
 }
 
 .navbar .nav li.social a {
-  padding: 15px 3px;
+  padding: 0px 15px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 15px 5px;
+  }
+  
+  .navbar .nav li.social a {
+    padding: 15px 3px;
+  }
 }
 
 @media (min-width: 992px) {
