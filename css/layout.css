@@ -286,23 +286,24 @@ main-content .row {
   margin-bottom: 0;
   }
   
-.navbar a.logo {
-  display: block;
-  float:left;
-  height: auto;
-  width: 139px;
-}
-
+.navbar a.logo,
 .navbar a.logo img {
   display: block;
   height: auto;
   width: 139px;
 }
 
-.largelogosize nav.navbar a.logo,
-.largelogosize nav.navbar a.logo img {
-  height: auto;
-  width: 180px !important;
+.navbar a.logo {
+  float:left;
+}
+
+.navbar-nav > li > a {
+  padding: 0 15px;
+}
+
+.navbar .nav li.social, 
+.navbar .nav li.social a {
+  padding: 0;
 }
 
 .navbar > .container {
@@ -324,15 +325,6 @@ main-content .row {
 
 .largelogosize .navbar ul.nav { top: 77px; }
 .largelogosize .navbar > .container { border: none; }
-
-.navbar .nav li.social {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar .nav li.social a {
-  padding: 0 5px;
-}
 
 .navbar .btn-navbar p {
   color: #009AC9;
