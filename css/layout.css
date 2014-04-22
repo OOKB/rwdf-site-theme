@@ -51,11 +51,6 @@ footer {
 
 /* Nav Styles */
 
-ul.nav li {
-  font-size:1.8rem;
-  font-weight:300;
-}
-  
 .side-nav ul li {
   font-size: 1.4rem; 
 }
@@ -286,6 +281,11 @@ main-content .row {
   margin-bottom: 0;
   }
   
+ul.nav li {
+  font-size:1.5rem;
+  font-weight:300;
+}
+    
 .navbar a.logo,
 .navbar a.logo img {
   display: block;
@@ -297,18 +297,32 @@ main-content .row {
   float:left;
 }
 
-.navbar-nav > li > a {
-  padding: 10px 15px;
-}
-
 .navbar .nav li.social, 
 .navbar .nav li.social a {
   margin: 0;
   padding: 0;
 }
 
+.navbar-nav > li > a {
+  padding: 15px 5px;
+}
+
 .navbar .nav li.social a {
-  padding: 10px 5px;
+  padding: 15px 3px;
+}
+
+@media (min-width: 992px) {
+  ul.nav li {
+    font-size:1.8rem;
+  }
+    
+  .navbar-nav > li > a {
+    padding: 15px 15px;
+  }
+  
+  .navbar .nav li.social a {
+    padding: 15px 5px;
+  }
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
