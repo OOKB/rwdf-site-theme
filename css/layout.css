@@ -329,11 +329,8 @@ main-content .row {
 
 .navbar ul.nav {
   position: relative;
-  top: 50px;
+  top: 40px;
 }
-
-.largelogosize .navbar ul.nav { top: 77px; }
-.largelogosize .navbar > .container { border: none; }
 
 .navbar .btn-navbar p {
   color: #009AC9;
