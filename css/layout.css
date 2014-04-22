@@ -332,8 +332,8 @@ ul.nav li {
     padding: 15px 3px;
   }
 
-  .navbar .nav li.social:first-child {
-    margin-left: 15px;
+  .navbar .nav li.blog) {
+    margin-right: 7px;
   }
 }
 
@@ -348,6 +348,10 @@ ul.nav li {
   
   .navbar .nav li.social a {
     padding: 15px 5px;
+  }
+
+  .navbar .nav li.blog) {
+    margin-right: 15px;
   }
 }
 
