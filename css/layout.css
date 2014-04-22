@@ -1100,6 +1100,7 @@ div.spruceup {
 @media (max-width: 768px) {
   .jumbotron { margin-bottom: 0; }
   footer {margin-top: 30px;}
+  .accompany img, #staff aside img { margin-top: 0; }
 }
 
 
