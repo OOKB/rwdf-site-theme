@@ -331,6 +331,10 @@ ul.nav li {
   .navbar .nav li.social a {
     padding: 15px 3px;
   }
+
+  .navbar .nav li.social:first-child {
+    margin-left: 15px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -395,9 +399,6 @@ ul.nav li {
 }
 
 .tab-pane h3 { margin-top: 22px; }
-
-
-
 
 /*=========================*/
 /*=========================*/
