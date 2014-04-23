@@ -19,10 +19,6 @@ div.phone span.one {
   width: 6.333333333333%;
 }
 
-.controls-row {
-  width:90% !important;
-  }
-
 .controls-row input,
 .controls-row label, 
 .controls-row .span4 input,
@@ -57,36 +53,4 @@ textarea {
   background: #395b00;
   color: #F3F3F3;
   color: rgba(243,243,243,1);
-}
-
- /** tweaks for @media queries */
-/* 1200 AND ABOVE // Biggie Browser */
-/* 980-1200 // Sm. Browser, Landscape Tablet */
-/* ----------- BEGIN COLLAPSED NAV ----------- */
-/* 768-979 // Portrait Tablet */
-/* 481-767 // Landscape Smartphone */
-/* 480 AND UNDER // Portrait Smartphone */
-
-@media (max-width: 979px) {
-
-.controls-row {
-  width:100% !important;
-  }
-  
-#field10, #field10-1 {
-  width:20% !important;
-  }
-  
-}
-
-@media (max-width: 767px) {
-
-.controls-row {
-  width:100% !important;
-  }
-  
-.row-fluid .controls-row [class*="span"] + [class*="span"] {
-  margin:0 !important;
-  }  
-  
 }
