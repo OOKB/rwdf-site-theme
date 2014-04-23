@@ -1114,6 +1114,7 @@ div.spruceup {
   .jumbotron { margin-bottom: 0; }
   .jumbotron h1 { margin: 0; padding: 15px 15px 0; }
   .jumbotron .lead { margin: 0; padding: 15px 15px 30px; }
+  .index .jumbotron .lead { padding: 0; }
   .accompany img, #staff aside img { margin-top: 0; }
   footer {margin-top: 30px;}
   .add-top { margin-top: 30px; }
@@ -1128,6 +1129,10 @@ div.spruceup {
   ul.side-nav .icons i.icon-arts,
   ul.side-nav .icons i.icon-justice,
   ul.side-nav .icons i.icon-community  { margin-left: auto; }
+  .newslist p.date { margin-top: 15px; text-align: left; }
+  .sidebar { padding: 15px; margin: 15px 15px 0; width: calc(100% - 30px); }
+  .wufoo .controls div { height: auto; }
+  .wufoo .controls div input { width: 100%; }
 }
 
 
