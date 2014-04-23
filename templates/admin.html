@@ -1,0 +1,33 @@
+---
+css:
+  - "http://cape.ookb.co/css/rwdffeed.css"
+js:
+  - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.0/list.min.js"
+  - "http://templates.cape.io/js/libs/RubaXa/Sortable/Sortable.min.js"
+---
+
+<h2>Projects</h2>
+<div class="row" id="projects">
+</div>
+
+<script id="projects-template" type="text/x-mustache-template">
+  <!-- // LISTING OF RWDF PROJECTS -->
+  <ul id="project-list">
+  {{#projects}}
+    <li class="col-12 col-sm-6 col-med-4 col-lg-3 cape-picker block" id="{{_id}}">
+
+      <h3>{{featuretitle}}</h3>
+      {{# featureimg }}
+        <img src="{{{featureimg}}}" alt="{{featuretitle}}"/>
+      {{/ featureimg}}
+      {{# featureblurb }}
+        <p>{{featureblurb}}</p>
+      {{/ featureblurb }}
+      <small>{{title}}</small>
+
+    </li>
+  {{/projects}}
+  </ul>
+</script>
