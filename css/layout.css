@@ -704,13 +704,19 @@ ul.side-nav .iconsidenav {
     text-align: center;
   }
   #filters li.icons div, #filters li.icons a { display:block; margin: 0; padding: 0; }
-  #filters li.icons a { padding: 5px 0; }
+  #filters li.icons a { padding: 5px 0; text-align: center; }
   #filters li.icons p { display: none; }
   #filters li:first-child {
     text-align: center;
     display: block;
     width: 100%;
   }
+
+  ul.side-nav .icons i {
+    display: block;
+    margin: 0 auto;
+  }
+
 }
 
 @media (min-width: 767px) {
@@ -1117,6 +1123,11 @@ div.spruceup {
   .brick ul.categories.pull-right { float: none !important; }
   .project h3 { margin-top: 0; }
   p a.btn.blog { display: inline; white-space: normal; padding: 0; background: transparent; color: #6EB000; color: rgba(110,176,0,1); }
+  ul.side-nav .icons i.icon-science,
+  ul.side-nav .icons i.icon-scholars,
+  ul.side-nav .icons i.icon-arts,
+  ul.side-nav .icons i.icon-justice,
+  ul.side-nav .icons i.icon-community  { margin-left: 0; }
 }
 
 
