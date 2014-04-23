@@ -40,7 +40,7 @@ $(document).ready(function() {
   });
 
   $(window).bind( 'hashchange', function( event ){
-    if ($.deparam.fragment) {
+    if ($.deparam && $.deparam.fragment) {
       // get options object from hash
       var hashOptions = $.deparam.fragment();
       // apply options from hash
