@@ -487,7 +487,7 @@ ul.nav li {
 
 #gridded .feature,
 #gridded .col-sm-4 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   height: 150px
 }
 
@@ -498,12 +498,17 @@ ul.nav li {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #gridded .feature,
+  #gridded .col-sm-4 {
+    margin-bottom: 30px;
+  }
+
   #gridded .feature {
     height: 250px;
   }
   
   #gridded .col-sm-4 {
-    height: 110px
+    height: 110px;
   }
   
   .hero .tagline div.text h1 {
@@ -1099,8 +1104,11 @@ div.spruceup {
 
 @media (max-width: 768px) {
   .jumbotron { margin-bottom: 0; }
-  footer {margin-top: 30px;}
+  .jumbotron h1, .jumbtron .lead { margin: 0; padding: 15px; }
   .accompany img, #staff aside img { margin-top: 0; }
+  footer {margin-top: 30px;}
+  .add-top    { margin-top: 30px; }
+  .add-bottom { margin-bottom: 30px; }
 }
 
 
