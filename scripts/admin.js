@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   var endpoint = '/whatwedo/projects.json';
   $.getJSON(endpoint, function(data) {
