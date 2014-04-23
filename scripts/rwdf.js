@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('.icons.categories a.community').attr('href', '/whatwedo/#filter=.community');
 
   var $container = $('#projects');
-  if ($container) {
+  if ($container && $container.isotope) {
     $container.isotope({ layoutMode : 'fitRows' });
   }
 
