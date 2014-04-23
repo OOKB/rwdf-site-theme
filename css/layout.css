@@ -1127,7 +1127,7 @@ div.spruceup {
   ul.side-nav .icons i.icon-scholars,
   ul.side-nav .icons i.icon-arts,
   ul.side-nav .icons i.icon-justice,
-  ul.side-nav .icons i.icon-community  { margin-left: 0; }
+  ul.side-nav .icons i.icon-community  { margin-left: auto; }
 }
 
 
