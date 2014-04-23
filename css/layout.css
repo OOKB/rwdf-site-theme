@@ -962,11 +962,13 @@ div.spruceup {
   width: calc(100% - 30px);
   display: inline-block;
 }
-  
-.brick:last-child {
-  padding-bottom:60px;
-  border-bottom: none; 
-  }
+
+@media (min-width: 768px) {
+  .brick:last-child {
+    padding-bottom:60px;
+    border-bottom: none; 
+    }
+}
 
 .brick .tags {
   display: block;
@@ -1108,10 +1110,11 @@ div.spruceup {
   .jumbotron .lead { margin: 0; padding: 15px 15px 30px; }
   .accompany img, #staff aside img { margin-top: 0; }
   footer {margin-top: 30px;}
-  .add-top    { margin-top: 30px; }
+  .add-top { margin-top: 30px; }
   .add-bottom { margin-bottom: 30px; }
   #filters {padding-top: 15px;}
-  .brick:last-child { padding-bottom: 15px; }
+  .brick ul.categories { margin: 0; padding: 10px; }
+  .brick ul.categories.pull-right { float: none !important; }
 }
 
 
