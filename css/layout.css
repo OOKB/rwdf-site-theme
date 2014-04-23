@@ -454,15 +454,11 @@ ul.nav li {
   margin-bottom: 0;
 }
 
-.overlay h3 {
-  margin: 0;
-  padding: 10px;
-}
-
 .overlay h3,
 .overlay h3 a { 
   color: white; 
   font-weight: 400; 
+  margin: 0; 
 }
 
 .hero .tagline h1 {
