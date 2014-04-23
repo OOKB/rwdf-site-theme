@@ -1104,7 +1104,7 @@ div.spruceup {
 
 /* MASSIVE MOBILE FRIENDLY STYLES */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jumbotron { margin-bottom: 0; }
   .jumbotron h1 { margin: 0; padding: 15px 15px 0; }
   .jumbotron .lead { margin: 0; padding: 15px 15px 30px; }
@@ -1113,8 +1113,9 @@ div.spruceup {
   .add-top { margin-top: 30px; }
   .add-bottom { margin-bottom: 30px; }
   #filters {padding-top: 15px;}
-  .brick ul.categories { margin: 0; padding: 10px; }
+  .brick ul.categories { margin: 0; padding: 10px 0 0 0; }
   .brick ul.categories.pull-right { float: none !important; }
+  .project h3 { margin-top: 0; }
 }
 
 
