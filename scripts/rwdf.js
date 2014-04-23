@@ -13,7 +13,9 @@ $(document).ready(function() {
   $('.icons.categories a.community').attr('href', '/whatwedo/#filter=.community');
 
   var $container = $('#projects');
-  $container.isotope({ layoutMode : 'fitRows' });
+  if ($container) {
+    $container.isotope({ layoutMode : 'fitRows' });
+  }
 
   $('#filters a').click(function(){
     // get href attr, remove leading #
@@ -73,7 +75,7 @@ $(window).bind("load", function() {
     $('#slideshow').height(200);
     $('#slideshow .slide').css('height','100%');
   }
-  
+
 });
 
 //Working on making sidebar navigation follow active trail.
@@ -94,7 +96,7 @@ $(window).bind("load", function() {
   var relpos        = (projectheight)*-1;
   $('.controls div a').css('top',relpos);
   $('.controls div a').height(btnheight);
-  
+
   $('.spruceuptabs .spruceuplist ul li').first().addClass('active');
   $('.spruceuptabs .tab-content > div.tab-pane').first().addClass('active');
 });
