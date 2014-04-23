@@ -839,11 +839,6 @@ ul.side-nav .active i {
   .controls div::after{
     clear:none;
   }
-  .controls div {
-    float:left;
-    margin-top:30px;
-    width: 50%;
-  }
   .controls div a:hover { 
     background-color: #009AC9;
     background-color: rgba(0,154,201,1);
