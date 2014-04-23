@@ -40,10 +40,12 @@ $(document).ready(function() {
   });
 
   $(window).bind( 'hashchange', function( event ){
-    // get options object from hash
-    var hashOptions = $.deparam.fragment();
-    // apply options from hash
-    $container.isotope( hashOptions );
+    if ($.deparam.fragment) {
+      // get options object from hash
+      var hashOptions = $.deparam.fragment();
+      // apply options from hash
+      $container.isotope( hashOptions );
+    }
   })
   // trigger hashchange to capture any hash data on init
   .trigger('hashchange');
