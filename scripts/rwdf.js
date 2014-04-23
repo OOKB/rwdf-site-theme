@@ -88,7 +88,9 @@ $("#filters a").click(function() {
 
 // FancyBox
 $(document).ready(function() {
-  $('.fancybox').fancybox();
+  if ($('.fancybox').fancybox) {
+    $('.fancybox').fancybox();
+  }
 });
 
 $(window).bind("load", function() {
