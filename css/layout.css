@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   }
   
 img { max-width: 100%; }
@@ -198,7 +198,7 @@ footer .text-right { text-align: left; }
 /*===========================================*/
 .socialicon, .socialicon-color {
   float:left;
-  margin: 5px 10px 20px 0;
+  margin: 5px 10px 15px 0;
   }
 
 .iconblue { 
@@ -375,7 +375,7 @@ ul.nav li {
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .navbar .btn-navbar p {
@@ -614,7 +614,7 @@ ul.nav li {
   background-color:#f8f7f7;
   border: #eee solid 1px;
   padding:30px;
-  margin-bottom:20px;
+  margin-bottom:15px;
   color:gray;
   border-radius: 7px
 }
@@ -624,7 +624,7 @@ ul.nav li {
 }
 
 form {
-  margin-top:20px;
+  margin-top:15px;
 }
   
 label {
@@ -635,7 +635,7 @@ label {
 .side-nav {
   list-style-type: none;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 15px;
   margin:5px 0;
 }
 
@@ -830,7 +830,7 @@ ul.side-nav .active i {
     text-indent: 100%;
     white-space: nowrap;
     height: 100px !important;   
-    height: 120px !important;   
+    height: 115px !important;   
     margin-top:80px;
     border-top:3px solid #F8F7F7;
   }
@@ -889,7 +889,7 @@ div.spruceup {
 /*Icon Stuff*/
 .brick ul.categories {
   list-style: none;
-  margin: 20px 0 0 0 ;
+  margin: 15px 0 0 0 ;
   padding: 0;
   }
 
@@ -954,7 +954,7 @@ div.spruceup {
 }
 
 .brick {
-  padding-bottom:20px;
+  padding-bottom:15px;
   border-bottom: 3px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1); 
@@ -1104,11 +1104,14 @@ div.spruceup {
 
 @media (max-width: 768px) {
   .jumbotron { margin-bottom: 0; }
-  .jumbotron h1, .jumbotron .lead { margin: 0; padding: 15px; }
+  .jumbotron h1 { margin: 0; padding: 15px 15px 0; }
+  .jumbotron .lead { margin: 0; padding: 15px 15px 30px; }
   .accompany img, #staff aside img { margin-top: 0; }
   footer {margin-top: 30px;}
   .add-top    { margin-top: 30px; }
   .add-bottom { margin-bottom: 30px; }
+  #filters {padding-top: 15px;}
+  .brick:last-child { padding-bottom: 15px; }
 }
 
 
