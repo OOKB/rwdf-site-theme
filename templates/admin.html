@@ -19,11 +19,12 @@ js:
   <!-- // LISTING OF RWDF PROJECTS -->
   <ul id="project-list">
   {{#projects}}
-    <li class="col-12 col-sm-6 col-med-4 col-lg-3 cape-picker block" id="{{_id}}">
+    {{# featureimg }}
+    <li class="cape-picker block" id="{{_id}}">
 
-      <h3>{{featuretitle}}</h3>
+      <h3>{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
       {{# featureimg }}
-        <img src="{{{featureimg}}}" alt="{{featuretitle}}"/>
+        <img style="max-width: 400px" class="featureimg img-thumbnail" src="{{{featureimg}}}" alt="{{title}}"/>
       {{/ featureimg}}
       {{# featureblurb }}
         <p>{{featureblurb}}</p>
@@ -31,6 +32,7 @@ js:
       <small>{{title}}</small>
 
     </li>
+    {{/ featureimg }}
   {{/projects}}
   </ul>
 </script>
