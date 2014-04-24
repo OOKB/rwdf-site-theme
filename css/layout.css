@@ -434,7 +434,7 @@ ul.nav li {
   margin: 0;
   min-height: 50px;
   max-height: auto;
-  padding: 0;
+  padding: 10px;
   position: absolute;
   left: 15px;
   right: 15px;
@@ -454,15 +454,11 @@ ul.nav li {
   margin-bottom: 0;
 }
 
-.overlay h3 {
-  margin: 0;
-  padding: 10px;
-}
-
 .overlay h3,
 .overlay h3 a { 
   color: white; 
   font-weight: 400; 
+  margin: 0; 
 }
 
 .hero .tagline h1 {
@@ -1160,6 +1156,7 @@ div.spruceup {
   .jumbotron h1 { margin: 0; padding: 15px 15px 0; }
   .jumbotron .lead { margin: 0; padding: 15px 15px 30px; }
   .index .jumbotron .lead { padding: 0; }
+  .overlay .lead { display: none; }
   .accompany img, #staff aside img { margin-top: 0; }
   footer {margin-top: 30px;}
   .add-top { margin-top: 30px; }
