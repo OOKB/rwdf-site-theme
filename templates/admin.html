@@ -1,6 +1,6 @@
 ---
 css:
-  - "http://cape.ookb.co/css/rwdffeed.css"
+  - "/css/rwdffeed.css"
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
   - "//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"
@@ -10,7 +10,7 @@ js:
 
 ---
 
-<h2>Projects</h2>
+<h2>Projects for Homepage</h2>
 <div class="row" id="projects">
 </div>
 
@@ -22,14 +22,14 @@ js:
     {{# featureimg }}
     <li class="cape-picker block" id="{{_id}}">
 
-      <h3>{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
       {{# featureimg }}
-        <img style="max-width: 400px" class="featureimg img-thumbnail" src="{{{featureimg}}}" alt="{{title}}"/>
+        <img class="featureimg img-thumbnail col-xs-12 col-sm-3" src="{{{featureimg}}}" alt="{{title}}"/>
       {{/ featureimg}}
+      <h3 class="col-xs-12 col-sm-3">{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
       {{# featureblurb }}
-        <p>{{featureblurb}}</p>
+        <p class="col-xs-12 col-sm-3">{{featureblurb}}</p>
       {{/ featureblurb }}
-      <small>{{title}}</small>
+<!--       <small>{{title}}</small> -->
 
     </li>
     {{/ featureimg }}
