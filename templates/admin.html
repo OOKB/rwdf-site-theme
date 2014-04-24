@@ -17,18 +17,20 @@ js:
 {{=<% %>=}}
 <script id="projects-template" type="text/x-mustache-template">
   <!-- // LISTING OF RWDF PROJECTS -->
-  <ul id="project-list">
+  <ul id="project-list" class="col-xs-12 col-sm-10">
   {{#projects}}
     {{# featureimg }}
-    <li class="cape-picker block" id="{{_id}}">
+    <li class="cape-picker block row" id="{{_id}}">
 
       {{# featureimg }}
         <img class="featureimg img-thumbnail col-xs-12 col-sm-3" src="{{{featureimg}}}" alt="{{title}}"/>
       {{/ featureimg}}
-      <h3 class="col-xs-12 col-sm-3">{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
-      {{# featureblurb }}
-        <p class="col-xs-12 col-sm-3">{{featureblurb}}</p>
-      {{/ featureblurb }}
+      <div class="col-xs-12 col-sm-9">
+        <h3>{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
+        {{# featureblurb }}
+          <p>{{featureblurb}}</p>
+        {{/ featureblurb }}
+      </div>
 <!--       <small>{{title}}</small> -->
 
     </li>
