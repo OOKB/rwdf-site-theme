@@ -17,7 +17,7 @@ $(document).ready(function() {
     var list = document.getElementById("project-list");
     var sorted = function(evt){
       var obj = { entity: {} };
-      // Collect the order of the items and build an object 
+      // Collect the order of the items and build an object
       $('ul#project-list > li').each(function(i) {
         var id = $(this).attr('id');
         var position = i+1;
@@ -33,6 +33,8 @@ $(document).ready(function() {
         contentType: 'application/json',
         success: function(result) {
           console.log(result);
+          // Now tell cape to reprocess the views. This is horrible.
+          $.getJSON('/_view/_all/_output', function(data){});
         },
         fail: function(result) {
           console.log(result);
