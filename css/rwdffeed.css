@@ -4,6 +4,8 @@
   margin: 0;
 }
 
+.cape-picker { cursor: pointer; }
+
 .cape-picker:hover {
   background-color: #F8F7F7; /*light gray*/
   background-color: rgba(248,247,247,1); /*light gray*/
