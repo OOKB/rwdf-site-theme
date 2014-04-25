@@ -36,8 +36,11 @@
   margin-bottom: 60px;
 }
 
-.cape-picker:nth-child(5):after {
+.cape-picker:nth-child(6):before {
   content: "additional projects...";
+  display: list-item;
+  height: 50px;
+  clear: both;
 }
 
 .cape-picker:nth-child(6) {
