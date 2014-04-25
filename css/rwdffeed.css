@@ -64,7 +64,7 @@
   font-size: 1.25em;
 }
 
-.cape-picker:nth-child(2):before {
+.cape-picker:nth-child(1):before {
   content: "Main Hompage Graphic:";
 }
 
