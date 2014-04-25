@@ -32,17 +32,17 @@ $(document).ready(function() {
         headers: { Authorization: 'bearer 1demo69231642511demo51589525777684849721335713456018032661191234' },
         contentType: 'application/json',
         success: function(result) {
-          console.log(result);
+          //console.log(result);
           // Now tell cape to reprocess the views. This is horrible.
-          $.getJSON('/_view/_all/_output', function(data){console.log(data)});
+          $.getJSON('/_view/_all/_output', function(data){//console.log(data)});
         },
         fail: function(result) {
           console.log(result);
         }
       });
-      console.log(obj);
+      //console.log(obj);
     };
     new Sortable(list, {onUpdate: sorted});
-    console.log('list');
+    //console.log('list');
   });
 });
