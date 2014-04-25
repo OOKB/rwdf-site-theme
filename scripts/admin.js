@@ -21,7 +21,7 @@ $(document).ready(function() {
       $('ul#project-list > li').each(function(i) {
         var id = $(this).attr('id');
         var position = i+1;
-        if (position < 6) {
+        if (position < 50) {
           obj.entity[id] = position;
         }
       });
@@ -34,7 +34,7 @@ $(document).ready(function() {
         success: function(result) {
           console.log(result);
           // Now tell cape to reprocess the views. This is horrible.
-          $.getJSON('/_view/_all/_output', function(data){});
+          $.getJSON('/_view/_all/_output', function(data){console.log(data)});
         },
         fail: function(result) {
           console.log(result);
