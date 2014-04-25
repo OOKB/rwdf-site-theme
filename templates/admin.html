@@ -20,12 +20,12 @@ js:
   <ul id="project-list" class="col-xs-12">
   {{#projects}}
     {{# featureimg }}
-    <li class="cape-picker block row" id="{{_id}}">
+    <li class="cape-picker row" id="{{_id}}">
 
       {{# featureimg }}
-        <img class="featureimg img-thumbnail col-xs-12 col-sm-2" src="{{{featureimg}}}" alt="{{title}}"/>
+        <img class="featureimg img-rounded col-xs-12 col-sm-1 col-md-2" src="{{{featureimg}}}" alt="{{title}}"/>
       {{/ featureimg}}
-      <div class="col-xs-12 col-sm-10">
+      <div class="col-xs-12 col-sm-11 col-md-10">
         <h3>{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</h3>
         {{# featureblurb }}
           <p>{{featureblurb}}</p>
