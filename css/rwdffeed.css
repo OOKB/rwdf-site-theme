@@ -41,43 +41,38 @@
   border-color: rgba(248,247,247,1); /*light gray*/
 }
 
-.cape-picker:nth-child(1):before {
-  content: "Main Hompage Graphic:";
+.cape-picker:nth-child(1):before,
+.cape-picker:nth-child(2):before,
+.cape-picker:nth-child(3):before,
+.cape-picker:nth-child(6):before {
   display: list-item;
   height: 0px;
   position: relative;
-  top: -60px;
-  font-size: 1.5em;
   font-weight: bold;
+}
+
+.cape-picker:nth-child(1):before,
+.cape-picker:nth-child(2):before,
+.cape-picker:nth-child(3):before {
+  top: -20px;
+  font-size: 1.25em;
+}
+
+.cape-picker:nth-child(2):before {
+  content: "Main Hompage Graphic:";
 }
 
 .cape-picker:nth-child(2):before {
   content: "Right column:";
-  display: list-item;
-  height: 0px;
-  position: relative;
-  top: -60px;
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 .cape-picker:nth-child(3):before {
   content: "Lower Triptych:";
-  display: list-item;
-  height: 0px;
-  position: relative;
-  top: -60px;
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 .cape-picker:nth-child(6):before {
   content: "Other Projects Not Featured on Homepage:";
-  display: list-item;
-  height: 0px;
-  position: relative;
   top: -60px;
   font-size: 1.5em;
-  font-weight: bold;
 }
 
