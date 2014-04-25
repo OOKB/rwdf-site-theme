@@ -36,3 +36,13 @@
   margin-bottom: 60px;
 }
 
+.cape-picker:nth-child(5):after {
+  content: "additional projects...";
+}
+
+.cape-picker:nth-child(6) {
+  border-top: 6px solid #f8f7f7;
+  border-color: rgba(248,247,247,1); /*light gray*/
+}
+
+
