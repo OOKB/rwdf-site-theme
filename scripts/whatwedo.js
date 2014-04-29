@@ -51,4 +51,38 @@ $(document).ready(function() {
     // trigger hashchange to capture any hash data on init
     .trigger('hashchange');
 
+  // spruceup box behaviors
+  $('.spruceuptabs').hide();
+  $('.spruceuptitle').click(function() {
+    $('span.togglearrow').toggle('slow');
+    $('.spruceuptabs').toggle('slow', function() {
+      // subtract height of projects so prev/next buttons show up in right places
+      var projectheight = $('.row.project').height();
+      var btnheight     = projectheight+60;
+      var relpos        = (projectheight)*-1;
+      $('.controls div a').css('top',relpos);
+      $('.controls div a').height(btnheight);
+    });
+  });
+
 });
+
+// FancyBox
+$(document).ready(function() {
+  if ($('.fancybox').fancybox() {
+    $('.fancybox').fancybox();
+  }
+});
+
+$(window).bind("load", function() {
+  // subtract height of projects so prev/next buttons show up in right places
+  var projectheight = $('.row.project').height();
+  var btnheight     = projectheight+60;
+  var relpos        = (projectheight)*-1;
+  $('.controls div a').css('top',relpos);
+  $('.controls div a').height(btnheight);
+
+  $('.spruceuptabs .spruceuplist ul li').first().addClass('active');
+  $('.spruceuptabs .tab-content > div.tab-pane').first().addClass('active');
+});
+
