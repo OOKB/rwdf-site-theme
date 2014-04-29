@@ -67,13 +67,6 @@ $(document).ready(function() {
 
 });
 
-// FancyBox
-$(document).ready(function() {
-  if ($('.fancybox').fancybox() {
-    $('.fancybox').fancybox();
-  }
-});
-
 $(window).bind("load", function() {
   // subtract height of projects so prev/next buttons show up in right places
   var projectheight = $('.row.project').height();
