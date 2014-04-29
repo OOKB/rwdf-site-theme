@@ -17,8 +17,7 @@ $(document).ready(function() {
   $('.icons.categories .community a').attr('href', '#filter=.community');
   $('.icons.categories a.community').attr('href', '/whatwedo/#filter=.community');
 
-  var $container = $('#projects');
-  $container.isotope({ layoutMode : 'fitRows' });
+  $('#projects').isotope({ layoutMode : 'fitRows' });
 
   $('#filters a').click(function(){
         // get href attr, remove leading #
@@ -46,7 +45,7 @@ $(document).ready(function() {
     // get options object from hash
     var hashOptions = $.deparam.fragment();
     // apply options from hash
-    $container.isotope( hashOptions );
+    $('#projects').isotope( hashOptions );
   })
     // trigger hashchange to capture any hash data on init
     .trigger('hashchange');
