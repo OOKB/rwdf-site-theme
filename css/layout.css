@@ -297,7 +297,7 @@ ul.nav li {
 .navbar a.logo img {
   display: block;
   height: auto;
-  width: 139px;
+  width: 120px;
 }
 
 .navbar a.logo {
@@ -345,6 +345,13 @@ ul.nav li {
 }
 
 @media (min-width: 992px) {
+  .navbar a.logo,
+  .navbar a.logo img {
+    display: block;
+    height: auto;
+    width: 139px;
+  }
+
   ul.nav li {
     font-size:1.8rem;
   }
@@ -361,6 +368,16 @@ ul.nav li {
     margin-right: 15px;
   }
 }
+
+@media (min-width: 1200px) {
+  .navbar a.logo,
+  .navbar a.logo img {
+    display: block;
+    height: auto;
+    width: 150px;
+  }
+}
+
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent;
