@@ -17,7 +17,7 @@ title: "The Robert W. Deutsch Foundation"
         {{#front.1}}
         <img src="{{featureimg}}{{^featureimg}}{{image}}{{/featureimg}}" >
         <div class="text overlay">
-          <h2><a href="whatwedo/{{_filename}}">{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}}</a></h2>
+          <h2><a href="whatwedo/{{_filename}}">{{featuretitle}}{{^featuretitle}}{{title}}{{/featuretitle}} {{^featureblurb}}&rarr;{{/featureblurb}}</a></h2>
           {{#featureblurb}}
             <p class="lead"><a href="whatwedo/{{_filename}}">{{featureblurb}} &rarr;</a></p>
           {{/featureblurb}}
