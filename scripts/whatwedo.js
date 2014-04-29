@@ -6,6 +6,8 @@ $("#filters a").click(function() {
 
 $(document).ready(function() {
   //prepare whatwedo feed for isotope...
+  
+  //sets href for the isotope filters...
   $('.icons.categories .science a').attr('href', '#filter=.science');
   $('.icons.categories .scholars a').attr('href', '#filter=.scholars');
   $('.icons.categories .arts a').attr('href', '#filter=.arts');
@@ -45,5 +47,7 @@ $(document).ready(function() {
 
   // trigger hashchange to capture any hash data on init
   .trigger('hashchange');
+  
+  //the end
 
 });
