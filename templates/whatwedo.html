@@ -74,7 +74,7 @@ js:
         </ul>
         <h3 class="project-title"><a href="/whatwedo/{{_filename}}" data-disqus-identifier="/whatwedo/{{_filename}}">{{ title }}</a></h3>
         <p class="project-content">
-          {{{ summary }}}
+          {{#summary}} {{summary}} {{/summary}} {{^summary}} {{teaser}} {{/summary}}
         </p>
       </li>
       {{/ page.projects._all }}
