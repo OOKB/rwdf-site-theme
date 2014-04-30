@@ -9,8 +9,10 @@ $("#myTab li a").on("click", function(e) {
 });
 
 // on load of the page: switch to the currently selected tab
-$(window).load(function() {
-  $.preventDefault();
-  $.scrollTop(0);
-  $('#myTab li a[href="' + window.location.hash + '"]').tab('show');
+$(function() {
+  if (location.hash) {
+    window.scrollTop(0);
+    $('#myTab li a[href="' + window.location.hash + '"]').tab('show');
+  }
+  else {}
 });
