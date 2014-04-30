@@ -1,5 +1,11 @@
 //trying to make the href location and tabs play along a little better...
 
+$("#myTab li a").on("click", function(e) {
+  e.preventDefault();
+  $(this).tab('show');
+  history.pushState({}, "", this.href);
+});
+
 // store the currently selected tab in the hash value
 $("#myTab li a").on("shown.bs.tab", function (e) {
   var id = $(e.target).attr("href").substr(1);
