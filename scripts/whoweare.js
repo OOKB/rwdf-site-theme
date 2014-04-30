@@ -1,23 +1,16 @@
-// why is this doing this?
-// why are you not properly listening!
+//trying to make the href location and tabs play along a little better...
 
-$(document).ready(function() {
-  
-  // store the currently selected tab in the hash value
-  $("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
-      var id = $(e.target).attr("href").substr(1);
-      window.location.hash = id;
-  });
-  
-  // on load of the page: switch to the currently selected tab
-  var hash = window.location.hash;
-  $('#myTab a[href="' + hash + '"]').tab('show');
-  
+// store the currently selected tab in the hash value
+$("#myTab li a").on("shown.bs.tab", function (e) {
+  var id = $(e.target).attr("href").substr(1);
+  window.location.hash = id;
 });
-
 
 $('#myTab li a').click(function(){
-    var href = $(this).attr('href');
-    console.log(href);
+  var href = $(this).attr('href');
 });
+
+// on load of the page: switch to the currently selected tab
+var hash = window.location.hash;
+$('#myTab li a[href="#' + hash + '"]').tab('show');
 
