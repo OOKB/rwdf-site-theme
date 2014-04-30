@@ -18,9 +18,3 @@ $("#myTab li a").on("shown.bs.tab", function (e) {
 var hash = window.location.hash;
 $('#myTab li a[href="' + hash + '"]').tab('show');
 
-/*
-$('#myTab li a').click(function(){
-  var href = $(this).attr('href');
-});
-*/
-
