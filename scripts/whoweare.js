@@ -13,8 +13,11 @@ $("#myTab li a").on("shown.bs.tab", function (e) {
 });
 
 // on load of the page: switch to the currently selected tab
-var hash = window.location.hash;
-$('#myTab li a[href="' + hash + '"]').tab('show');
+$(window).load(function() {
+  var hash = window.location.hash;
+  e.preventDefault();
+  $('#myTab li a[href="' + hash + '"]').tab('show');
+});
 
 /*
 $('#myTab li a').click(function(){
