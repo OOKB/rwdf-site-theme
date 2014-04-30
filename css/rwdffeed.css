@@ -4,36 +4,73 @@
   margin: 0;
 }
 
+.cape-picker {
+  border-bottom: 3px solid #f8f7f7;
+  border-color: rgba(248,247,247,1); /*light gray*/
+  cursor: pointer;
+  margin: 0;
+  padding: 15px;
+}
+
 .cape-picker:hover {
   background-color: #F8F7F7; /*light gray*/
   background-color: rgba(248,247,247,1); /*light gray*/
 }
 
-.block {
-  border-bottom: 3px solid #f8f7f7;
-  border-color: rgba(248,247,247,1); /*light gray*/
-  margin: 0;
-  padding: 15px;
-}
-
-.block h3 {
-  height: 2em;
-}
-
-.block img {
-  width: 100%;
-  height: auto;
-}
-
-.choose {
-  margin-top: 6px;
-}
-
-.choose i {
-  font-size: 24px;
-}
-
 .cape-picker:nth-child(5) {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
+
+.cape-picker:nth-child(6) {
+  border-top: 6px solid #f8f7f7;
+  border-color: rgba(248,247,247,1); /*light gray*/
+}
+
+.cape-picker:nth-child(1),
+.cape-picker:nth-child(2),
+.cape-picker:nth-child(3) {
+  margin-top: 30px;
+}
+
+.cape-picker:nth-child(1):before,
+.cape-picker:nth-child(2):before,
+.cape-picker:nth-child(3):before,
+.cape-picker:nth-child(6):before {
+  display: list-item;
+  height: 0px;
+  position: relative;
+  font-weight: bold;
+}
+
+.cape-picker:nth-child(1):before,
+.cape-picker:nth-child(2):before,
+.cape-picker:nth-child(3):before {
+  top: -30px;
+  font-size: 1.25em;
+}
+
+.cape-picker:nth-child(1):before {
+  content: "Main Hompage Graphic:";
+}
+
+.cape-picker:nth-child(2):before {
+  content: "Right column:";
+}
+
+.cape-picker:nth-child(3):before {
+  content: "Lower Triptych:";
+}
+
+.cape-picker:nth-child(6):before {
+  content: "Other Projects Not Featured on Homepage:";
+  top: -60px;
+  font-size: 1.5em;
+}
+
+.cape-picker h3 { margin: 0; }
+
+
+
+
+
 

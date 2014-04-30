@@ -297,7 +297,7 @@ ul.nav li {
 .navbar a.logo img {
   display: block;
   height: auto;
-  width: 139px;
+  width: 120px;
 }
 
 .navbar a.logo {
@@ -328,7 +328,7 @@ ul.nav li {
 @media (min-width: 768px) {
   .navbar ul.nav {
     position: relative;
-    top: 40px;
+    top: 32px;
   }
   
   .navbar-nav > li > a {
@@ -345,6 +345,17 @@ ul.nav li {
 }
 
 @media (min-width: 992px) {
+  .navbar a.logo,
+  .navbar a.logo img {
+    display: block;
+    height: auto;
+    width: 139px;
+  }
+
+  .navbar ul.nav {
+    top: 40px;
+  }
+  
   ul.nav li {
     font-size:1.8rem;
   }
@@ -361,6 +372,20 @@ ul.nav li {
     margin-right: 15px;
   }
 }
+
+@media (min-width: 1200px) {
+  .navbar ul.nav {
+    top: 57px;
+  }
+  
+  .navbar a.logo,
+  .navbar a.logo img {
+    display: block;
+    height: auto;
+    width: 172px;
+  }
+}
+
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent;
@@ -389,7 +414,7 @@ ul.nav li {
 .navbar-toggle {
   border: 3px solid #f8f7f7;
   border-radius: 6px;
-  top: 32px;
+  top: 22px;
   margin: 0;
 }
 
@@ -1188,4 +1213,6 @@ div.spruceup {
 /*=========================*/
 /*=========================*/
 /*=========================*/
+
+
 

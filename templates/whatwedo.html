@@ -4,7 +4,10 @@ title: "What We Do"
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"
+  - "/scripts/whatwedo.js"
 ---
+
+<!-- WHAT WE DO PAGE -->
 
   <div class="row">
     <div class="col-xs-12 col-sm-2">
@@ -71,7 +74,7 @@ js:
         </ul>
         <h3 class="project-title"><a href="/whatwedo/{{_filename}}" data-disqus-identifier="/whatwedo/{{_filename}}">{{ title }}</a></h3>
         <p class="project-content">
-          {{{ summary }}} {{^summary}} {{teaser}} {{/summary}}
+          {{#summary}} {{summary}} {{/summary}} {{^summary}} {{teaser}} {{/summary}}
         </p>
       </li>
       {{/ page.projects._all }}
