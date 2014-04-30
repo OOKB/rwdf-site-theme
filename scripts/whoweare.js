@@ -9,5 +9,8 @@ $("#myTab li a").on("click", function(e) {
 });
 
 // on load of the page: switch to the currently selected tab
-history.pushState(null, null, window.location.hash);
-$('#myTab li a[href="' + window.location.hash + '"]').tab('show');
+$(window).load(function(e) {
+  e.preventDefault();
+  history.pushState(null, null, window.location.hash);
+  $('#myTab li a[href="' + window.location.hash + '"]').tab('show');
+});
