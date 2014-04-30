@@ -6,11 +6,13 @@ $("#myTab li a").on("shown.bs.tab", function (e) {
   window.location.hash = id;
 });
 
+// on load of the page: switch to the currently selected tab
+var hash = window.location.hash;
+$('#myTab li a[href="' + hash + '"]').tab('show');
+
+/*
 $('#myTab li a').click(function(){
   var href = $(this).attr('href');
 });
-
-// on load of the page: switch to the currently selected tab
-var hash = window.location.hash;
-$('#myTab li a[href="#' + hash + '"]').tab('show');
+*/
 
