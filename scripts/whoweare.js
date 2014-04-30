@@ -9,4 +9,5 @@ $("#myTab li a").on("click", function(e) {
 
 // on load of the page: switch to the currently selected tab
 var hash = window.location.hash;
+history.pushState(null, null, hash);
 $('#myTab li a[href="' + hash + '"]').tab('show');
