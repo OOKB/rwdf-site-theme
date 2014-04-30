@@ -14,3 +14,10 @@ $(document).ready(function() {
   $('#myTab a[href="' + hash + '"]').tab('show');
   
 });
+
+
+$('#myTab li a').click(function(){
+    var href = $(this).attr('href');
+    console.log(href);
+});
+
