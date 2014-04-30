@@ -2,12 +2,12 @@
 
 $("#myTab li a").on("click", function(e) {
   e.preventDefault();
-  $(this).tab('show');
   var id = $(this).attr("href");
   window.location.hash = id;
+  history.pushState(null, null, e.href);
+  $(this).tab('show');
 });
 
 // on load of the page: switch to the currently selected tab
-var hash = window.location.hash;
-history.pushState(null, null, hash);
-$('#myTab li a[href="' + hash + '"]').tab('show');
+history.pushState(null, null, window.location.hash);
+$('#myTab li a[href="' + window.location.hash + '"]').tab('show');
