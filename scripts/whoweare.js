@@ -14,5 +14,4 @@ $(function() {
     window.scrollTop(0);
     $('#myTab li a[href="' + window.location.hash + '"]').tab('show');
   }
-  else {}
 });
