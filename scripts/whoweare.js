@@ -10,7 +10,8 @@ $("#myTab li a").on("click", function(e) {
 
 // on load of the page: switch to the currently selected tab
 if (window.location.hash) {
-  $(window).scrollTop(0);
+  history.pushState(null, null, window.location.hash);
+  $(window).scrollTo(0, 0);
   $('#myTab li a[href="' + window.location.hash + '"]').tab('show');
   console.log(window.location.hash);
 }
