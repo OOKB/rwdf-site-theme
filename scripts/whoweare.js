@@ -14,7 +14,7 @@ $(window).bind("load", function() {
   if (location.hash) {
     console.log(hashy);
     history.pushState(null, null, hashy);
-    $.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     $('#myTab li a[href="' + hashy + '"]').tab('show');
   }
 });

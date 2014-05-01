@@ -1,11 +1,18 @@
 //Working on making sidebar navigation follow active trail.
-$("#filters a").click(function() {
-  $("#filters").find('li.active').removeClass('active');
-  $(this).parent().parent().addClass('active');
-});
-
 $(document).ready(function() {
-  //prepare whatwedo feed for isotope...
+
+  // properly sets active side-bar link
+  
+  $("#filters a").click(function() {
+    $("#filters").find('li.active').removeClass('active');
+    $(this).parent().parent().addClass('active');
+  });
+  
+  $('#projects .icons.categories a').click(function(){
+    var href = $(this).attr('href');
+    $("#filters").find('li.active').removeClass('active');
+    $("#filters").find('a[href="' + href + '"]').parent().parent().addClass('active');
+  });
   
   //sets href for the isotope filters...
   $('.icons.categories .science a').attr('href', '#filter=.science');
