@@ -1,8 +1,6 @@
 rwdf-site-theme
 ===============
 
-Theme for rwdfoundation.org
-
-themes content from here: https://github.com/bjornmeansbear/rwdf-site-content (actually a dropbox repository now, but still updated to there every once in a while)
-
-Powered by CAPE.
+The Theme for rwdfoundation.org
+The Content comes from a dropbox folder
+The Theme and The Content get combined with [CAPE](http://www.cape.io/).
