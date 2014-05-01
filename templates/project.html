@@ -41,14 +41,14 @@ js:
       {{# page._images.length }}
       <aside class="lightbox-thumbs clearfix">
         <!-- IMAGES in the slideshow -->
-        {{# page.images }}
+        {{# page._images }}
           <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
             <img alt="" src="{{ . }}" />
           </a>
-        {{/ page.images }}
+        {{/ page._images }}
       </aside>
       {{/ page._images.length }}
-      {{/page.image}}
+      {{/page._image}}
 
       {{# page.spruceup-grants}}
         <aside class="lightbox-thumbs clearfix">
