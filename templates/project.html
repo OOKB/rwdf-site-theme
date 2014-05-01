@@ -14,9 +14,7 @@ js:
   <div class="row">
     <div id="slideshow">
       <!-- big image area -->
-      {{# page.featureimg }}
         <div class="slide"><img src="{{ page.featureimg }}" /></div>
-      {{/ page.featureimg }}
     </div>
   </div>
 {{/ page.featureimg }}
@@ -31,15 +29,16 @@ js:
 
     <article class="writeup">
 
-      {{# page.image }}
+      {{# page._image }}
         <div class="leadimage text-center row">
-            <img class="col-xs-12 col-sm-6 col-sm-offset-3" src="{{ page.image }}" />
+            <img class="col-xs-12 col-sm-6 col-sm-offset-3" src="/{{ page._image._id }}" />
         </div>
-      {{/ page.image }}
+      {{/ page._image }}
 
       <h2>{{ page.title }}</h2>
 
-      {{# page.images.length }}
+      {{^page._image}}
+      {{# page._images.length }}
       <aside class="lightbox-thumbs clearfix">
         <!-- IMAGES in the slideshow -->
         {{# page.images }}
@@ -48,9 +47,10 @@ js:
           </a>
         {{/ page.images }}
       </aside>
-      {{/ page.images.length }}
+      {{/ page._images.length }}
+      {{/page.image}}
 
-      {{# page.spruceup}}
+      {{# page.spruceup-grants}}
         <aside class="lightbox-thumbs clearfix">
           <!-- IMAGES in the slideshow -->
           {{# spruceups }}
@@ -59,11 +59,11 @@ js:
             </a>
           {{/ spruceups }}
         </aside>
-      {{/ page.spruceup}}
+      {{/ page.spruceup-grants}}
 
       {{{ page.content }}}
 
-      {{# page.spruceup }}
+      {{# page.spruceup-grants }}
       <!-- Spruce Up Projects Tabs!
       ================================================== -->
       <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
@@ -94,7 +94,7 @@ js:
       </div><!-- / END tabbable -->
       <!-- ==================================================
            END SPRUCE UP SUB-PROJECTS TABBABLE AREA -->
-      {{/ page.spruceup }}
+      {{/ page.spruceup-grants }}
 
       <div class="icons categories bottom text-center">
         {{# page.categories }}
