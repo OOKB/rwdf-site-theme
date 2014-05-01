@@ -28,7 +28,7 @@ classes: homepage
 
       <div class="col-xs-12 col-sm-4 tagline">
         <div class="text">
-            <h1>{{ page_info.homepage.hed }}</h1>
+            <h1>{{ content.homepage.hed }}</h1>
         </div>
       </div>
 
@@ -93,7 +93,7 @@ classes: homepage
       <div class="diag-divider"></div>
     </div>
     <div class="col-xs-12 jumbo-text">
-      <p class="lead">{{{ page_info.homepage.dek }}}</p>
+      <p class="lead">{{{ content.homepage.dek }}}</p>
     </div>
   </div>
 </div>
@@ -102,26 +102,26 @@ classes: homepage
 <div class="add-top">
   <div class="row home-content">
 
-    <!-- just the legacy document stuff -->
-    {{# content.homepage.legacy }}
+    <!-- just the leagacy_md document stuff -->
+    {{# content.homepage.leagacy_md }}
       <div class="col-xs-12 col-sm-4">
         <h3><a href="whoweare">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ content.homepage.legacy }}
+    {{/ content.homepage.leagacy_md }}
 
     <!-- just the big idea document stuff -->
-    {{# content.homepage.bigidea }}
+    {{# content.homepage.bigidea_md }}
       <div class="col-xs-12 col-sm-4">
         <h3><a href="tellusaboutyou">{{ title }}</a></h3>
         {{{content}}}
       </div>
-    {{/ content.homepage.bigidea }}
+    {{/ content.homepage.bigidea_md }}
 
     <!-- this needs to be spit out from the news feed -->
     <div class="col-xs-12 col-sm-4 news">
-      <h3><a href="news">{{ page_info.news.hed }}</a></h3>
-      <p>{{ page_info.news.dek }}</p>
+      <h3><a href="news">{{ content.news.hed }}</a></h3>
+      <p>{{ content.news.dek }}</p>
       <ul class="newslist">
       {{# content.news.articles.2014._all }}
         <li><p><a href="{{link}}">{{ title }}</a></p></li>
