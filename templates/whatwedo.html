@@ -63,7 +63,7 @@ js:
     </div>
 
     <ul class="col-xs-12 col-sm-10 isotope-area" id="projects">
-      {{# page.projects._all }}
+      {{# page.projects._dirs }}
       <li class="project brick {{# categories }} {{.}} {{/ categories }}">
         <ul class="icons categories pull-right">
           {{# categories }}
@@ -77,7 +77,7 @@ js:
           {{summary}} {{^summary}} {{teaser}} {{/summary}}
         </p>
       </li>
-      {{/ page.projects._all }}
+      {{/ page.projects._dirs }}
     </ul>
   </div>
 
