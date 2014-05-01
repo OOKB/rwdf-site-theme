@@ -42,8 +42,8 @@ js:
       <aside class="lightbox-thumbs clearfix">
         <!-- IMAGES in the slideshow -->
         {{# page._images }}
-          <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ . }}">
-            <img alt="" src="{{ . }}" />
+          <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="/{{ _id }}">
+            <img alt="" src="/{{ _id }}" />
           </a>
         {{/ page._images }}
       </aside>
