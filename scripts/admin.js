@@ -6,8 +6,19 @@ $(document).ready(function() {
   var endpoint = '/whatwedo/projects.json';
   $.getJSON(endpoint, function(data) {
     _.forEach(data.projects, function(project){
-      if (project.image && !project.featureimg) {
-        project.featureimg = project.image;
+      if (project.featureimg) {
+        // If string does not contain.
+        if (!~project.featureimg.indexOf('/')) {
+          project.featureimg = '/' + project._dirname + '/' + project.featureimg;
+        }
+      }
+      else {
+        if (project._image) {
+          project.featureimg = '/' + project._image._id;
+        }
+        else if (project._images) {
+          project.featureimg = '/' + project._images[0]._id;
+        }
       }
     });
     // Assign template from html. Script tag with id.
