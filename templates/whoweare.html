@@ -30,7 +30,7 @@ js:
         ================================================== -->
         <div class="tab-pane fade in active" id="values">
           <div class="row">
-            {{# content.whoweare.our-values_md }}
+            {{# page.our-values_md }}
               <div class="col-xs-12 col-sm-8">
                 <h3>{{title}}</h3>
                 {{{ content }}}
@@ -38,7 +38,7 @@ js:
               <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/whoweare/{{image}}"/>
               </aside>
-            {{/ content.whoweare.our-values_md }}
+            {{/ page.our-values_md }}
           </div>
         </div>
 
@@ -46,14 +46,14 @@ js:
         <!-- ====================================== -->
         <div class="tab-pane fade" id="founders">
           <div class="row">
-            {{# content.whoweare.robert-florence_md }}
+            {{# page.robert-florence_md }}
               <div class="col-xs-12 col-sm-8">
                 {{{ content }}}
               </div>
               <aside class="col-xs-12 col-sm-4 accompany">
                 <img src="/media/whoweare/{{image}}"/>
               </aside>
-            {{/ content.whoweare.robert-florence_md }}
+            {{/ page.robert-florence_md }}
           </div>
         </div>
 
@@ -70,7 +70,7 @@ js:
 
                 <h3>Directors</h3>
 
-                {{# content.whoweare.bios.directors._all }}
+                {{# page.bios.directors._all }}
                   <div class="plain {{sortorder}}">
                     <h4>{{title}}</h4>
                     <h5>{{subhead}}</h5>
@@ -79,7 +79,7 @@ js:
                       <a href="mailto:{{email}}">{{email}}</a>
                     </div>
                   </div>
-                {{/ content.whoweare.bios.directors._all }}
+                {{/ page.bios.directors._all }}
               </section>
 
               <aside class="col-xs-12 col-sm-4 accompany">
@@ -96,7 +96,7 @@ js:
 
                 <h3>Staff</h3>
 
-                {{# content.whoweare.bios.staff._all }}
+                {{# page.bios.staff._all }}
                   <div class="plain {{sortorder}}">
                     <h4>{{title}}</h4>
                     <h5>{{subhead}}</h5>
@@ -105,7 +105,7 @@ js:
                       <a href="mailto:{{email}}">{{email}}</a>
                     </div>
                   </div>
-                {{/ content.whoweare.bios.staff._all }}
+                {{/ page.bios.staff._all }}
               </section>
 
               <aside class="col-xs-12 col-sm-4 accompany">
@@ -121,7 +121,7 @@ js:
 
                 <h3>Fellows</h3>
 
-                {{# content.whoweare.bios.fellows._all }}
+                {{# page.bios.fellows._all }}
                   <div class="plain {{sortorder}}">
                     <h4>{{title}}</h4>
                     <h5>{{subhead}}</h5>
@@ -130,7 +130,7 @@ js:
                       <a href="mailto:{{email}}">{{email}}</a>
                     </div>
                   </div>
-                {{/ content.whoweare.bios.fellows._all }}
+                {{/ page.bios.fellows._all }}
 
               </section>
 
