@@ -149,18 +149,21 @@ js:
 
         <!-- IRS FORMS -->
         <!-- ====================================== -->
+        {{#page.form990}}
         <div class="tab-pane fade" id="irs-forms">
           <div class="row">
             <div class="col-xs-12 col-sm-8">
               <h3>IRS Form 990</h3>
               <p>Form 990 is an annual report that federally tax-exempt organizations, like The Robert W. Deutsch Foundation, file with the IRS. It provides information on our finances, mission and programs.</p>
               <ul>
-                <li><a href="/media/whoweare/form990/RWDF-FY2013.pdf">FY2013</a></li>
+                {{#_all_pdf}}
+                <li><a href="/{{_id}}">{{_file_slug}}</a></li>
+                {{/_all_pdf}}
               </ul>
             </div>
           </div>
         </div>
-
+        {{/page.form990}}
       </div>
       <!-- end tabbed "pages" column... -->
 
