@@ -1126,6 +1126,9 @@ form.wufoo label {
 
 form.wufoo input,
 form.wufoo textarea {
+  border-radius: 3px;
+  margin-bottom: 7px;
+  /**/
   max-width: 100%;
   width: 100%;
   min-width: 100%;
