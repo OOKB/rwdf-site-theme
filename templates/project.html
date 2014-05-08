@@ -19,38 +19,71 @@ js:
 
     <article class="writeup">
 
-      {{# page._image }}
-        <div class="leadimage text-center row">
-            <img class="col-xs-12 col-sm-6 col-sm-offset-3" src="/{{ page._image._id }}" />
-        </div>
-      {{/ page._image }}
+      <div class="imagewrapper">
+        {{# page._image }}
+          <div class="leadimage text-center row">
+              <img class="col-xs-12 col-sm-6 col-sm-offset-3" src="/{{ page._image._id }}" />
+          </div>
+        {{/ page._image }}
 
+        {{^page._image}}
+          {{# page._images.length }}
+
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+<!--
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+-->
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    {{# page._images }}
+                    <img src="/{{ _id }}" alt="...">
+                    {{/ page._images }}
+                  </div>
+                  ...
+                </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+
+            <aside class="lightbox-thumbs clearfix">
+              <!-- IMAGES in the slideshow -->
+              {{# page._images }}
+                <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="/{{ _id }}">
+                  <img alt="" src="/{{ _id }}" />
+                </a>
+              {{/ page._images }}
+            </aside>
+          {{/ page._images.length }}
+        {{/page._image}}
+  
+        {{# page.spruceup-grants}}
+          <aside class="lightbox-thumbs clearfix">
+            <!-- IMAGES in the slideshow -->
+            {{# spruceups }}
+              <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
+                <img alt="" src="{{ image }}" />
+              </a>
+            {{/ spruceups }}
+          </aside>
+        {{/ page.spruceup-grants}}
+
+      </div>
+      
       <h2>{{ page.title }}</h2>
-
-      {{^page._image}}
-      {{# page._images.length }}
-      <aside class="lightbox-thumbs clearfix">
-        <!-- IMAGES in the slideshow -->
-        {{# page._images }}
-          <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="/{{ _id }}">
-            <img alt="" src="/{{ _id }}" />
-          </a>
-        {{/ page._images }}
-      </aside>
-      {{/ page._images.length }}
-      {{/page._image}}
-
-      {{# page.spruceup-grants}}
-        <aside class="lightbox-thumbs clearfix">
-          <!-- IMAGES in the slideshow -->
-          {{# spruceups }}
-            <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="{{ image }}">
-              <img alt="" src="{{ image }}" />
-            </a>
-          {{/ spruceups }}
-        </aside>
-      {{/ page.spruceup-grants}}
-
+      
       {{{ page.content }}}
 
       {{# page.spruceup-grants }}
