@@ -1,8 +1,3 @@
-// FancyBox
-$(document).ready(function() {
-  $('.fancybox').fancybox();
-});
-
 $(document).ready(function() {
   //prepare whatwedo feed for isotope...
   $('.icons.categories a.science').attr('href', '/whatwedo/#filter=.science');

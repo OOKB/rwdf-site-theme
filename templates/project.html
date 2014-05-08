@@ -2,8 +2,6 @@
 layout : default
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
-  - "//cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140216/jquery.cycle2.min.js"
-  - "//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"
   - "/scripts/project.js"
 ---
 
@@ -28,44 +26,27 @@ js:
 
         {{^page._image}}
           {{# page._images.length }}
-
-              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-<!--
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
--->
-              
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                  <div class="item active">
-                    {{# page._images }}
-                    <img src="/{{ _id }}" alt="...">
-                    {{/ page._images }}
-                  </div>
-                  ...
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+            
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  {{# page._images }}
+                  <img src="/{{ _id }}" alt="...">
+                  {{/ page._images }}
                 </div>
-              
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+                ...
               </div>
-
-            <aside class="lightbox-thumbs clearfix">
-              <!-- IMAGES in the slideshow -->
-              {{# page._images }}
-                <a class="fancybox" data-fancybox-group="gallery" rel="=group1" href="/{{ _id }}">
-                  <img alt="" src="/{{ _id }}" />
-                </a>
-              {{/ page._images }}
-            </aside>
+            
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
           {{/ page._images.length }}
         {{/page._image}}
   
