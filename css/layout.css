@@ -1216,7 +1216,7 @@ form.wufoo .phone span.one {
   ul.side-nav .icons i.icon-justice,
   ul.side-nav .icons i.icon-community  { margin-left: auto; }
   .newslist p.date { margin-top: 15px; text-align: left; }
-  .sidebar { padding: 15px; margin: 15px 15px 0; width: calc(100% - 30px); }
+  .sidebar { padding: 15px; }
   .wufoo .controls div { height: auto; }
 }
 
