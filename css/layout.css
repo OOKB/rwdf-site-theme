@@ -1037,7 +1037,7 @@ div.spruceup {
 /* Slideshow Stuff */
 /*=========================*/
 /* Student Overlay Slideshow */
-#slideshow {
+#img-carousel {
   margin-left: 0px;
   margin-bottom: 50px;
   text-align: center;
@@ -1052,25 +1052,9 @@ div.spruceup {
   overflow: hidden;
   }
 
-#singleimg {
-  position: relative;
-  margin-left: 0px;
-  margin-bottom: 30px;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  }
-
-#singleimg img {
-  max-height: 100%;
-  max-width: 100%;
-  }
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #slideshow,
-  #singleimg {
+  #img-carousel {
     margin-bottom: 50px;
     min-height: 200px;
     max-height: 400px;
@@ -1085,8 +1069,7 @@ div.spruceup {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #slideshow,
-  #singleimg {
+  #img-carousel {
     max-height: 500px;
     }
   
@@ -1098,8 +1081,7 @@ div.spruceup {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #slideshow,
-  #singleimg {
+  #img-carousel {
     max-height: 600px;
     }
   
