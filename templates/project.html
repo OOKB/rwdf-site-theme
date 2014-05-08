@@ -31,12 +31,11 @@ js:
             
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
-                <div class="item active">
-                  {{# page._images }}
+                {{# page._images }}
+                <div class="item">
                   <img src="/{{ _id }}" alt="...">
-                  {{/ page._images }}
                 </div>
-                ...
+                {{/ page._images }}
               </div>
             
               <!-- Controls -->
