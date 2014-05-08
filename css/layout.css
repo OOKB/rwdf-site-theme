@@ -1100,16 +1100,19 @@ div.spruceup {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  opacity: .66;
+  filter: alpha(opacity=66);
   font-size: 20px;
   text-align: center;
   text-shadow: none);
+  transition: all 500ms;
 }
 
 .carousel-control:hover { 
   color:#6EB000;
-  color:rgba(110,176,0,1); 
+  color:rgba(110,176,0,1);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .carousel-control.left,
