@@ -12,6 +12,11 @@ orange        rgba(189,88,9,1), #BD5809
 **/
 
 /* Base Styles */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+ 
 html {
   font-size:10px;
   line-height:1.25;
@@ -1126,8 +1131,10 @@ form.wufoo label {
 
 form.wufoo input,
 form.wufoo textarea {
+  border: 1px solid #cccccc;
   border-radius: 3px;
   margin-bottom: 7px;
+  padding: 1%;
   /**/
   max-width: 100%;
   width: 100%;
