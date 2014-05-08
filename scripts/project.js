@@ -20,6 +20,8 @@ $(document).ready(function() {
     });
   });
 
+  $("#img-carousel div.carousel-inner div.item:nth-child(1)").addClass("active");
+
 });
 
 $(window).bind("load", function() {
