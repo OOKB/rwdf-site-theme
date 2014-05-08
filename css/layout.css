@@ -1124,7 +1124,8 @@ form.wufoo label {
   font-weight: normal;
 }
 
-form.wufoo input {
+form.wufoo input,
+form.wufoo textarea {
   max-width: 100%;
   width: 100%;
   min-width: 100%;
