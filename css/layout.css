@@ -1038,57 +1038,42 @@ div.spruceup {
 /*=========================*/
 /* Student Overlay Slideshow */
 #img-carousel {
-  margin-left: 0px;
-  margin-bottom: 50px;
   text-align: center;
   min-height: 200px;
   max-height: 200px;
-  }
+}
 
 .carousel-inner,  
 .carousel-inner > .item {
   height: 200px;
   text-align: center;
   overflow: hidden;
-  }
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #img-carousel {
-    margin-bottom: 50px;
     min-height: 200px;
     max-height: 400px;
-    }
+  }
   
   .carousel-inner,  
   .carousel-inner > .item {
     height: 400px;
     text-align: center;
-    }
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #img-carousel {
     max-height: 500px;
-    }
+  }
   
   .carousel-inner,  
   .carousel-inner > .item {
     height: 500px;
-    }
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  #img-carousel {
-    max-height: 600px;
-    }
-  
-  .carousel-inner,  
-  .carousel-inner > .item {
-    height: 600px;
-    }
+  }
 }
 
 /* http://css-tricks.com/centering-in-the-unknown/ - this is what I used for vertical centering... works like a charm! */
