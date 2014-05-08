@@ -1130,6 +1130,24 @@ form.wufoo input {
   min-width: 100%;
 }
 
+form.wufoo .phone input.three {
+  max-width: 25%;
+  width: 25%;
+  min-width: 25%;
+}
+
+form.wufoo .phone input.four {
+  max-width: 33%;
+  width: 33%;
+  min-width: 33%;
+}
+
+form.wufoo .phone span.one {
+  max-width: 8%;
+  width: 8%;
+  min-width: 83%;
+}
+
 #saveForm, .btn.blog {
   border: none;
   background: #009AC9;
