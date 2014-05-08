@@ -836,11 +836,6 @@ ul.side-nav .active i {
   background-image: url("../media/proj-n-wh.png");
 }
 
-.leadimage {
-  margin-bottom:30px;
-  margin-top: 30px;
-}
-
 @media (max-width: 767px) {
   .controls div { 
     position: static; 
@@ -1037,12 +1032,14 @@ div.spruceup {
 /* Slideshow Stuff */
 /*=========================*/
 /* Student Overlay Slideshow */
-#img-carousel {
+#img-carousel,
+.leadimage {
   text-align: center;
   min-height: 200px;
   max-height: 200px;
 }
 
+.leadimage .singleimage,
 .carousel-inner,  
 .carousel-inner > .item {
   height: 200px;
@@ -1052,33 +1049,38 @@ div.spruceup {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #img-carousel {
+  #img-carousel,
+  .leadimage {
     min-height: 200px;
-    max-height: 400px;
+    max-height: 350px;
   }
   
+  .leadimage .singleimage,
   .carousel-inner,  
   .carousel-inner > .item {
-    height: 400px;
+    height: 350px;
     text-align: center;
   }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #img-carousel {
-    max-height: 500px;
+  #img-carousel,
+  .leadimage {
+    max-height: 400px;
   }
   
+  .leadimage .singleimage,
   .carousel-inner,  
   .carousel-inner > .item {
-    height: 500px;
+    height: 400px;
   }
 }
 
 /* http://css-tricks.com/centering-in-the-unknown/ - this is what I used for vertical centering... works like a charm! */
 /* here is some other info too: http://gtwebdev.com/workshop/vcenter/vcenter-inline-css.php */
 
+.leadimage .singleimage:before,
 .carousel-inner > .item:before {
   content: '';
   display: inline-block;
@@ -1087,6 +1089,7 @@ div.spruceup {
   /* margin: -0.1em; */ /* Adjusts for spacing */
  }
 
+.leadimage .singleimage img,
 .carousel-inner > .item > img, 
 .carousel-inner > .item > a > img {
   display: inline-block;
