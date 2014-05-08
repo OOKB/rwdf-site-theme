@@ -1036,33 +1036,99 @@ div.spruceup {
 
 /* Slideshow Stuff */
 /*=========================*/
-#slideshow, #slideshow .slide { border-radius: 0; position: relative; overflow: hidden; }
-#slideshow, #slideshow .slide, #slideshow img { width: 100%; }
-#slideshow img {position: absolute;}
+/* Student Overlay Slideshow */
+#slideshow {
+  margin-left: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+  min-height: 200px;
+  max-height: 200px;
+  }
 
-#slideshow:before,
-#slideshow:after {
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: 777;
-  display: block;
-  content: "";
-  height: 40px;
+.carousel-inner,  
+.carousel-inner > .item {
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+  }
+
+#singleimg {
+  position: relative;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  }
+
+#singleimg img {
+  max-height: 100%;
+  max-width: 100%;
+  }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #slideshow,
+  #singleimg {
+    margin-bottom: 50px;
+    min-height: 200px;
+    max-height: 400px;
+    }
+  
+  .carousel-inner,  
+  .carousel-inner > .item {
+    height: 400px;
+    text-align: center;
+    }
 }
 
-#slideshow:before {
-  top:0;
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, .2), rgba(0,0,0,0));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .2), rgba(0,0,0,0));
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #slideshow,
+  #singleimg {
+    max-height: 500px;
+    }
+  
+  .carousel-inner,  
+  .carousel-inner > .item {
+    height: 500px;
+    }
 }
 
-#slideshow:after {
-  bottom: 0;
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,.2));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,.2));
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #slideshow,
+  #singleimg {
+    max-height: 600px;
+    }
+  
+  .carousel-inner,  
+  .carousel-inner > .item {
+    height: 600px;
+    }
 }
 
+/* http://css-tricks.com/centering-in-the-unknown/ - this is what I used for vertical centering... works like a charm! */
+/* here is some other info too: http://gtwebdev.com/workshop/vcenter/vcenter-inline-css.php */
+
+.carousel-inner > .item:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  /* margin: -0.1em; */ /* Adjusts for spacing */
+ }
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 98%;
+  height: auto;
+  margin: 0;
+}
 /** /END SLIDESHOW STUFF **/
 
 /** NEWS PAGE/STYLES **/
