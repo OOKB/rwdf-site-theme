@@ -121,14 +121,6 @@ js:
 
     </article>
 
-    <aside class="blogroll">
-      <ul>
-        {{# page.blogroll }}
-          <li><a href="tk" class="tk" >tk</a></li>
-        {{/ page.blogroll }}
-      </ul>
-    </aside>
-
   </div>
 
 </div>
@@ -151,4 +143,10 @@ js:
 <!-- /end Navigation Prev/Next
 ================================================== -->
 
-<!-- hmmm why isn't this updating? ! -->
+<aside class="blogroll row">
+  <ul>
+    {{# page.blogroll }}
+      <li><a href="tk" class="tk" >tk</a></li>
+    {{/ page.blogroll }}
+  </ul>
+</aside>
