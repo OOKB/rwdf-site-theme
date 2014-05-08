@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
   });
 
-  $("#img-carousel div.carousel-inner div.item:nth-child(1)").addClass("active");
+  $("#img-carousel div.item:nth-child(1)").addClass("active");
 
 });
 
