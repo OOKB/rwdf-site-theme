@@ -1065,33 +1065,6 @@ div.spruceup {
 
 /** /END SLIDESHOW STUFF **/
 
-/** fancy box popups */
-
-.lightbox-thumbs {
-  background: #daf6ff;
-  margin: 7px -7px;
-  padding: 7px 7px 0;
-  border-radius: 7px;
-}
-
-.lightbox-thumbs,
-.lightbox-thumbs a {
-  margin-bottom: 7px;
-}
-
-.lightbox-thumbs a,
-.lightbox-thumbs img {
-  display: block;
-  width:50px;
-  height:50px;
-  border-radius: 7px;
-}
-
-.lightbox-thumbs a {
-  margin-right: 7px;
-  float: left;
-}
-
 /** NEWS PAGE/STYLES **/
 .newslist time {
   color: #009AC9;
