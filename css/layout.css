@@ -1146,7 +1146,7 @@ form.wufoo .phone input.four {
 form.wufoo .phone span.one {
   max-width: 8%;
   width: 8%;
-  min-width: 83%;
+  min-width: 8%;
 }
 
 #saveForm, .btn.blog {
