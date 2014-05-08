@@ -1121,6 +1121,7 @@ div.spruceup {
 form.wufoo label {
   max-width: 100%;
   display: block;
+  font-weight: normal;
 }
 
 form.wufoo input {
@@ -1128,6 +1129,7 @@ form.wufoo input {
   width: 100%;
   min-width: 100%;
 }
+
 #saveForm, .btn.blog {
   border: none;
   background: #009AC9;
@@ -1154,8 +1156,6 @@ form.wufoo input {
   color: #F3F3F3;
   color: rgba(243,243,243,1);
 }
-
-
 
 /*=========================*/
 /*=========================*/
