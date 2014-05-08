@@ -1123,6 +1123,11 @@ form.wufoo label {
   display: block;
 }
 
+form.wufoo input {
+  max-width: 100%;
+  width: 100%;
+  min-width: 100%;
+}
 #saveForm, .btn.blog {
   border: none;
   background: #009AC9;
