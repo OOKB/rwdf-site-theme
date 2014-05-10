@@ -13,6 +13,9 @@ $(document).ready(function() {
       hash_html.hide();
       thanks_shown = false;
     }
+    else {
+      console.log(hash);
+    }
   }
   if ("onhashchange" in window) {
     hash = window.location.hash;
