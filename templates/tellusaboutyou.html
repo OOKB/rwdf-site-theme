@@ -5,6 +5,12 @@ js:
   - /scripts/wufoo.js
 ---
 
+  {{# page.thanks_md}}
+  <div class="row thanks" style="display:none;">
+    {{{ content }}}
+  </div>
+  {{/ page.thanks_md}}
+
   <div class="row">
 
     <div class="col-xs-12 col-md-7">
