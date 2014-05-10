@@ -4,10 +4,12 @@ $(document).ready(function() {
   var thanks_shown = false;
   var show_thanks = function() {
     if ('#thanks' == hash) {
-      console.log('thanks');
+      console.log('show thanks');
       hash_html.show();
+      thanks_shown = true;
     }
     else if (thanks_shown) {
+      console.log('hide thanks');
       hash_html.hide();
       thanks_shown = false;
     }
