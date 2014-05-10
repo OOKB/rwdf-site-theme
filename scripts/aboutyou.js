@@ -3,6 +3,7 @@ $(document).ready(function() {
   var hash_html = $('div#thankyou_message');
   var thanks_shown = false;
   var show_thanks = function() {
+    hash = window.location.hash;
     if ('#thanks' == hash) {
       console.log('show thanks');
       hash_html.show();
@@ -17,9 +18,6 @@ $(document).ready(function() {
       console.log(hash);
     }
   }
-  if ("onhashchange" in window) {
-    hash = window.location.hash;
-    show_thanks();
-  }
+  window.onhashchange = show_thanks;
   show_thanks();
 });
