@@ -27,7 +27,7 @@ $(document).ready(function() {
   if (blog_tag) {
     var endpoint = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=http://rwdfblog.com/tag/" + blog_tag + "/feed/";
     $.getJSON(endpoint, function(data) {
-      console.log(data.responseData.feed);
+      // console.log(data.responseData.feed);
       var template = Hogan.compile($('#blog-read-more-template').html());
       $('#blog-read-more').append(template.render(data.responseData.feed));
     });
