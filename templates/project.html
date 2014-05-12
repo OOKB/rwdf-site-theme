@@ -3,6 +3,7 @@ layout : default
 js:
   - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
   - "/scripts/project.js"
+  - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
 ---
 
 <!-- The Project page(s)! -->
@@ -102,6 +103,7 @@ js:
                 <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
                 <h3>{{title}}</h3>
                 {{{ content }}}
+                <div id="blog-read-more"></div>
               </div>
             </div>
           {{/ spruceups }}
@@ -142,4 +144,18 @@ js:
 </div>
 <!-- /end Navigation Prev/Next
 ================================================== -->
+
+{{=<% %>=}}
+<script id="blog-entries-template" type="text/x-mustache-template">
+  <h3>Read more detailed info about our MASD Fellows</h3>
+  <!-- // LISTING OF RWDF PROJECTS -->
+  <ul id="blog-entries-list" class="col-xs-12">
+    {{#entries}}
+      <li class="blog-entry">
+        <a href="{{link}}">{{title}}</a>
+      </li>
+    {{/entries}}
+  </ul>
+</script>
+<%={{ }}=%>
 
