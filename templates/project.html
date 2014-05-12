@@ -85,6 +85,8 @@ js:
 
       {{{ page.content }}}
 
+      <div id="blog-read-more"></div>
+
       {{# page.spruceup-grants }}
       <!-- Spruce Up Projects Tabs!
       ================================================== -->
@@ -107,7 +109,6 @@ js:
                 <div class="clearfix leadimage"><img class="col-xs-12 col-sm-8 offset2 " src="{{ image }}" /></div>
                 <h3>{{title}}</h3>
                 {{{ content }}}
-                <div id="blog-read-more"></div>
               </div>
             </div>
           {{/ spruceups }}
@@ -150,7 +151,7 @@ js:
 ================================================== -->
 
 {{=<% %>=}}
-<script id="blog-entries-template" type="text/x-mustache-template">
+<script id="blog-read-more-template" type="text/x-mustache-template">
   <h3>Read more detailed info about our MASD Fellows</h3>
   <!-- // LISTING OF RWDF PROJECTS -->
   <ul id="blog-entries-list" class="col-xs-12">

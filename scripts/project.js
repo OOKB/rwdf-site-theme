@@ -22,6 +22,15 @@ $(document).ready(function() {
 
   $("#img-carousel div.item:nth-child(1)").addClass("active");
 
+  // Blog entry list.
+  var blog_tag = window.blog_tag;
+  if (blog_tag) {
+    var endpoint = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=%3A%2F%2Frwdfblog.com%2Ftag%2F" + blog_tag + "%2Ffeed";
+    $.getJSON(endpoint, function(data) {
+      var template = Hogan.compile($('#blog-read-more-template').html());
+      $('#blog-read-more').append(template.render(data.responseData));
+    });
+  }
 });
 
 $(window).bind("load", function() {
