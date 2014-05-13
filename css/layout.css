@@ -1153,6 +1153,10 @@ ul.newslist {
   padding-bottom: 30px;
 }
 
+.newslist .border-bottom:first-child {
+  padding-top: 0;
+}
+
 .newslist .border-bottom:last-child {
   border-bottom: none; 
 }
