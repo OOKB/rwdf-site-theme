@@ -23,6 +23,7 @@ $(document).ready(function() {
 
   $('#projects').isotope({ layoutMode : 'fitRows' });
 
+  //hmmm i deleted this, and it stopped working, then I put it back and it still isn't working... feck.
   $('#filters a').click(function(){
     // get href attr, remove leading #
     var href = $(this).attr('href').replace( /^#/, '' ),
