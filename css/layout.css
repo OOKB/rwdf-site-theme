@@ -779,6 +779,10 @@ ul.side-nav .active i {
 /* Project Pages */
 /*=========================*/
 
+article.writeup ul {
+  padding-left: 1em;
+}
+
 .controls,
 .controls div { 
   padding-top: 0; 
