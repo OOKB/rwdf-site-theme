@@ -23,4 +23,38 @@ $(document).ready(function() {
 
   $('#projects').isotope({ layoutMode : 'fitRows' });
 
+  $('#filters a').click(function(){
+    // get href attr, remove leading #
+    var href = $(this).attr('href').replace( /^#/, '' ),
+        // convert href into object
+        // i.e. 'filter=.inner-transition' -> { filter: '.inner-transition' }
+        option = $.deparam( href, true );
+    // set hash, triggers hashchange on window
+    $.bbq.pushState( option );
+    return false;
+  });
+
+  $('#projects .icons.categories a').click(function(){
+    // get href attr, remove leading #
+    var href = $(this).attr('href').replace( /^#/, '' ),
+        // convert href into object
+        // i.e. 'filter=.inner-transition' -> { filter: '.inner-transition' }
+        option = $.deparam( href, true );
+    // set hash, triggers hashchange on window
+    $.bbq.pushState( option );
+    return false;
+  });
+
+  $(window).bind( 'hashchange', function( event ){
+    // get options object from hash
+    var hashOptions = $.deparam.fragment();
+    // apply options from hash
+    $('#projects').isotope( hashOptions );
+  })
+
+  // trigger hashchange to capture any hash data on init
+  .trigger('hashchange');
+  
+  //the end
+
 });
