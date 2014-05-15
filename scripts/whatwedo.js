@@ -16,7 +16,7 @@ $(document).ready(function() {
   
   //sets href for the isotope filters...
   $('.icons.categories .science a').attr('href', '#filter=.science');
-  $('.icons.categories .scholars a').attr('href', '#filter=.scholars');
+  $('.icons.categories .education a').attr('href', '#filter=.education');
   $('.icons.categories .arts a').attr('href', '#filter=.arts');
   $('.icons.categories .justice a').attr('href', '#filter=.justice');
   $('.icons.categories .community a').attr('href', '#filter=.community');

@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //prepare whatwedo feed for isotope...
   $('.icons.categories a.science').attr('href', '/whatwedo/#filter=.science');
-  $('.icons.categories a.scholars').attr('href', '/whatwedo/#filter=.scholars');
+  $('.icons.categories a.education').attr('href', '/whatwedo/#filter=.education');
   $('.icons.categories a.arts').attr('href', '/whatwedo/#filter=.arts');
   $('.icons.categories a.justice').attr('href', '/whatwedo/#filter=.justice');
   $('.icons.categories a.community').attr('href', '/whatwedo/#filter=.community');
