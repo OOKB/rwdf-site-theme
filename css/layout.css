@@ -194,6 +194,12 @@ footer a {
 footer { margin-top: 60px; }
 footer ul.menu { list-style: none; }
 footer .text-right { text-align: left; }
+footer .logo-sm {
+  width: 36px;
+  height: auto;
+  float: left;
+  margin: 0 12px 72px 0;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   footer .text-right { text-align: right; }
@@ -227,12 +233,12 @@ li:hover .icongreen, li:hover .icongray {
   background-color:rgba(0,154,201,1); 
 }
   
-.icons.categories .science , .icons.categories .arts , .icons.categories .justice, /* .icons.categories .scholars, */ .icons.categories .education, .icons.categories .community, .icons.categories.bottom a {
+.icons.categories .science , .icons.categories .arts , .icons.categories .justice, .icons.categories .education, .icons.categories .community, .icons.categories.bottom a {
   background-color: #B9BAB8;
   background-color:rgba(185,186,184,1); 
 }
   
-.icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover, /* .icons.categories .scholars:hover, */ .icons.categories .education:hover, .icons.categories .community:hover, .icons.categories.bottom a:hover {
+.icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover, .icons.categories .education:hover, .icons.categories .community:hover, .icons.categories.bottom a:hover {
   background-color:#009AC9;
   background-color:rgba(0,154,201,1); 
 }
@@ -957,15 +963,6 @@ div.spruceup {
   width:35px !important;
   }
   
-/*
-.icons.categories .scholars a,
-.icons.categories.bottom a.scholars {
-  background-image:url('../media/category_scholars_40.png');
-  background-repeat: no-repeat;
-  width:40px !important;
-  }
-*/
-
 .icons.categories .education a,
 .icons.categories.bottom a.education {
   background-image:url('../media/category_scholars_40.png');
