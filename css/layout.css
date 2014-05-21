@@ -1256,7 +1256,7 @@ form.wufoo .phone span.one {
 /*=========================*/
 /*=========================*/
 
-/* MASSIVE MOBILE FRIENDLY STYLES */
+/* LAST MASS OF MOBILE FRIENDLY STYLES TO FINISH OUT THE SITE */
 
 @media (max-width: 767px) {
   .jumbotron { margin-bottom: 0; }
@@ -1281,8 +1281,11 @@ form.wufoo .phone span.one {
   .newslist p.date { margin-top: 15px; text-align: left; }
   .sidebar { padding: 15px; }
   .wufoo .controls div { height: auto; }
+  .feature h2, .overlay h3 { font-size: 2.2rem; margin: 0; padding: 0; line-height: 1.25em; }
+  .hero .feature { top: 165px; }
+  .hero .tagline { top: -165px; }
+  .feature .overlay { bottom: initial; top: 0; }
 }
-
 
 /*=========================*/
 /*=========================*/
