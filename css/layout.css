@@ -419,6 +419,8 @@ ul.nav li {
 }
 
 .navbar-toggle p {
+  color: #009CC1;
+  color: rgba(0,156,193,1);
   margin: 0;
   text-transform: uppercase;
 }
@@ -1282,8 +1284,10 @@ form.wufoo .phone span.one {
   .sidebar { padding: 15px; }
   .wufoo .controls div { height: auto; }
   .feature h2, .overlay h3 { font-size: 1.75rem; letter-spacing:1px; margin: 0; padding: 0; line-height: 1.25em; }
-  .hero .feature { top: 115px; }
-  .hero .tagline { top: -165px; height: 100px; }
+  .hero .feature { top: 165px; }
+  .hero .tagline { top: -165px; }
+  .hero .tagline .text { background: transparent; color: #009CC1; color: rgba(0,156,193,1); }
+  .hero .tagline .text h1 { color: #009CC1; color: rgba(0,156,193,1); font-size: 2.25em; text-align: left; padding: 0; margin: 0;}
   .feature .overlay { bottom: initial; top: 0; }
   .overlay { min-height: none; }
 }
