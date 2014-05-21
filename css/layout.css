@@ -1290,7 +1290,7 @@ form.wufoo .phone span.one {
   .hero .tagline .text { background: transparent; color: #009CC1; color: rgba(0,156,193,1); }
   .hero .tagline div.text h1 { color: #009CC1; color: rgba(0,156,193,1); font-size: 2.75em; text-align: left; padding: 0; margin: 0; line-height: 1; }
   .feature .overlay { bottom: initial; top: 0; }
-  .overlay { min-height: none; }
+  .overlay { min-height: initial; padding: 6px 10px; }
 }
 
 /*=========================*/
