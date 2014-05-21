@@ -1281,10 +1281,11 @@ form.wufoo .phone span.one {
   .newslist p.date { margin-top: 15px; text-align: left; }
   .sidebar { padding: 15px; }
   .wufoo .controls div { height: auto; }
-  .feature h2, .overlay h3 { font-size: 2.2rem; margin: 0; padding: 0; line-height: 1.25em; }
-  .hero .feature { top: 165px; }
-  .hero .tagline { top: -165px; }
+  .feature h2, .overlay h3 { font-size: 1.75rem; letter-spacing:1px; margin: 0; padding: 0; line-height: 1.25em; }
+  .hero .feature { top: 115px; }
+  .hero .tagline { top: -165px; height: 100px; }
   .feature .overlay { bottom: initial; top: 0; }
+  .overlay { min-height: none; }
 }
 
 /*=========================*/
