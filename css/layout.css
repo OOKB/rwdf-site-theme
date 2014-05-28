@@ -1007,6 +1007,16 @@ div.spruceup {
   clear:both;
 }
 
+p.project-content {
+  max-width: 617px;
+}
+
+@media (min-width: 992px) {
+  p.project-content {
+    max-width: 750px;
+  }
+}
+
 /**** Isotope CSS3 transitions ****/
 .isotope-item { z-index: 2; }
 .isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
