@@ -1127,7 +1127,7 @@ p.project-content {
   opacity: .33;
   filter: alpha(opacity=33);
   text-align: center;
-  text-shadow: none);
+  text-shadow: none;
   transition: all 300ms;
   /**/
   background-position: center center;
