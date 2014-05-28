@@ -30,7 +30,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
-  line-height: 1.25em;  
+  line-height: 1.25em;
+  font-weight: 700;
 }
 
 .add-top    { margin-top: 75px; }
