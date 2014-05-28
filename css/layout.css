@@ -832,13 +832,13 @@ article.writeup ul {
   background: url("../media/proj-p.png") center center no-repeat;
 }
 .controls .prev a:hover {
-  background-image: url("../media/proj-p-wh.png");
+  background-image: url("../media/proj-p-white.png");
 }
 .controls .next a {
   background: url("../media/proj-n.png") center center no-repeat;
 }
 .controls .next a:hover {
-  background-image: url("../media/proj-n-wh.png");
+  background-image: url("../media/proj-n-white.png");
 }
 
 @media (max-width: 767px) {
