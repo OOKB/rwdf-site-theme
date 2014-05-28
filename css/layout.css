@@ -1102,8 +1102,7 @@ p.project-content {
   display: inline-block;
   height: 100%; 
   vertical-align: middle;
-  /* margin: -0.1em; */ /* Adjusts for spacing */
- }
+}
 
 .leadimage .singleimage img,
 .carousel-inner > .item > img, 
@@ -1171,9 +1170,6 @@ p.project-content {
   display: inline-block;
   vertical-align: middle;
 }
-
-
-
 
 /** /END SLIDESHOW STUFF **/
 
