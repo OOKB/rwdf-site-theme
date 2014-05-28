@@ -1124,12 +1124,15 @@ p.project-content {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 11.11111%;
+  width: 12.121212121212121212%;
   opacity: .33;
   filter: alpha(opacity=33);
   text-align: center;
   text-shadow: none);
   transition: all 300ms;
+  /**/
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .carousel-control:hover { 
@@ -1140,23 +1143,19 @@ p.project-content {
 }
 
 .carousel-control.left {
-/*   background: url("../media/arrow-left-gy.png") center center no-repeat; */
-  background: url("../media/arrow-sm-l-gy.png") center bottom no-repeat;
+  background-image: url("../media/arrow-sm-l-gy.png");
 }
 
 .carousel-control.right {
-/*   background: url("../media/arrow-right-gy.png") center center no-repeat; */
-  background: url("../media/arrow-sm-r-gy.png") center bottom no-repeat;
+  background-image: url("../media/arrow-sm-r-gy.png");
 }
 
 .carousel-control.left:hover {
-/*   background: url("../media/arrow-left.png") center center no-repeat; */
-  background: url("../media/arrow-sm-l.png") center bottom no-repeat;
+  background-image: url("../media/arrow-sm-l.png");
 }
 
 .carousel-control.right:hover {
-/*   background: url("../media/arrow-right.png") center center no-repeat; */
-  background: url("../media/arrow-sm-r.png") center bottom no-repeat;
+  background-image: url("../media/arrow-sm-r.png");
 }
 
 @media screen and (min-width: 768px)
