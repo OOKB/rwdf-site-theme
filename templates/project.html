@@ -79,14 +79,22 @@ js:
         {{/ page.spruceup-grants}}
 
       </div>
+      <!-- END IMAGE CRAZINESS -->
+
+
+
 
       <h2>{{ page.title }}</h2>
 
       {{{ page.content }}}
 
       <div id="blog-read-more" class="add-bottom">
-        <!-- "This is where the Read more detailed info" goes. -->
+        <!-- "This is where the Read more detailed info on the blog" goes. -->
       </div>
+
+
+
+
 
       {{# page.spruceup-grants }}
       <!-- Spruce Up Projects Tabs!
@@ -139,13 +147,13 @@ js:
 ================================================== -->
 <div class="row minus-top controls">
 
-  {{# page._next }}
-    <div class="next col-xs-6 col-sm-2"><a href="/{{_dirname}}" title="{{ title }}">Next &rarr;</a></div>
-  {{/ page._next }}
-
   {{# page._previous }}
-    <div class="prev previous col-xs-6 col-sm-2 col-sm-offset-8"><a href="/{{_dirname}}" title="{{ title }}">&larr; Previous</a></div>
+    <div class="prev previous col-xs-6 col-sm-2 "><a href="/{{_dirname}}/" title="{{ title }}">&larr; Previous</a></div>
   {{/ page._previous }}
+
+  {{# page._next }}
+    <div class="next col-xs-6 col-sm-2 col-sm-offset-8"><a href="/{{_dirname}}/" title="{{ title }}">Next &rarr;</a></div>
+  {{/ page._next }}
 
 </div>
 <!-- /end Navigation Prev/Next
