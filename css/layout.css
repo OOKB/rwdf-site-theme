@@ -459,13 +459,13 @@ ul.nav li {
 .overlay {
   background: rgba(0,156,193,.5);
   margin: 0;
-  padding: 10px;
+  padding: 9px;
   position: absolute;
   left: 15px;
   right: 15px;
 }
 
-.feature .overlay  { bottom: 0; }
+.feature .overlay  { bottom: 0; padding: 9px 12px; }
 .col-sm-4 .overlay { top: 0; }
 
 .hero .lead {
@@ -487,8 +487,8 @@ ul.nav li {
 }
 
 .overlay h3 {
-  font-size: 1.25em;
-  letter-spacing: 1px;
+  font-size: 1.111111111em;
+  letter-spacing: .022222222222em;
 }
 
 .hero .tagline h1 {
