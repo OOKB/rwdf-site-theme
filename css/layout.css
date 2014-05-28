@@ -1141,22 +1141,22 @@ p.project-content {
 
 .carousel-control.left {
 /*   background: url("../media/arrow-left-gy.png") center center no-repeat; */
-  background: url("../media/arrow-sm-l-gy.png") center center no-repeat;
+  background: url("../media/arrow-sm-l-gy.png") center bottom no-repeat;
 }
 
 .carousel-control.right {
 /*   background: url("../media/arrow-right-gy.png") center center no-repeat; */
-  background: url("../media/arrow-sm-r-gy.png") center center no-repeat;
+  background: url("../media/arrow-sm-r-gy.png") center bottom no-repeat;
 }
 
 .carousel-control.left:hover {
 /*   background: url("../media/arrow-left.png") center center no-repeat; */
-  background: url("../media/arrow-sm-l.png") center center no-repeat;
+  background: url("../media/arrow-sm-l.png") center bottom no-repeat;
 }
 
 .carousel-control.right:hover {
 /*   background: url("../media/arrow-right.png") center center no-repeat; */
-  background: url("../media/arrow-sm-r.png") center center no-repeat;
+  background: url("../media/arrow-sm-r.png") center bottom no-repeat;
 }
 
 @media screen and (min-width: 768px)
