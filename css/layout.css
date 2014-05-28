@@ -1046,7 +1046,6 @@ p.project-content {
 
 /* Slideshow Stuff */
 /*=========================*/
-/* Student Overlay Slideshow */
 .imagewrapper { margin-top: 20px; }
 
 #img-carousel,
@@ -1126,9 +1125,8 @@ p.project-content {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: .66;
-  filter: alpha(opacity=66);
-  font-size: 20px;
+  opacity: .5;
+  filter: alpha(opacity=5);
   text-align: center;
   text-shadow: none);
   transition: all 500ms;
@@ -1141,15 +1139,48 @@ p.project-content {
   filter: alpha(opacity=100);
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
+.carousel-control.left {
+  background: url("../media/arrow-left-gy.png") center center no-repeat;
 }
 
+.carousel-control.right {
+  background: url("../media/arrow-right-gy.png") center center no-repeat;
+}
+
+.carousel-control.left:hover {
+  background: url("../media/arrow-left.png") center center no-repeat;
+}
+
+.carousel-control.right:hover {
+  background: url("../media/arrow-right.png") center center no-repeat;
+}
+
+@media screen and (min-width: 768px)
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right, 
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+
 /** /END SLIDESHOW STUFF **/
+
+
+
+
+
+
+
+
 
 /** NEWS PAGE/STYLES **/
 ul.newslist {
