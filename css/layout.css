@@ -1131,7 +1131,7 @@ p.project-content {
   transition: all 300ms;
   /**/
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
 }
 
 .carousel-control:hover { 
@@ -1172,14 +1172,6 @@ p.project-content {
 }
 
 /** /END SLIDESHOW STUFF **/
-
-
-
-
-
-
-
-
 
 /** NEWS PAGE/STYLES **/
 ul.newslist {
