@@ -1,7 +1,6 @@
 ---
 layout : default
 js:
-  - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
   - "/scripts/project.js"
   - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
 ---
@@ -46,12 +45,9 @@ js:
               </div>
 
               <!-- Controls -->
-              <a class="left carousel-control" href="#img-carousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#img-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
+              <a class="left carousel-control" href="#img-carousel" data-slide="prev" title="Last Image"></a>
+              <a class="right carousel-control" href="#img-carousel" data-slide="next" title="Next Image"></a>
+              
             </div>
           {{/ page._images.length }}
         {{/page._image}}
@@ -70,30 +66,27 @@ js:
             </div>
 
             <!-- Controls -->
-            <a class="left carousel-control" href="#img-carousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#img-carousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
+            <a class="left carousel-control" href="#img-carousel" data-slide="prev" title="Last Image"></a>
+            <a class="right carousel-control" href="#img-carousel" data-slide="next" title="Next Image"></a>
           </div>
         {{/ page.spruceup-grants}}
 
       </div>
+      <!-- END IMAGE CRAZINESS -->
 
       <h2>{{ page.title }}</h2>
 
       {{{ page.content }}}
 
-      <div id="blog-read-more">
-        <!-- "This is where the Read more detailed info" goes. -->
+      <div id="blog-read-more" class="add-bottom">
+        <!-- "This is where the Read more detailed info on the blog" goes. -->
       </div>
 
       {{# page.spruceup-grants }}
       <!-- Spruce Up Projects Tabs!
       ================================================== -->
-      <h3 class="spruceuptitle">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
-      <div class="tabbable spruceuptabs">
+      <h3 class="spruceuptitle add-top">Grant Recipients <span class="togglearrow">&#8595;</span></h3>
+      <div class="tabbable spruceuptabs row">
         <div class="spruceuplist col-xs-12 col-sm-4" id="myTab">
           <ul class="side-nav">
           {{# spruceups }}
@@ -140,13 +133,13 @@ js:
 ================================================== -->
 <div class="row minus-top controls">
 
-  {{# page._next }}
-    <div class="next col-xs-6 col-sm-2"><a href="/{{_dirname}}" title="{{ title }}">Next &rarr;</a></div>
-  {{/ page._next }}
-
   {{# page._previous }}
-    <div class="prev previous col-xs-6 col-sm-2 col-sm-offset-8"><a href="/{{_dirname}}" title="{{ title }}">&larr; Previous</a></div>
+    <div class="prev previous col-xs-6 col-sm-2 "><a href="/{{_dirname}}/" title="{{ title }}">&larr; Previous</a></div>
   {{/ page._previous }}
+
+  {{# page._next }}
+    <div class="next col-xs-6 col-sm-2 col-sm-offset-8"><a href="/{{_dirname}}/" title="{{ title }}">Next &rarr;</a></div>
+  {{/ page._next }}
 
 </div>
 <!-- /end Navigation Prev/Next
@@ -154,9 +147,9 @@ js:
 
 {{=<% %>=}}
 <script id="blog-read-more-template" type="text/x-mustache-template">
-  <h3>Read more detailed info</h3>
+  <h3>Read more on the blog:</h3>
   <!-- // LISTING OF RWDF PROJECTS -->
-  <ul id="blog-entries-list" class="col-xs-12">
+  <ul id="blog-entries-list">
     {{#entries}}
       <li class="blog-entry">
         <a href="{{link}}">{{title}}</a>

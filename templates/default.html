@@ -27,6 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
   </head>
 
   <body class="{{ page.title }} {{ page._info.title }} {{ page._info.classes }}">
@@ -89,29 +90,40 @@
     <footer class="container">
       <div class="diag-divider"></div>
       <div class="row">
-        <address class="col-xs-12 col-sm-3">
-          The Robert W. Deutsch Foundation <br/>
-          Suite 201, The Exchange <br/>
-          1122 Kenilworth Drive <br/>
-          Towson, MD 21204
-        </address>
+        <div class="col-xs-12 col-sm-3">
+          <img src="{{urls.theme}}/media/bigd.png" class="logo-sm" />
+          <address>
+            The Robert W. Deutsch Foundation <br/>
+            Suite 201, The Exchange <br/>
+            1122 Kenilworth Drive <br/>
+            Towson, MD 21204
+          </address>
+        </div>
         <p class="col-xs-12 col-sm-3">
           Email us at <a href="{{data.email}}" target="_blank">{{data.email}}</a> <br/>
-          Phone: {{data.phone}} / Fax: {{data.fax}} <br/>
+          Phone: {{data.phone}} <br/>
+          Fax: {{data.fax}} <br/>
           <a href="https://twitter.com/DeutschFound" target="_blank"><img src="{{urls.theme}}/media/socialmask_twitter.png" class="icongray" ></a>
           <a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="{{urls.theme}}/media/socialmask_fbook.png" class="icongray" ></a>
           <a href="http://rwdfblog.com/" target="_blank"><img src="{{urls.theme}}/media/socialmask_wpress.png" class="icongray" ></a>
           <a href="https://www.flickr.com/photos/101614637@N07/" target="_blank"><img src="{{urls.theme}}/media/socialmask_flickr.png" class="icongray" ></a>
         </p>
         <ul class="menu col-xs-12 col-sm-2 col-sm-offset-1">
-          <li><a href="/" target="_blank">Home</a></li>
-          <li><a href="/whoweare/" target="">Who We Are</a></li>
-          <li><a href="/whatwedo/" target="">What We Do</a></li>
-          <li><a href="/tellusaboutyou/" target="">Tell Us About You</a></li>
-          <li><a href="/news/" target="">In The Press</a></li>
-          <li><a href="http://rwdfblog.com/" target="">Read Our Blog</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/whoweare/">Who We Are</a></li>
+          <li><a href="/whatwedo/">What We Do</a></li>
+          <li><a href="/tellusaboutyou/">Tell Us About You</a></li>
+          <li><a href="/news/">In The Press</a></li>
+          <li><a href="http://rwdfblog.com/">Read Our Blog &raquo;</a></li>
+          <li><a href="/whoweare/form990/RWDF-FY2013.pdf">IRS Form 990 (FY2013)</a></li>
         </ul>
         <p class="col-xs-12 col-sm-3 text-right">&copy; Deutsch Foundation {{date.year}}</p>
+      </div>
+      <div class="row">
+        <p class="col-xs-12 col-sm-3">
+          Site by <a href="http://www.ookb.co/" target="_blank">OOKB</a> <br/>
+          Powered by <a href="http://www.cape.io/" target="_blank">CAPE</a> &amp; <a href="http://www.ezle.co/" target="_blank">EZLE</a>
+        </p>
       </div>
     </footer>
     <!-- /footer -->
@@ -123,7 +135,9 @@
     <script src="{{&.}}" type="text/javascript"></script>
     {{/page_html.js}}
 
-    <script src="/scripts/rwdf.js" type="text/javascript"></script>
+
+<!--     <script src="/scripts/rwdf.js" type="text/javascript"></script> everything has been pulled out into its own, page specific JS files -->
+
 
     <!-- Google Analytics -->
     <script>

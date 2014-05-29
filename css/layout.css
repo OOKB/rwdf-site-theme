@@ -30,7 +30,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
-  line-height: 1.25em;  
+  line-height: 1.25em;
+  font-weight: 700;
 }
 
 .add-top    { margin-top: 75px; }
@@ -194,6 +195,12 @@ footer a {
 footer { margin-top: 60px; }
 footer ul.menu { list-style: none; }
 footer .text-right { text-align: left; }
+footer .logo-sm {
+  width: 36px;
+  height: auto;
+  float: left;
+  margin: 0 12px 72px 0;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   footer .text-right { text-align: right; }
@@ -227,12 +234,12 @@ li:hover .icongreen, li:hover .icongray {
   background-color:rgba(0,154,201,1); 
 }
   
-.icons.categories .science , .icons.categories .arts , .icons.categories .justice, .icons.categories .scholars, .icons.categories .community, .icons.categories.bottom a {
+.icons.categories .science , .icons.categories .arts , .icons.categories .justice, .icons.categories .education, .icons.categories .community, .icons.categories.bottom a {
   background-color: #B9BAB8;
   background-color:rgba(185,186,184,1); 
 }
   
-.icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover , .icons.categories .scholars:hover , .icons.categories .community:hover, .icons.categories.bottom a:hover {
+.icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover, .icons.categories .education:hover, .icons.categories .community:hover, .icons.categories.bottom a:hover {
   background-color:#009AC9;
   background-color:rgba(0,154,201,1); 
 }
@@ -413,6 +420,8 @@ ul.nav li {
 }
 
 .navbar-toggle p {
+  color: #009CC1;
+  color: rgba(0,156,193,1);
   margin: 0;
   text-transform: uppercase;
 }
@@ -451,15 +460,13 @@ ul.nav li {
 .overlay {
   background: rgba(0,156,193,.5);
   margin: 0;
-  min-height: 50px;
-  max-height: auto;
-  padding: 10px;
+  padding: 9px;
   position: absolute;
   left: 15px;
   right: 15px;
 }
 
-.feature .overlay  { bottom: 0; }
+.feature .overlay  { bottom: 0; padding: 9px 12px; }
 .col-sm-4 .overlay { top: 0; }
 
 .hero .lead {
@@ -474,10 +481,14 @@ ul.nav li {
 }
 
 .overlay h3,
-.overlay h3 a { 
+.overlay h3 a {
   color: white; 
-  font-weight: 400; 
   margin: 0; 
+}
+
+.overlay h3 {
+  font-size: 1.111111111em;
+  letter-spacing: .022222222222em;
 }
 
 .hero .tagline h1 {
@@ -749,13 +760,13 @@ ul.side-nav .icons i {
 }
 
 ul.side-nav .icons i.icon-science    { background-image: url("../media/category_science_40.png"); width: 21px; margin-left: 3px; }
-ul.side-nav .icons i.icon-scholars   { background-image: url("../media/category_scholars_40.png"); width: 24px; margin-left: 1px; }
+ul.side-nav .icons i.icon-education  { background-image: url("../media/category_scholars_40.png"); width: 24px; margin-left: 1px; }
 ul.side-nav .icons i.icon-arts       { background-image: url("../media/category_arts_40.png"); width: 24px; margin-left: 1px; }
 ul.side-nav .icons i.icon-justice    { background-image: url("../media/category_justice_40.png"); width: 26px; }
 ul.side-nav .icons i.icon-community  { background-image: url("../media/category_community_40.png"); width: 22px; margin-left: 2px; }
 
 ul.side-nav .active i.icon-science   { background-image: url("../media/category_science_40gr.png"); }
-ul.side-nav .active i.icon-scholars  { background-image: url("../media/category_scholars_40gr.png"); }
+ul.side-nav .active i.icon-education { background-image: url("../media/category_scholars_40gr.png"); }
 ul.side-nav .active i.icon-arts      { background-image: url("../media/category_arts_40gr.png"); }
 ul.side-nav .active i.icon-justice   { background-image: url("../media/category_justice_40gr.png"); }
 ul.side-nav .active i.icon-community { background-image: url("../media/category_community_40gr.png"); }
@@ -778,6 +789,10 @@ ul.side-nav .active i {
 
 /* Project Pages */
 /*=========================*/
+
+article.writeup ul {
+  padding-left: 1em;
+}
 
 .controls,
 .controls div { 
@@ -816,13 +831,13 @@ ul.side-nav .active i {
   background: url("../media/proj-p.png") center center no-repeat;
 }
 .controls .prev a:hover {
-  background-image: url("../media/proj-p-wh.png");
+  background-image: url("../media/proj-p-white.png");
 }
 .controls .next a {
   background: url("../media/proj-n.png") center center no-repeat;
 }
 .controls .next a:hover {
-  background-image: url("../media/proj-n-wh.png");
+  background-image: url("../media/proj-n-white.png");
 }
 
 @media (max-width: 767px) {
@@ -953,8 +968,8 @@ div.spruceup {
   width:35px !important;
   }
   
-.icons.categories .scholars a,
-.icons.categories.bottom a.scholars {
+.icons.categories .education a,
+.icons.categories.bottom a.education {
   background-image:url('../media/category_scholars_40.png');
   background-repeat: no-repeat;
   width:40px !important;
@@ -992,6 +1007,16 @@ div.spruceup {
   clear:both;
 }
 
+p.project-content {
+  max-width: 617px;
+}
+
+@media (min-width: 992px) {
+  p.project-content {
+    max-width: 750px;
+  }
+}
+
 /**** Isotope CSS3 transitions ****/
 .isotope-item { z-index: 2; }
 .isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
@@ -1020,7 +1045,6 @@ div.spruceup {
 
 /* Slideshow Stuff */
 /*=========================*/
-/* Student Overlay Slideshow */
 .imagewrapper { margin-top: 20px; }
 
 #img-carousel,
@@ -1077,8 +1101,7 @@ div.spruceup {
   display: inline-block;
   height: 100%; 
   vertical-align: middle;
-  /* margin: -0.1em; */ /* Adjusts for spacing */
- }
+}
 
 .leadimage .singleimage img,
 .carousel-inner > .item > img, 
@@ -1094,38 +1117,76 @@ div.spruceup {
 .carousel-control {
   color: #B9BAB8;
   color:rgba(185,186,184,1);
-  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
-  opacity: .66;
-  filter: alpha(opacity=66);
-  font-size: 20px;
+  width: 12.121212121212121212%;
   text-align: center;
-  text-shadow: none);
-  transition: all 500ms;
+  text-shadow: none;
+  transition: all 300ms;
+  /**/
+  background: transparent;
+  background-color: transparent;
+  background-image: none;
+  background-position: center center;
+  background-repeat: no-repeat !important;
 }
 
-.carousel-control:hover { 
+.carousel-control.left,
+.carousel-control.right {
+  opacity: .33;
+  filter: none;
+  filter: alpha(opacity=33);
+}
+
+.carousel-control.left {
+  background-image: url("../media/arrow-sm-l-gy.png");
+}
+
+.carousel-control.right {
+  background-image: url("../media/arrow-sm-r-gy.png");
+}
+
+.carousel-control:hover,
+.carousel-control.left:hover,
+.carousel-control.right:hover { 
   color:#6EB000;
   color:rgba(110,176,0,1);
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
+.carousel-control.left:hover {
+  background-image: url("../media/arrow-sm-l.png");
+}
+
+.carousel-control.right:hover {
+  background-image: url("../media/arrow-sm-r.png");
+}
+
+@media screen and (min-width: 768px)
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right, 
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /** /END SLIDESHOW STUFF **/
 
 /** NEWS PAGE/STYLES **/
+ul.newslist {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
 .newslist time {
   color: #009AC9;
   color:rgba(0,154,201,1); 
@@ -1140,14 +1201,19 @@ div.spruceup {
   margin-top: 0;
 }
 
-.newslist .border-top {
+.newslist .border-bottom {
   border-bottom: 2px solid; 
   border-color: #f8f7f7; 
   border-color: rgba(248,247,247,1);
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.newslist .border-top:last-child {
+.newslist .border-bottom:first-child {
+  padding-top: 0;
+}
+
+.newslist .border-bottom:last-child {
   border-bottom: none; 
 }
 
@@ -1235,8 +1301,9 @@ form.wufoo .phone span.one {
 /*=========================*/
 /*=========================*/
 /*=========================*/
+/*=========================*/
 
-/* MASSIVE MOBILE FRIENDLY STYLES */
+/* LAST MASS OF MOBILE FRIENDLY STYLES TO FINISH OUT THE SITE */
 
 @media (max-width: 767px) {
   .jumbotron { margin-bottom: 0; }
@@ -1254,16 +1321,22 @@ form.wufoo .phone span.one {
   .project h3 { margin-top: 0; }
   p a.btn.blog { display: inline; white-space: normal; padding: 0; background: transparent; color: #6EB000; color: rgba(110,176,0,1); }
   ul.side-nav .icons i.icon-science,
-  ul.side-nav .icons i.icon-scholars,
+  ul.side-nav .icons i.icon-education,
   ul.side-nav .icons i.icon-arts,
   ul.side-nav .icons i.icon-justice,
   ul.side-nav .icons i.icon-community  { margin-left: auto; }
   .newslist p.date { margin-top: 15px; text-align: left; }
   .sidebar { padding: 15px; }
   .wufoo .controls div { height: auto; }
+  .feature h2, .overlay h3 { font-size: 1.75rem; letter-spacing:1px; margin: 0; padding: 0; line-height: 1.25em; }
+  .hero .feature { top: 165px; }
+  .hero .tagline { top: -165px; }
+  .hero .tagline .text { background: transparent; color: #009CC1; color: rgba(0,156,193,1); }
+  .hero .tagline div.text h1 { color: #009CC1; color: rgba(0,156,193,1); font-size: 2.75em; text-align: left; padding: 0; margin: 0; line-height: 1; }
+  .feature .overlay { bottom: initial; top: 0; }
+  .overlay { min-height: initial; padding: 6px 10px; }
 }
 
-
 /*=========================*/
 /*=========================*/
 /*=========================*/
@@ -1275,6 +1348,4 @@ form.wufoo .phone span.one {
 /*=========================*/
 /*=========================*/
 /*=========================*/
-
-
-
+/*=========================*/

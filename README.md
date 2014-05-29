@@ -16,4 +16,4 @@ The Theme and The Content get combined with [CAPE](http://www.cape.io/).
 
 ### Hosting Technical Description
 
-* CAPE servers strategically located across the US check for dropbox changes every minute. When a change is found it pulls down the change, updates the database and recompiles the content with the theme. Each changed file is pushed to the Akamai CDN. Even if the compile servers becomes unavailable or require maintenance the website still remains live on the CDN.
+* CAPE servers strategically located across the US check for dropbox changes every minute. When a change is found it pulls down the change, updates the database and recompiles the content with the theme. Each changed file is pushed to the Akamai CDN. Even if the compile servers becomes unavailable or require maintenance the website still remains live on the CDN with the last update’s content still live.

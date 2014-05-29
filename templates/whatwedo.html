@@ -29,9 +29,9 @@ js:
         </li>
         <li class="icons">
           <div>
-            <a href="#filter=.scholars" >
-              <i class="icon-scholars icongreen iconsidenav"></i>
-              <p>Scholars &amp; Fellows</p>
+            <a href="#filter=.education" >
+              <i class="icon-education icongreen iconsidenav"></i>
+              <p>Education</p>
             </a>
           </div>
         </li>
@@ -55,7 +55,7 @@ js:
           <div>
             <a href="#filter=.community">
               <i class="icon-community icongreen iconsidenav"></i>
-              <p>Community</p>
+              <p>Community Development</p>
             </a>
           </div>
         </li>
@@ -74,7 +74,7 @@ js:
         </ul>
         <h3 class="project-title"><a href="/{{_dirname}}" data-disqus-identifier="/{{_dirname}}">{{ title }}</a></h3>
         <p class="project-content">
-          {{summary}} {{^summary}} {{teaser}} {{/summary}}
+          {{{summary}}} {{^summary}} {{{teaser}}} {{/summary}}
         </p>
       </li>
       {{/ page.projects._dirs }}
@@ -86,3 +86,4 @@ js:
       <a class="btn btn-large btn-info blog" href="http://rwdfblog.com" target="_blank">Additional information on many of these projects can be found on the blog</a>
     </p>
   </div>
+  
