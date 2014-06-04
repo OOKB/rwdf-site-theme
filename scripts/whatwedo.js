@@ -74,11 +74,11 @@ $(document).ready(function() {
     }
     else if ('#filter=.justice' == hash) {
       $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.justice a').addClass('active');
+      $("#filters").find('.justice').addClass('active');
     }
     else if ('#filter=.community' == hash) {
       $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.community a').addClass('active');
+      $("#filters").find('.community').addClass('active');
     }
     else {}
   };
