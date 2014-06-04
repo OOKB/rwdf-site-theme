@@ -66,9 +66,10 @@ js:
             <!-- Directors!
             ================================================== -->
             <div class="row">
-              <section class="directors col-xs-12 col-sm-8">
 
-                <h3>Directors</h3>
+              <h3 class="col-xs-12">Directors</h3>
+
+              <section class="directors col-xs-12 col-sm-8">
 
                 {{# page.bios.directors._all }}
                   <div class="plain {{sortorder}}">
@@ -91,10 +92,11 @@ js:
 
             <!-- Main Staff!
             ================================================== -->
-            <div class="row">
-              <section class="staff col-xs-12 col-sm-8">
+            <div class="row add-top">
 
-                <h3>Staff</h3>
+              <h3 class="col-xs-12">Staff</h3>
+
+              <section class="staff col-xs-12 col-sm-8">
 
                 {{# page.bios.staff._all }}
                   <div class="plain {{sortorder}}">
@@ -116,10 +118,11 @@ js:
 
             <!-- Fellows!
             ================================================== -->
-            <div class="row">
-              <section class="fellows col-xs-12 col-sm-8">
+            <div class="row add-top">
+              
+              <h3 class="col-xs-12">Fellows</h3>
 
-                <h3>Fellows</h3>
+              <section class="fellows col-xs-12 col-sm-8">
 
                 {{# page.bios.fellows._all }}
                   <div class="plain {{sortorder}}">
