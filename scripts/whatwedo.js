@@ -58,6 +58,7 @@ $(document).ready(function() {
   
   //the end
 
+  // this could be more dynamic, but its a place to start.
   var menu_activation = function() {
     hash = window.location.hash;
     if ('#filter=.science' == hash) {
