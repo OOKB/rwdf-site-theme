@@ -60,8 +60,27 @@ $(document).ready(function() {
 
   var menu_activation = function() {
     hash = window.location.hash;
-    $("#filters").find('li.active').removeClass('active');
-    $("#filters").find('a[href="' + hash + '"]').parent().parent().addClass('active');
+    if ('#filter=.science' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.science').addClass('active');
+    }
+    else if ('#filter=.education' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.education').addClass('active');
+    }
+    else if ('#filter=.arts' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.arts').addClass('active');
+    }
+    else if ('#filter=.justice' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.justice a').addClass('active');
+    }
+    else if ('#filter=.community' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.community a').addClass('active');
+    }
+    else {}
   };
 
   menu_activation();
