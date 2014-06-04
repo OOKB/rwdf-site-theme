@@ -60,27 +60,8 @@ $(document).ready(function() {
 
   var menu_activation = function() {
     hash = window.location.hash;
-    if ('#filter=.science' == hash) {
-      $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.icons.categories .science a').parent().parent().addClass('active');
-    }
-    else if ('#filter=.education' == hash) {
-      $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.icons.categories .education a').parent().parent().addClass('active');
-    }
-    else if ('#filter=.arts' == hash) {
-      $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.icons.categories .arts a').parent().parent().addClass('active');
-    }
-    else if ('#filter=.justice' == hash) {
-      $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.icons.categories .justice a').parent().parent().addClass('active');
-    }
-    else if ('#filter=.community' == hash) {
-      $("#filters").find('li.active').removeClass('active');
-      $("#filters").find('.icons.categories .community a').parent().parent().addClass('active');
-    }
-    else {}
+    $("#filters").find('li.active').removeClass('active');
+    $("#filters").find('a[href="' + hash + '"]').parent().parent().addClass('active');
   };
 
   menu_activation();
