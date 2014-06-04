@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   
 img { max-width: 100%; }
 .accompany img { margin-top: 30px; }
-#staff aside img { margin-top: 12px; }
+#staff aside img { margin-top: 0; }
 
 footer {
   font-size:1.2rem;

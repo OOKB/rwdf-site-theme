@@ -23,6 +23,34 @@ $(document).ready(function() {
 
   $('#projects').isotope({ layoutMode : 'fitRows' });
 
+  var hash = window.location.hash;
+  
+  var menu_activation = function() {
+    hash = window.location.hash;
+    if ('#filter=.science' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.icons.categories .science a').parent().parent().addClass('active');
+    }
+    else if ('#filter=.education' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.icons.categories .education a').parent().parent().addClass('active');
+    }
+    else if ('#filter=.arts' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.icons.categories .arts a').parent().parent().addClass('active');
+    }
+    else if ('#filter=.justice' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.icons.categories .justice a').parent().parent().addClass('active');
+    }
+    else if ('#filter=.community' == hash) {
+      $("#filters").find('li.active').removeClass('active');
+      $("#filters").find('.icons.categories .community a').parent().parent().addClass('active');
+    }
+    else {}
+  };
+
+
   //hmmm i deleted this, and it stopped working, then I put it back and it still isn't working... feck.
   $('#filters a').click(function(){
     // get href attr, remove leading #
