@@ -1,13 +1,31 @@
 ---
 
-about_us: whoweare/
-about_us/staff_and_directors: whoweare/#staff
-about_us/dr_robert_w_deutsch_profile: whoweare/#founders
-about_us/our_founders: whoweare/#founders
-about_us/our_values_and_interest: whoweare/
-projects_we_have_funded: whatwedo/
-projects_we_have_funded/spruce-up_grants: whatwedo/projects/spruceup-grants/
-projects_we_have_funded/biofabrication_at_the_fischell_department_of_bioengineering_at_the_university_of_maryland_college_park: whatwedo/projects/biofab/
-contact_us: tellusaboutyou/
-tell_us_about_you: tellusaboutyou/
-new_ideas__directions/education/do_video_games_provide_educational_benefits: whatwedo/
+about_us: "whoweare/"
+about_us/staff_and_directors: "whoweare/#staff"
+about_us/dr_robert_w_deutsch_profile: "whoweare/#founders"
+about_us/our_founders: "whoweare/#founders"
+about_us/our_values_and_interest: "whoweare/"
+projects_we_have_funded: "whatwedo/"
+projects_we_have_funded/spruce-up_grants: "whatwedo/projects/spruceup-grants/"
+projects_we_have_funded/biofabrication_at_the_fischell_department_of_bioengineering_at_the_university_of_maryland_college_park: "whatwedo/projects/biofab/"
+projects_we_have_funded/the_imaging_research_center_at_the_university_of_maryland_baltimore_county: "whatwedo/projects/imaging-research-center/"
+projects_we_have_funded/the_center_for_community_technology_service: "whatwedo/"
+projects_we_have_funded/media_democracy: "whatwedo/projects/media-democracy-fund/"
+projects_we_have_funded/the_allosphere_at_uc-santa_barbara: "whatwedo/projects/allosphere/"
+contact_us: "tellusaboutyou/"
+tell_us_about_you: "tellusaboutyou/"
+new_ideas__directions/education/do_video_games_provide_educational_benefits: "whatwedo/"
+new_ideas__directions/arts_and_culture: "whatwedo/#filter=.arts"
+new_ideas__directions/arts_and_culture/public_spaces_and_private_faces_in_new_media_art: "whatwedo/#filter=.arts"
+new_ideas__directions/arts_and_culture/serious_twitterature_the_online_future_of_the_novel: "whatwedo/#filter=.arts"
+new_ideas__directions/education: "whatwedo/#filter=.education"
+new_ideas__directions/education/moving_toward_web_20_schools_and_education: "whatwedo/#filter=.education"
+new_ideas__directions/social_justice: "whatwedo/#filter=.justice"
+new_ideas__directions/social_justice/will_one_billion_feed_one_billion: "whatwedo/#filter=.justice"
+new_ideas__directions/social_justice/a_just_way_to_cut_healthcare_expenditures_: "whatwedo/#filter=.justice"
+new_ideas__directions/philanthropy_and_social_change: "whatwedo/#filter=.community"
+new_ideas__directions/philanthropy_and_social_change/philanthrophy’s_promise: "whatwedo/#filter=.community"
+new_ideas__directions/media_and_technology: "whatwedo/#filter=.science"
+new_ideas__directions/media_and_technology/new_media_journalism_transforming_chaos_into_news: "whatwedo/#filter=.science"
+new_ideas__directions/media_and_technology/fdr’s_fireside_chat_in_the_age_of_social_media: "whatwedo/#filter=.science"
+
