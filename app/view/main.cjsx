@@ -4,7 +4,8 @@ React = require 'react'
 module.exports = React.createClass
   render: ->
     {data, query} = @props
+    tellus = data.db.tellusaboutyou
 
     <div id="react-app">
-      Hello!
+
     </div>

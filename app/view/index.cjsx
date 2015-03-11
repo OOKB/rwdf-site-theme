@@ -1,7 +1,7 @@
 React = require 'react'
 {RouteHandler} = require 'react-router'
 
-Main = require './main'
+Header = require './header/header'
 
 module.exports = React.createClass
   render: ->
@@ -10,6 +10,8 @@ module.exports = React.createClass
     appFileName = sha or 'app'
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
+
+    page = React.createElement(RouteHandler, data.db)
 
     <html>
       <head>
@@ -24,7 +26,8 @@ module.exports = React.createClass
         <link rel="stylesheet" type="text/css" href="/assets/print.css" media="print" />
       </head>
       <body>
-        <Main data={data} />
+        <Header />
+        {page}
         <script src={jsFilePath} type="text/javascript" />
       </body>
     </html>

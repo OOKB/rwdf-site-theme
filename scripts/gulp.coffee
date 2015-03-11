@@ -27,7 +27,7 @@ browserSync = require 'browser-sync'
 browserify = require 'browserify'
 exorcist = require 'exorcist'
 watchify = require 'watchify'
-
+_ = require 'lodash'
 # Custom Helper Scripts
 serverData = require './serverData'
 #content = require './content'
@@ -114,13 +114,20 @@ gulp.task 'serverData', ['data', 'content'], (cb) ->
 
 # Compile the static html files.
 gulp.task 'templates', (cb) ->
+  filePath = 'public/index.html'
+  fs.mkdirsSync path.dirname(filePath)
+  markup = "<!DOCTYPE html>\n<html><head><script src=\"/assets/app.js\"></script></head><body></body>"
+  markup += '<!-- ' + _.random(0, 999999, true) + ' --></html>'
+  fs.writeFile(filePath, markup)
+  cb()
+  return
   # Calling an external script for this.
-  exec 'coffee ./scripts/renderMarkup.coffee', (err, stdout, stderr) ->
-    if stdout
-      console.log stdout
-    if stderr
-      console.log stderr
-    cb err
+  # exec 'coffee ./scripts/renderMarkup.coffee', (err, stdout, stderr) ->
+  #   if stdout
+  #     console.log stdout
+  #   if stderr
+  #     console.log stderr
+  #   cb err
 
 # Process LESS to CSS.
 gulp.task 'styles', ->
