@@ -76,8 +76,7 @@ opts.extensions = ['.coffee', '.cjsx']
 opts.debug = true
 w = watchify browserify('./app/app.cjsx', opts)
 
-bundle = () ->
-  runSequence 'templates'
+gulp.task 'bundle', ['templates'], ->
   w.bundle()
     .on 'error', gutil.log.bind gutil, 'Browserify Error'
     .pipe source('app.js')
@@ -86,9 +85,13 @@ bundle = () ->
       .pipe(sourcemaps.write('./'))
     .pipe gulp.dest('./public/assets')
     .pipe browserSync.reload({stream:true})
-w.on 'update', bundle
 
-gulp.task 'compile-watch', ['serverData'], bundle
+w.on 'update', () ->
+  runSequence 'bundle'
+
+gulp.task 'compile-watch', (cb) ->
+  runSequence ['data'], 'bundle', cb
+  return
 # /WATCHIFY
 
 # Convert yaml files from the content dir to json files.
