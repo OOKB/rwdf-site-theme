@@ -33,6 +33,7 @@ if inBrowser
     window.app = data
     # This is created specific to the client.
     render = (Handler, props) ->
+      console.log 'init'
       React.render React.createElement(Handler, props), document.documentElement
     App {}, render
 
