@@ -1,0 +1,148 @@
+/*==============================*/
+/* Homepage */
+/*==============================*/
+.hero .text * {
+  color: white;
+  margin: 0;
+}
+
+.tagline .text h1 {
+  padding: 15px;
+}
+
+.hero,
+.hero .row,
+.hero .feature,
+.hero .tagline,
+.hero .tagline .text,
+#gridded .col-sm-4 {
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tagline div.text,
+.overlay {
+  background: #009CC1;
+  background: rgba(0,156,193,1);
+}
+
+.overlay {
+  background: rgba(0,156,193,.5);
+  margin: 0;
+  padding: 9px;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.feature .overlay  { bottom: 0; padding: 9px 12px; }
+.col-sm-4 .overlay { top: 0; }
+
+.hero .lead {
+  font-size:2rem;
+  font-weight:300;
+  line-height:1.33;
+}
+
+.hero h2 {
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+
+.overlay h3,
+.overlay h3 a {
+  color: white;
+  margin: 0;
+}
+
+.overlay h3 {
+  font-size: 1.111111111em;
+  letter-spacing: .022222222222em;
+}
+
+.hero .tagline h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.hero .tagline div.text {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .tagline div.text h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5em;
+  line-height: 1.25;
+  text-align: center;
+}
+
+#gridded .feature,
+#gridded .col-sm-4 {
+  margin-bottom: 15px;
+  height: 150px
+}
+
+#gridded img  {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #gridded .feature,
+  #gridded .col-sm-4 {
+    margin-bottom: 30px;
+  }
+
+  #gridded .feature {
+    height: 250px;
+  }
+
+  #gridded .col-sm-4 {
+    height: 110px;
+  }
+
+  .hero .tagline div.text h1 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #gridded .feature {
+    height: 350px;
+  }
+
+  #gridded .col-sm-4 {
+    height: 160px
+  }
+
+  .hero .tagline div.text h1 {
+    font-size: 2.25em;
+    line-height: 1.33;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #gridded .feature {
+    height: 490px;
+  }
+
+  #gridded .col-sm-4 {
+    height: 230px
+  }
+
+  .hero .tagline div.text h1 {
+    font-size: 3em;
+  }
+}
+
+/*=========================*/
+/* /END HOMEPAGE STYLES */
