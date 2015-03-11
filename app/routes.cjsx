@@ -15,4 +15,5 @@ module.exports =
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>
+    <Route name="whatwedo/" handler={Contact} />
   </Route>

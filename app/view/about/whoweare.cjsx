@@ -1,5 +1,5 @@
 React = require 'react'
-{RouteHandler, State} = require 'react-router'
+{RouteHandler, State, Link} = require 'react-router'
 
 Tab = require './tab'
 TabStaff = require './tabStaff'
@@ -30,9 +30,9 @@ module.exports = React.createClass
 
         <div className="col-xs-12 col-sm-2">
           <ul className="side-nav" id="myTab">
-            <li className="active"><a href="#whoweare/our-values" data-toggle="tab">Our Values</a></li>
-            <li><a href="#whoweare/robert-florence" data-toggle="tab">Robert &amp; Florence</a></li>
-            <li><a className="staff" href="#whoweare/bios" data-toggle="tab">Directors &amp; Staff</a></li>
+            <li className="active"><Link to="/whoweare/our-values" data-toggle="tab">Our Values</Link></li>
+            <li><Link to="/whoweare/robert-florence" data-toggle="tab">Robert &amp; Florence</Link></li>
+            <li><Link className="staff" to="/whoweare/bios" data-toggle="tab">Directors &amp; Staff</Link></li>
           </ul>
         </div>
 

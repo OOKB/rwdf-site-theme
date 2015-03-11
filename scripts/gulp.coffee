@@ -44,10 +44,11 @@ gulp.task "default", ['browser-sync'], ->
 # For development.
 gulp.task "browser-sync", ['compile-watch', 'styles', 'static'], ->
   browserSync
-    server:
-      baseDir: 'public'
+    # server:
+    #   baseDir: 'public'
     # open: 'external'
     # host: 'l.cape.io'
+    proxy: "localhost:8088"
     logConnections: true
     injectChanges: false
     #logLevel: 'debug'
@@ -76,7 +77,7 @@ opts.extensions = ['.coffee', '.cjsx']
 opts.debug = true
 w = watchify browserify('./app/app.cjsx', opts)
 
-gulp.task 'bundle', ['templates'], ->
+gulp.task 'bundle', ->
   w.bundle()
     .on 'error', gutil.log.bind gutil, 'Browserify Error'
     .pipe source('app.js')
@@ -146,7 +147,7 @@ gulp.task 'static', ->
 # - - - - prod - - - -
 
 gulp.task 'prod', ['prod_clean'], (cb) ->
-  runSequence ['static', 'serverData'], ['templates', 'compile', 'styles'], cb
+  runSequence ['static', 'serverData'], ['compile', 'styles'], cb
 
 # Remove contents from public directory.
 gulp.task 'prod_clean', ->
