@@ -1,4 +1,5 @@
 React = require 'react'
+{RouteHandler} = require 'react-router'
 
 Tab = require './tab'
 
@@ -20,7 +21,7 @@ module.exports = React.createClass
 
         <div className="tab-content col-xs-12 col-sm-10">
 
-          { React.createElement(Tab, ourValues) }
+          { React.createElement(RouteHandler, ourValues) }
 
         </div>
 

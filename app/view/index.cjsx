@@ -11,14 +11,12 @@ module.exports = React.createClass
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
 
-    page = React.createElement(RouteHandler, @props.db)
-
     if false
       hed =
-        <div class="jumbotron" id="page_hed">
-          <div class="jumbo-text">
+        <div className="jumbotron" id="page_hed">
+          <div className="jumbo-text">
             <h1>{{ hed }}</h1>
-            <p class="lead">{{ dek }}</p>
+            <p className="lead">{{ dek }}</p>
           </div>
         </div>
     else
@@ -38,9 +36,9 @@ module.exports = React.createClass
       </head>
       <body>
         <Header />
-        <div class="container inner main-content">
+        <div className="container inner main-content">
           {hed}
-          {page}
+          {React.createElement(RouteHandler, @props.db)}
         </div>
         <Footer email={email} phone={phone} fax={fax} />
         <script src={jsFilePath} type="text/javascript" />

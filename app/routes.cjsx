@@ -5,10 +5,14 @@ Router = require 'react-router'
 Index = require './view/index'
 Contact = require './view/contact/contact'
 About = require './view/about/whoweare'
+AboutTab = require './view/about/tab'
 
 module.exports =
 
   <Route name="app" path="/" handler={Index}>
     <Route name="tellusaboutyou/" handler={Contact} />
-    <Route name="whoweare/" handler={About} />
+    <Route name="whoweare/" handler={About}>
+      <Route path=":tabId" handler={AboutTab} />
+      <DefaultRoute handler={AboutTab}/>
+    </Route>
   </Route>
