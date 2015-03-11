@@ -1,0 +1,77 @@
+{
+  "name": "mfa-thesis",
+  "version": "0.0.1",
+  "description": "MFA Thesis",
+  "main": "app/app.cjsx",
+  "browser": "app/app.cjsx",
+  "browserify": {
+    "extensions": [
+      ".coffee",
+      ".cjsx",
+      ".json"
+    ],
+    "transform": [
+      [
+        "coffee-reactify"
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run markup && npm run build && browser-sync start --files \"public/index.html, public/assets/*.*\" --server public",
+    "markup": "coffee ./scripts/renderMarkup.coffee",
+    "update-dev": "npm run markup && npm run build",
+    "build": "NODE_ENV=production browserify ./ > ./public/assets/app.js && zopfli ./public/assets/app.js",
+    "clean": "rm -f ./public/assets/*"
+  },
+  "author": "Kristian Bjornard and Kai Curry",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "3.x",
+    "react": "0.12.x",
+    "react-bootstrap": "0.x",
+    "react-router": "0.x",
+    "react-router-bootstrap": "0.x",
+    "superagent": "0.x",
+    "moment": "2.x",
+    "ampersand-model": "4.x",
+    "ampersand-collection": "1.x",
+    "ampersand-rest-collection": "2.x",
+    "ampersand-state": "^4.4.4"
+  },
+  "devDependencies": {
+    "gulp": "3.x",
+    "browserify": "8.x",
+    "coffee-react": "2.x",
+    "coffee-reactify": "2.x",
+    "coffee-script": "1.x",
+    "vinyl-transform": "1.x",
+    "gulp-rename": "1.x",
+    "minifyify": "4.x",
+    "gulp-uglify": "1.x",
+    "exorcist": "*",
+    "browser-sync": "1.x",
+    "request": "*",
+    "gulp-data": "*",
+    "gulp-yaml": "*",
+    "gulp-less": "*",
+    "gulp-markdown-to-json": "*",
+    "async": "*",
+    "vinyl-source-stream": "1.x",
+    "fs-extra": "0.x",
+    "gulp-debug": "1.x",
+    "gulp-gh-pages": "0.x",
+    "run-sequence": "1.x",
+    "yaml-front-matter": "3.x",
+    "marked": "0.x",
+    "marky-mark": "1.x",
+    "watchify": "2.x",
+    "gulp-util": "3.x",
+    "vinyl-buffer": "1.x",
+    "gulp-sourcemaps": "1.x",
+    "minimist": "1.x",
+    "gulp-clean": "x",
+    "imgix": "0.0.1",
+    "queries": "0.0.3"
+  }
+}
