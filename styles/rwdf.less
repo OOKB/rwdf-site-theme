@@ -14,23 +14,21 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: @open-stack;
   font-size:1.5rem;
   padding-bottom:100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
-  line-height: 1.25em;
-  font-weight: 700;
+  .playfair-styled
 }
 
 .diag-divider {
   height:40px;
   background: url("../media/diag.gif") repeat;
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   margin-bottom: 15px;
 }
 
@@ -72,8 +70,8 @@ h4 { /* Inner Page Subhead */
 .jumbotron {
   background: url("../media/diag.gif") repeat;
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   text-align: left;
   padding-top: 0;
   padding-bottom: 0;
@@ -85,29 +83,31 @@ h4 { /* Inner Page Subhead */
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
-}
 
-.index.jumbotron .diag-divider {
-  margin-bottom: 30px;
+  .diag-divider {
+    margin-bottom: 30px;
+  }
+
+  .lead {
+    font-size: 2.4rem;
+    line-height: 1.3333;
+  }
+
 }
 
 .jumbo-text {
   background: white;
-}
 
-.jumbo-text .lead {
-  font-size: 1.8rem;
-  line-height: 1.33;
-}
+  .lead {
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
 
-.jumbo-text h1 {
-  font-size: 3.0rem;
-  padding: 0;
-}
+  h1 {
+    font-size: 3.0rem;
+    padding: 0;
+  }
 
-.index.jumbotron .lead {
-  font-size: 2.4rem;
-  line-height: 1.3333;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -119,20 +119,21 @@ h4 { /* Inner Page Subhead */
   .jumbo-text {
     padding: 30px 100px;
     text-align: center;
-  }
 
-  .jumbo-text h1 {
-    font-size:5rem;
-    margin-bottom: 10px;
-    padding:0 50px;
-    line-height: 1.125;
-  }
+    h1 {
+      font-size:5rem;
+      margin-bottom: 10px;
+      padding:0 50px;
+      line-height: 1.125;
+    }
 
-  .jumbo-text .lead {
-    font-size: 2.4rem;
-    font-weight: 300;
-    line-height: 1.33;
-    text-align: center;
+    .lead {
+      font-size: 2.4rem;
+      font-weight: 300;
+      line-height: 1.33;
+      text-align: center;
+    }
+
   }
 
   .index.jumbotron .diag-divider {
@@ -149,11 +150,11 @@ h4 { /* Inner Page Subhead */
 a {
   color:#6EB000;
   color:rgba(110,176,0,1);
-}
 
-a:hover {
+  &:hover {
   color: #009AC9;
   color:rgba(0,154,201,1);
+  }
 }
 
 .navbar ul.nav li.active a {
@@ -175,8 +176,8 @@ h3.project-title a { color: #0799C8; }
 
 footer,
 footer a {
-  color: #B9BAB8;
-  color:rgba(185,186,184,1)
+  color: @rwdf-gray-hex;
+  color:@rwdf-gray-rgb
 }
 
 /* Footer ===================================*/
@@ -212,8 +213,8 @@ footer .logo-sm {
 }
 
 .icongray {
-  background-color: #B9BAB8;
-  background-color:rgba(185,186,184,1);
+  background-color: @rwdf-gray-hex;
+  background-color:@rwdf-gray-rgb;
 }
 
 .icongreen:hover, .icongray:hover,
@@ -223,8 +224,8 @@ li:hover .icongreen, li:hover .icongray {
 }
 
 .icons.categories .science , .icons.categories .arts , .icons.categories .justice, .icons.categories .education, .icons.categories .community, .icons.categories.bottom a {
-  background-color: #B9BAB8;
-  background-color:rgba(185,186,184,1);
+  background-color: @rwdf-gray-hex;
+  background-color:@rwdf-gray-rgb;
 }
 
 .icons.categories .science:hover , .icons.categories .arts:hover , .icons.categories .justice:hover, .icons.categories .education:hover, .icons.categories .community:hover, .icons.categories.bottom a:hover {
@@ -256,8 +257,8 @@ main-content .row {
 .home-content h3 {
   padding-bottom:10px;
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
 }
 
 .home-content p {
@@ -386,8 +387,8 @@ ul.nav li {
 
 .navbar > .container > .border-bottom{
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   margin-bottom: 0;
   padding-bottom: 15px;
 }
@@ -401,7 +402,7 @@ ul.nav li {
 }
 
 .navbar-toggle {
-  border: 3px solid #f8f7f7;
+  border: 3px solid @rwdf-lightgray-hex;
   border-radius: 6px;
   top: 22px;
   margin: 0;
@@ -594,8 +595,8 @@ ul.nav li {
 
 #staff h3 {
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   padding-bottom: 10px;
   margin-bottom: 8px;
 }
@@ -625,8 +626,8 @@ ul.nav li {
 }
 
 .plain {
-  border-bottom: 3px solid #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-bottom: 3px solid @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   margin-right:0 !important;
   margin-bottom:15px;
   margin-left:0 !important;
@@ -639,7 +640,7 @@ ul.nav li {
 }
 
 .sidebar {
-  background-color:#f8f7f7;
+  background-color:@rwdf-lightgray-hex;
   border: #eee solid 1px;
   padding:30px;
   margin-bottom:15px;
@@ -690,7 +691,7 @@ label {
 
 .side-nav i { margin: 3px 3px 0 0 }
 
-.side-nav > li.active { background-color: rgba(248,247,247,1); }
+.side-nav > li.active { background-color: @rwdf-lightgray-rgb; }
 
 ul.side-nav .iconsidenav {
   height:24px;
@@ -700,8 +701,8 @@ ul.side-nav .iconsidenav {
 @media (max-width: 767px) {
   #filters {
     border-bottom: 3px solid;
-    border-color: #f8f7f7;
-    border-color: rgba(248,247,247,1);
+    border-color: @rwdf-lightgray-hex;
+    border-color: @rwdf-lightgray-rgb;
     margin: 0;
     margin-bottom: 15px;
     padding: 3px 0;
@@ -861,7 +862,7 @@ article.writeup ul {
     height: 100px !important;
     height: 115px !important;
     margin-top:80px;
-    border-top:3px solid #F8F7F7;
+    border-top:3px solid @rwdf-lightgray-hex;
   }
   .controls div::after{
     clear:none;
@@ -986,8 +987,8 @@ div.spruceup {
 .brick {
   padding-bottom:15px;
   border-bottom: 3px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   width: 90%;
   width: calc(100% - 30px);
   display: inline-block;
@@ -1118,8 +1119,8 @@ p.project-content {
 }
 
 .carousel-control {
-  color: #B9BAB8;
-  color:rgba(185,186,184,1);
+  color: @rwdf-gray-hex;
+  color:@rwdf-gray-rgb;
   position: absolute;
   top: 0;
   left: 0;
@@ -1207,8 +1208,8 @@ ul.newslist {
 
 .newslist .border-bottom {
   border-bottom: 2px solid;
-  border-color: #f8f7f7;
-  border-color: rgba(248,247,247,1);
+  border-color: @rwdf-lightgray-hex;
+  border-color: @rwdf-lightgray-rgb;
   padding-top: 30px;
   padding-bottom: 30px;
 }
