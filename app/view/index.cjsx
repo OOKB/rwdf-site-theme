@@ -11,6 +11,8 @@ module.exports = React.createClass
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
 
+    page = React.createElement(RouteHandler, data.db)
+
     <html>
       <head>
         <title>{title}</title>
@@ -24,7 +26,7 @@ module.exports = React.createClass
         <link rel="stylesheet" type="text/css" href="/assets/print.css" media="print" />
       </head>
       <body>
-        <Main data={data} />
+        {page}
         <script src={jsFilePath} type="text/javascript" />
       </body>
     </html>
