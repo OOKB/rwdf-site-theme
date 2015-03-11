@@ -1,4 +1,5 @@
 React = require 'react'
+{Link} = require 'react-router'
 
 module.exports = React.createClass
 
@@ -11,13 +12,13 @@ module.exports = React.createClass
               <span className="sr-only">Toggle navigation</span>
               <p>Menu</p>
             </button>
-            <a className="logo brand" href="#/"><img src="http://db.rwdfoundation.org/media/rwdfbiglogo.jpg" alt="RW Deutsch Foundation Official Logo" /></a>
+            <Link className="logo brand" to="/"><img src="http://db.rwdfoundation.org/media/rwdfbiglogo.jpg" alt="RW Deutsch Foundation Official Logo" /></Link>
           </div>
           <div className="collapse navbar-collapse" id="mainmenu">
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#/whoweare/">Who We Are</a></li>
-              <li><a href="#/whatwedo/">What We Do</a></li>
-              <li><a href="#/tellusaboutyou/">Tell Us About You</a></li>
+              <li><Link to="whoweare/">Who We Are</Link></li>
+              <li><Link to="whatwedo/">What We Do</Link></li>
+              <li><Link to="tellusaboutyou/">Tell Us About You</Link></li>
               <li className="blog"><a href="http://rwdfblog.com/" target="_blank">Read Our Blog »</a></li>
               <li className="social"><a href="https://www.facebook.com/RobertWDeutschFoundation" target="_blank"><img src="/media/socialmask_fbook.png" className="icongreen" /></a></li>
               <li className="social last"><a href="https://twitter.com/DeutschFound" target="_blank"><img src="/media/socialmask_twitter.png" className="icongreen" /></a></li>

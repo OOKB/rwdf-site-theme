@@ -1,29 +1,12 @@
-# Core node modules.
-fs = require 'fs-extra'
-path = require 'path'
-_ = require 'queries'
-
-# Contrib.
 nodejsx = require 'coffee-react/register'
 React = require 'react'
-{Router} = require 'react-router'
+argv = require('minimist')(process.argv.slice(2))
 
-# Custom.
 App = require '../app/app'
 
-# Run Code.
-# Render function specific to the server.
 render = (Handler, props) ->
-  filePath = path.join 'public', props.vars.path, 'index.html'
   markup = React.renderToString React.createElement(Handler, props)
-  fs.mkdirsSync path.dirname(filePath)
-  fs.writeFile(filePath, "<!doctype html>\n" + markup)
+  markup = "<!doctype html>\n" + markup
+  console.log markup
 
-processPg = (path) ->
-  vars = {path: path}
-  App vars, render
-
-pages = ['/']
-
-_.each pages, (pg) ->
-  processPg pg
+App {path: argv._[0]}, render

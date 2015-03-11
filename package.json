@@ -72,6 +72,9 @@
     "minimist": "1.x",
     "gulp-clean": "x",
     "imgix": "0.0.1",
-    "queries": "0.0.3"
+    "queries": "0.0.3",
+    "hapi": "^8.3.1",
+    "good": "^5.1.2",
+    "good-console": "^4.1.0"
   }
 }

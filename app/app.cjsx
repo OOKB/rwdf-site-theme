@@ -22,8 +22,7 @@ App = (vars, render) ->
 
   if inBrowser
     data.windowInnerWidth = window.innerWidth
-    #Router.run Routes, Router.HistoryLocation, Render
-    Router.run Routes, Render
+    Router.run Routes, Router.HistoryLocation, Render
   else
     Router.run Routes, path, Render
 
@@ -34,7 +33,7 @@ if inBrowser
     # This is created specific to the client.
     render = (Handler, props) ->
       console.log 'init'
-      React.render React.createElement(Handler, props), document.documentElement
+      React.render React.createElement(Handler, props), document
     App {}, render
 
 module.exports = App
