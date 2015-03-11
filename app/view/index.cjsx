@@ -2,16 +2,16 @@ React = require 'react'
 {RouteHandler} = require 'react-router'
 
 Header = require './header/header'
+Footer = require './footer/footer'
 
 module.exports = React.createClass
   render: ->
-    {data} = @props
-    {title, sha, description, author} = data
+    {title, sha, description, author, email, phone, fax} = @props.db
     appFileName = sha or 'app'
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
 
-    page = React.createElement(RouteHandler, data.db)
+    page = React.createElement(RouteHandler, @props.db)
 
     <html>
       <head>
@@ -28,6 +28,7 @@ module.exports = React.createClass
       <body>
         <Header />
         {page}
+        <Footer email={email} phone={phone} fax={fax} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
     </html>
