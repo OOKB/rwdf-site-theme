@@ -8,6 +8,8 @@ module.exports = React.createClass
     {formTitle, areweagoodfit} = @props.tellusaboutyou
     console.log 'contact'
     <div className="contact">
-      <Form formTitle={formTitle} />
-      <Sidebar title={areweagoodfit.title} content={areweagoodfit.content} />
+      <div className="row">
+        <Form formTitle={formTitle} />
+        <Sidebar title={areweagoodfit.title} content={areweagoodfit.content} />
+      </div>
     </div>

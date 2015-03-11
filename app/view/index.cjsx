@@ -38,7 +38,7 @@ module.exports = React.createClass
       </head>
       <body>
         <Header />
-        <div class="container inner main-content">
+        <div className="container inner main-content">
           {hed}
           {page}
         </div>
