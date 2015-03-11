@@ -1,7 +1,7 @@
 React = require 'react'
 {RouteHandler} = require 'react-router'
 
-Main = require './main'
+Header = require './header/header'
 
 module.exports = React.createClass
   render: ->
@@ -26,6 +26,7 @@ module.exports = React.createClass
         <link rel="stylesheet" type="text/css" href="/assets/print.css" media="print" />
       </head>
       <body>
+        <Header />
         {page}
         <script src={jsFilePath} type="text/javascript" />
       </body>

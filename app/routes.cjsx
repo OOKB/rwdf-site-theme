@@ -7,5 +7,5 @@ Contact = require './view/contact/contact'
 module.exports =
 
   <Route name="app" path="/" handler={Index}>
-    <Route name="tellusaboutyou" handler={Contact} />
+    <Route name="tellusaboutyou/" handler={Contact} />
   </Route>
