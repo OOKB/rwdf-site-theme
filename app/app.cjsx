@@ -17,7 +17,8 @@ App = (vars, render) ->
 
   Render = (Handler) ->
     # This is the default props sent to the Index view.
-    render Handler, {data: data, vars: vars}
+    data.vars = vars
+    render Handler, data
 
   if inBrowser
     data.windowInnerWidth = window.innerWidth
@@ -29,8 +30,7 @@ App = (vars, render) ->
 if inBrowser
   window.onload = -> # Attach event handlers.
     # Attach app to global window var as app.
-    window.app =
-      db: data # Our database.
+    window.app = data
     # This is created specific to the client.
     render = (Handler, props) ->
       React.render React.createElement(Handler, props), document.documentElement
