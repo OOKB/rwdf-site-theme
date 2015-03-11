@@ -13,6 +13,17 @@ module.exports = React.createClass
 
     page = React.createElement(RouteHandler, @props.db)
 
+    if false
+      hed =
+        <div class="jumbotron" id="page_hed">
+          <div class="jumbo-text">
+            <h1>{{ hed }}</h1>
+            <p class="lead">{{ dek }}</p>
+          </div>
+        </div>
+    else
+      hed = false
+
     <html>
       <head>
         <title>{title}</title>
@@ -27,7 +38,10 @@ module.exports = React.createClass
       </head>
       <body>
         <Header />
-        {page}
+        <div class="container inner main-content">
+          {hed}
+          {page}
+        </div>
         <Footer email={email} phone={phone} fax={fax} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
