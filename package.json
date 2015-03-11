@@ -1,7 +1,7 @@
 {
-  "name": "mfa-thesis",
+  "name": "rwdf",
   "version": "0.0.1",
-  "description": "MFA Thesis",
+  "description": "RWDF",
   "main": "app/app.cjsx",
   "browser": "app/app.cjsx",
   "browserify": {
