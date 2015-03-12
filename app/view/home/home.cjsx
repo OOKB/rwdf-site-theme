@@ -3,6 +3,7 @@ React = require 'react'
 _ = require 'lodash'
 HomeContent = require './HomeContent'
 Tri = require './tri'
+TriEl = require './triEl'
 
 module.exports = React.createClass
 
@@ -13,12 +14,30 @@ module.exports = React.createClass
     featured = projects.featured.map (id) ->
       _.find projects.contents, {filename: id}
     feature = featured.shift()
+    feature.className = "col-xs-12 col-sm-8 feature"
+    feature.feature = true
+
     right = featured.shift()
     tri = featured.slice(0, 3)
 
     <div>
 
-      <div>
+      <div id="gridded">
+        <div className="hero">
+          <div className="row">
+
+            { React.createElement(TriEl, feature) }
+
+            <div className="col-xs-12 col-sm-4 tagline">
+              <div className="text">
+                <h1>{{ hed }}</h1>
+              </div>
+            </div>
+
+            { React.createElement(TriEl, right) }
+
+          </div>
+        </div>
 
         <Tri contents={tri} />
 
