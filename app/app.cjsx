@@ -21,8 +21,8 @@ data.db.whatwedo.projects.contents = _.map data.db.whatwedo.projects.contents, (
   {categories, filename} = proj
   # Add to index.
   data.db.projectIndex[filename] = i
-  proj.pre = if i is 0 then projectsLength else i-1
-  proj.next - if i is projectsLength then 0 else i+1
+  proj.prevId = if i is 0 then projectsLength else i-1
+  proj.nextId = if i is projectsLength then 0 else i+1
   # Fix silly categories array.
   proj.catIds = _.map categories, (cat) ->
     if filterStrObj[cat] then filterStrObj[cat] else cat
