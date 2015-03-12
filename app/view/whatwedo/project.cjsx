@@ -4,6 +4,7 @@ _ = require 'lodash'
 
 ProjImgs = require './projectImgs'
 ProjectIcons = require './projectIcons'
+Blog = require './blog'
 
 module.exports = React.createClass
   mixins: [State]
@@ -16,7 +17,7 @@ module.exports = React.createClass
       return <h2>{ msg }</h2>
     projects = @props.whatwedo.projects.contents
 
-    {title, images, prevId, nextId, content, catIds} = projects[projectIndex]
+    {title, images, prevId, nextId, content, catIds, blog_tag} = projects[projectIndex]
     prev = projects[prevId]
     next = projects[nextId]
 
@@ -31,9 +32,7 @@ module.exports = React.createClass
 
           <div dangerouslySetInnerHTML={ __html: content }/>
 
-          <div id="blog-read-more" className="add-top">
-            <h3>Read more on the blog:</h3>
-          </div>
+          { if blog_tag then React.createElement(Blog, {tag: blog_tag}) else false }
 
           <div className="icons categories bottom text-center">
             <ProjectIcons catIds={catIds} />

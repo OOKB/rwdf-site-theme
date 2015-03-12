@@ -30,7 +30,8 @@
     "lodash": "3.x",
     "react": "0.12.x",
     "react-router": "0.x",
-    "superagent": "0.x"
+    "superagent": "0.x",
+    "jsonp": "^0.1.0"
   },
   "devDependencies": {
     "gulp": "3.x",
