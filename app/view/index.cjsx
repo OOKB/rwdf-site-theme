@@ -18,7 +18,7 @@ module.exports = React.createClass
     if @props.db[urlArray[1]]
       pageData = @props.db[urlArray[1]]
 
-    if pageData?.hed
+    if pageData?.hed and urlArray[2] isnt 'projects'
       hed =
         <div className="jumbotron" id="page_hed">
           <div className="jumbo-text">
