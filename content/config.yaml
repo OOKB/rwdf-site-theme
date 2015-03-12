@@ -1,0 +1,48 @@
+generator: "CAPE.io 2.1.7 - Create Anywhere Publish Everywhere"
+pages:
+  -
+    id: homepage
+    layout: default
+    classes: homepage
+  -
+    id: whoweare
+    layout: page
+    js:
+      - "/scripts/whoweare.js"
+  -
+    id: whatwedo
+    layout : page
+    js:
+      - "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"
+      - "//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"
+      - "/scripts/whatwedo.js"
+  -
+    id: tellusaboutyou
+    layout : page
+    js:
+      - /scripts/wufoo.js
+      - /scripts/aboutyou.js
+  -
+    id: news
+    layout: page
+  -
+    id: admin
+    css:
+      - "/css/rwdffeed.css"
+    js:
+      - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
+      - "//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"
+      - "//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.0/list.min.js"
+      - "http://templates.cape.io/js/libs/RubaXa/Sortable/Sortable.min.js"
+      - "/scripts/admin.js"
+  -
+    id: '404'
+    layout: default
+    title: "404: Page Not Found"
+
+  -
+    id: project
+    layout : default
+    js:
+      - "/scripts/project.js"
+      - "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"
