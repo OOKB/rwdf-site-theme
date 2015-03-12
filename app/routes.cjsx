@@ -11,7 +11,7 @@ module.exports =
 
   <Route name="app" path="/" handler={Index}>
     <Route name="tellusaboutyou/" handler={Contact} />
-    <Route name="whoweare/" handler={About}>
+    <Route name="whoweare/" handler={About} ignoreScrollBehavior>
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>

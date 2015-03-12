@@ -6,7 +6,6 @@ Form = require './form'
 module.exports = React.createClass
   render: ->
     {formTitle, areweagoodfit} = @props.tellusaboutyou
-    console.log 'contact'
     <div className="contact">
       <div className="row">
         <Form formTitle={formTitle} />
