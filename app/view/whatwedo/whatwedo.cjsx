@@ -1,6 +1,7 @@
 React = require 'react'
 _ = require 'lodash'
 {Link, State} = require 'react-router'
+ProjectIcons = require './projectIcons'
 
 # <li> Filter element in the left sidebar.
 Filter = React.createClass
@@ -29,16 +30,9 @@ FilterEl = (props) ->
 Project = React.createClass
   render: ->
     {title, filename, summary, teaser, catIds, url} = @props
-    catEl = (id) ->
-      catLink = '/whatwedo/'+id
-      <li className={id} key={id}>
-        <Link to={catLink}>{id}</Link>
-      </li>
 
     <li className="project brick">
-      <ul className="icons categories pull-right">
-        {_.map catIds, catEl}
-      </ul>
+      <ProjectIcons catIds={catIds} className="pull-right" />
       <h3 className="project-title">
         <Link to={url}>{ title }</Link>
       </h3>
