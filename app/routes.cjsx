@@ -8,6 +8,7 @@ Homepage = require './view/home/home'
 About = require './view/about/whoweare'
 AboutTab = require './view/about/tab'
 WhatWeDo = require './view/whatwedo/whatwedo'
+Project = require './view/whatwedo/project'
 
 module.exports =
 
@@ -18,5 +19,6 @@ module.exports =
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>
+    <Route name="whatwedo/projects/:projectId?" handler={Project} />
     <Route name="whatwedo/:filterId?" handler={WhatWeDo} ignoreScrollBehavior />
   </Route>
