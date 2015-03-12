@@ -1,11 +1,19 @@
 exec = require('child_process').exec
 path = require 'path'
+fs = require 'fs-extra'
 
 Hapi = require 'hapi'
 _ = require 'lodash'
+async = require 'async'
+Wreck = require 'wreck'
+yaml = require 'js-yaml'
+
+SECOND = 1000
+MINUTE = 60 * SECOND
+HOUR = 60 * MINUTE
 
 server = new Hapi.Server {
-  #cache: require('catbox-redis')
+  cache: require('catbox-redis')
 }
 
 server.connection {
@@ -31,6 +39,36 @@ server.register {
       console.error err
     else
       console.log 'Good lugin is good.'
+
+getData = (qid, next) ->
+  data = yaml.safeLoad(fs.readFileSync('content/data.yaml', 'utf8'))
+  if data.api
+    getData = _.mapValues data.api, (url) ->
+      (cb) ->
+        Wreck.get url, {json: true}, (err, resp, payload) ->
+          cb err, payload
+  else
+    getData = {}
+  async.parallel getData, (err, serverData) ->
+    if err
+      return next(err)
+    _.merge data, serverData
+    next(err, data)
+
+server.method 'serverData', getData,
+  cache:
+    expiresIn: 48*HOUR
+    staleIn: MINUTE
+    staleTimeout: 150
+
+server.route
+  method: "GET"
+  path: "/_api/{qid}.json"
+  handler: (request, reply) ->
+    server.methods.serverData request.params.qid, (err, res) ->
+      if err then console.error err
+      reply err or res
+    return
 
 server.route
   method: 'GET'

@@ -13,6 +13,7 @@ module.exports = React.createClass
     jsFilePath = "/assets/#{appFileName}.js"
 
     url = @getPathname()
+    if url is '/' then url = '/homepage'
     urlArray = url.split('/')
 
     if @props.db[urlArray[1]]
@@ -20,7 +21,7 @@ module.exports = React.createClass
     else
       pageData = @props.db['404']
 
-    if pageData?.hed and urlArray[2] isnt 'projects'
+    if pageData?.hed and urlArray[2] isnt 'projects' and url isnt '/homepage'
       hed =
         <div className="jumbotron" id="page_hed">
           <div className="jumbo-text">
