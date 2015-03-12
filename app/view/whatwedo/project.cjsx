@@ -7,13 +7,15 @@ ProjImgs = require './projectImgs'
 module.exports = React.createClass
   mixins: [State]
   render: ->
+
     pid = @getParams().projectId
-    project = _.find @props.whatwedo.projects.contents, {filename: pid}
-    unless project
+    projectIndex = @props.projectIndex[pid]
+    if _.isUndefined projectIndex
       msg = "Project (#{pid}) not found."
       return <h2>{ msg }</h2>
-    {title, images} = project
-
+    {title, images, prevId, nextId} = @props.whatwedo.projects.contents[projectIndex]
+    prev = @props.projectIndex[prevId]
+    next = @props.projectIndex[nextId]
     <div>
 
       <div className="row project">
