@@ -7,6 +7,7 @@ Contact = require './view/contact/contact'
 Homepage = require './view/home/home'
 About = require './view/about/whoweare'
 AboutTab = require './view/about/tab'
+WhatWeDo = require './view/whatwedo/whatwedo'
 
 module.exports =
 
@@ -17,5 +18,5 @@ module.exports =
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>
-    <Route name="whatwedo/" handler={Contact} />
+    <Route name="whatwedo/" handler={WhatWeDo} />
   </Route>
