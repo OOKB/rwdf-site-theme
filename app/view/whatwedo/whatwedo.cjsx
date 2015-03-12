@@ -2,14 +2,7 @@ React = require 'react'
 _ = require 'lodash'
 {Link, State} = require 'react-router'
 
-# For some reason some posts have multi-word category names.
-filterIdObj =
-  arts: 'arts and culture'
-  science: 'science and tech'
-  justice: 'social justice'
-  community: 'community development'
-filterStrObj = _.invert filterIdObj
-
+# <li> Filter element in the left sidebar.
 Filter = React.createClass
   mixins: [State]
   render: ->
@@ -32,23 +25,22 @@ FilterEl = (props) ->
   props.key = props.id
   React.createElement(Filter, props)
 
+# <li> Project element for the main part of the page.
 Project = React.createClass
   render: ->
-    {title, filename, summary, teaser, categories} = @props
+    {title, filename, summary, teaser, catIds, url} = @props
     catEl = (id) ->
-      if filterStrObj[id]
-        id = filterStrObj[id]
-      url = '/whatwedo/'+id
+      catLink = '/whatwedo/'+id
       <li className={id} key={id}>
-        <Link to={url}>{id}</Link>
+        <Link to={catLink}>{id}</Link>
       </li>
 
     <li className="project brick">
       <ul className="icons categories pull-right">
-        {_.map categories, catEl}
+        {_.map catIds, catEl}
       </ul>
       <h3 className="project-title">
-        <a href="#">{ title }</a>
+        <Link to={url}>{ title }</Link>
       </h3>
       <p className="project-content">
         { summary or teaser }
@@ -59,6 +51,7 @@ ProjectEl = (props) ->
   props.key = props.filename
   React.createElement(Project, props)
 
+# Main page section html.
 module.exports = React.createClass
   mixins: [State]
   render: ->
@@ -72,10 +65,8 @@ module.exports = React.createClass
     ]
     {contents} = @props.whatwedo.projects
     if filterId = @getParams().filterId
-      if filterIdObj[filterId]
-        filterId = filterIdObj[filterId]
       contents = _.filter contents, (item) ->
-        _.contains item.categories, filterId
+        _.contains item.catIds, filterId
 
     <div>
 

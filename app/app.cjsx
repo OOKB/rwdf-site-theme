@@ -6,6 +6,23 @@ Router = require 'react-router'
 Routes = require './routes'
 
 data = require './data'
+# MODIFY PROJECT DATA
+# For some reason some posts have multi-word category names.
+filterIdObj =
+  arts: 'arts and culture'
+  science: 'science and tech'
+  justice: 'social justice'
+  community: 'community development'
+filterStrObj = _.invert filterIdObj
+# Need to modify the data coming in a bit.
+data.db.whatwedo.projects.contents = _.map data.db.whatwedo.projects.contents, (proj) ->
+  {categories, filename} = proj
+  # Fix silly categories array.
+  proj.catIds = _.map categories, (cat) ->
+    if filterStrObj[cat] then filterStrObj[cat] else cat
+  # Create url. (This should probably be the dir value from the database.)
+  proj.url = '/whatwedo/projects/'+filename
+  return proj
 
 inBrowser = typeof window isnt "undefined"
 

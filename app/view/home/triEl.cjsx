@@ -3,9 +3,9 @@ React = require 'react'
 
 module.exports = React.createClass
   render: ->
-    {filename, title, images, featuretitle, featureblurb, featureimg, className, feature} = @props
+    {filename, url, title, images, featuretitle, featureblurb, featureimg, className, feature} = @props
     titleTxt = "#{featuretitle or title} →"
-    linkUrl = '/whatwedo/projects/'+filename
+    linkUrl = url
     if featureimg
       imgSrc = 'http://db.rwdfoundation.org'+linkUrl+'/'+featureimg
     else
