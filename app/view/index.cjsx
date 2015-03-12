@@ -17,6 +17,8 @@ module.exports = React.createClass
 
     if @props.db[urlArray[1]]
       pageData = @props.db[urlArray[1]]
+    else
+      pageData = @props.db['404']
 
     if pageData?.hed and urlArray[2] isnt 'projects'
       hed =
@@ -31,7 +33,7 @@ module.exports = React.createClass
 
     <html>
       <head>
-        <title>{title}</title>
+        <title>{pageData?.title or title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content="CAPE.io, see www.cape.io" />

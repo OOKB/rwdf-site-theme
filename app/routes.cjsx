@@ -1,6 +1,6 @@
 React = require 'react'
 Router = require 'react-router'
-{Route, DefaultRoute} = Router
+{Route, DefaultRoute, NotFoundRoute} = Router
 
 Index = require './view/index'
 Contact = require './view/contact/contact'
@@ -9,6 +9,7 @@ About = require './view/about/whoweare'
 AboutTab = require './view/about/tab'
 WhatWeDo = require './view/whatwedo/whatwedo'
 Project = require './view/whatwedo/project'
+NotFound = require './view/notFound'
 
 module.exports =
 
@@ -21,4 +22,5 @@ module.exports =
     </Route>
     <Route name="whatwedo/projects/:projectId?" handler={Project} />
     <Route name="whatwedo/:filterId?" handler={WhatWeDo} ignoreScrollBehavior />
+    <NotFoundRoute handler={NotFound} />
   </Route>
