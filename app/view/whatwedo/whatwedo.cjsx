@@ -2,6 +2,14 @@ React = require 'react'
 _ = require 'lodash'
 {Link, State} = require 'react-router'
 
+# For some reason some posts have multi-word category names.
+filterIdObj =
+  arts: 'arts and culture'
+  science: 'science and tech'
+  justice: 'social justice'
+  community: 'community development'
+filterStrObj = _.invert filterIdObj
+
 Filter = React.createClass
   mixins: [State]
   render: ->
@@ -26,15 +34,18 @@ FilterEl = (props) ->
 
 Project = React.createClass
   render: ->
-    {title, filename, summary, teaser} = @props
+    {title, filename, summary, teaser, categories} = @props
     catEl = (id) ->
-      <li className={id}>
-        <a href="#">{id}</a>
+      if filterStrObj[id]
+        id = filterStrObj[id]
+      url = '/whatwedo/'+id
+      <li className={id} key={id}>
+        <Link to={url}>{id}</Link>
       </li>
 
     <li className="project brick">
       <ul className="icons categories pull-right">
-        {false}
+        {_.map categories, catEl}
       </ul>
       <h3 className="project-title">
         <a href="#">{ title }</a>
@@ -61,11 +72,6 @@ module.exports = React.createClass
     ]
     {contents} = @props.whatwedo.projects
     if filterId = @getParams().filterId
-      filterIdObj =
-        arts: 'arts and culture'
-        science: 'science and tech'
-        justice: 'social justice'
-        community: 'community development'
       if filterIdObj[filterId]
         filterId = filterIdObj[filterId]
       contents = _.filter contents, (item) ->
