@@ -13,9 +13,10 @@ module.exports = React.createClass
     if _.isUndefined projectIndex
       msg = "Project (#{pid}) not found."
       return <h2>{ msg }</h2>
-    {title, images, prevId, nextId} = @props.whatwedo.projects.contents[projectIndex]
-    prev = @props.projectIndex[prevId]
-    next = @props.projectIndex[nextId]
+    projects = @props.whatwedo.projects.contents
+    {title, images, prevId, nextId} = projects[projectIndex]
+    prev = projects[prevId]
+    next = projects[nextId]
     <div>
 
       <div className="row project">
@@ -32,8 +33,12 @@ module.exports = React.createClass
       </div>
 
       <div className="row minus-top controls">
-        <div className="prev previous col-xs-6 col-sm-2 "><a href="/{{_dirname}}/" title="{{ title }}">&larr; Previous</a></div>
-        <div className="next col-xs-6 col-sm-2 col-sm-offset-8"><a href="/{{_dirname}}/" title="{{ title }}">Next &rarr;</a></div>
+        <div className="prev previous col-xs-6 col-sm-2 ">
+          <Link to={prev.url} title={ prev.title }>&larr; Previous</Link>
+        </div>
+        <div className="next col-xs-6 col-sm-2 col-sm-offset-8">
+          <Link to={next.url} title={ next.title }> Next &rarr; </Link>
+        </div>
       </div>
 
     </div>
