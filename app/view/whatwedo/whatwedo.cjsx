@@ -6,7 +6,7 @@ Filter = React.createClass
   mixins: [State]
   render: ->
     {title, id, icon} = @props
-    url = "/whatwedo/#{id}"
+    url = "/whatwedo/#{if id isnt 'textonly' then id else ''}"
     unless icon is false
       icon = <i className={"icon-#{id} icongreen iconsidenav"}></i>
       className = "icons #{id}"
@@ -14,12 +14,10 @@ Filter = React.createClass
       className = "#{id}"
     if @isActive(url) then className += ' active'
     <li className={className}>
-      <div>
-        <Link to={url} >
-          {icon}
-          <p>{title}</p>
-        </Link>
-      </div>
+      <Link to={url} >
+        {icon}
+        <p>{title}</p>
+      </Link>
     </li>
 
 FilterEl = (props) ->
