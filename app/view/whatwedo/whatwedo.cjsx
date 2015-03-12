@@ -3,16 +3,19 @@ _ = require 'lodash'
 {Link, State} = require 'react-router'
 
 Filter = React.createClass
+  mixins: [State]
   render: ->
     {title, id, icon} = @props
+    url = "/whatwedo/#{id}"
     unless icon is false
       icon = <i className={"icon-#{id} icongreen iconsidenav"}></i>
       className = "icons #{id}"
     else
-      className = "#{id} active"
+      className = "#{id}"
+    if @isActive(url) then className += ' active'
     <li className={className}>
       <div>
-        <Link to={"/whatwedo/#{id}"} >
+        <Link to={url} >
           {icon}
           <p>{title}</p>
         </Link>
