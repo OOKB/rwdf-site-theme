@@ -18,5 +18,5 @@ module.exports =
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>
-    <Route name="whatwedo/" handler={WhatWeDo} />
+    <Route name="whatwedo/:filterId?" handler={WhatWeDo} ignoreScrollBehavior />
   </Route>

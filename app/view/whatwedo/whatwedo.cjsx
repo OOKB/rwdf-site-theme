@@ -1,5 +1,6 @@
 React = require 'react'
-{Link} = require 'react-router'
+_ = require 'lodash'
+{Link, State} = require 'react-router'
 
 Filter = React.createClass
   render: ->
@@ -11,10 +12,10 @@ Filter = React.createClass
       className = "#{id} active"
     <li className={className}>
       <div>
-        <a href={id} >
+        <Link to={"/whatwedo/#{id}"} >
           {icon}
           <p>{title}</p>
-        </a>
+        </Link>
       </div>
     </li>
 
@@ -47,7 +48,7 @@ ProjectEl = (props) ->
   React.createElement(Project, props)
 
 module.exports = React.createClass
-
+  mixins: [State]
   render: ->
     filters = [
       {id: 'textonly', title: 'View All Categories', icon: false}
@@ -58,6 +59,16 @@ module.exports = React.createClass
       {id: 'community', title: 'Community Development'}
     ]
     {contents} = @props.whatwedo.projects
+    if filterId = @getParams().filterId
+      filterIdObj =
+        arts: 'arts and culture'
+        science: 'science and tech'
+        justice: 'social justice'
+        community: 'community development'
+      if filterIdObj[filterId]
+        filterId = filterIdObj[filterId]
+      contents = _.filter contents, (item) ->
+        _.contains item.categories, filterId
 
     <div>
 
