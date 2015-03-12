@@ -25,14 +25,24 @@ module.exports = React.createClass
     else
       tabEl = React.createElement(RouteHandler, tabProps)
 
+    tabIds = [
+      {id: 'our-values', title: 'Our Values'}
+      {id: 'robert-florence', title: "Robert & Florence"}
+      {id: 'bios', title: "Directors & Staff"}
+    ]
+
     <div className="row">
       <div className="tabbable">
 
         <div className="col-xs-12 col-sm-2">
           <ul className="side-nav" id="myTab">
-            <li className="active"><Link to="/whoweare/our-values" data-toggle="tab">Our Values</Link></li>
-            <li><Link to="/whoweare/robert-florence" data-toggle="tab">Robert &amp; Florence</Link></li>
-            <li><Link className="staff" to="/whoweare/bios" data-toggle="tab">Directors &amp; Staff</Link></li>
+            {
+              tabIds.map (tabData) =>
+                url = '/whoweare/'+tabData.id
+                <li key={tabData.id} className={if @isActive(url) then 'active' else ''}>
+                  <Link to={url} data-toggle="tab">{tabData.title}</Link>
+                </li>
+            }
           </ul>
         </div>
 

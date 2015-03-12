@@ -4,14 +4,16 @@ Router = require 'react-router'
 
 Index = require './view/index'
 Contact = require './view/contact/contact'
+Homepage = require './view/home/home'
 About = require './view/about/whoweare'
 AboutTab = require './view/about/tab'
 
 module.exports =
 
   <Route name="app" path="/" handler={Index}>
+    <DefaultRoute handler={Homepage}/>
     <Route name="tellusaboutyou/" handler={Contact} />
-    <Route name="whoweare/" handler={About}>
+    <Route name="whoweare/" handler={About} ignoreScrollBehavior>
       <Route path=":tabId" handler={AboutTab} />
       <DefaultRoute handler={AboutTab}/>
     </Route>
