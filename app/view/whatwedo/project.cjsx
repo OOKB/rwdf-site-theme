@@ -5,6 +5,7 @@ _ = require 'lodash'
 ProjImgs = require './projectImgs'
 ProjectIcons = require './projectIcons'
 Blog = require './blog'
+SpruceUps = require './spruceUp'
 
 module.exports = React.createClass
   mixins: [State]
@@ -17,7 +18,7 @@ module.exports = React.createClass
       return <h2>{ msg }</h2>
     projects = @props.whatwedo.projects.contents
 
-    {title, images, prevId, nextId, content, catIds, blog_tag} = projects[projectIndex]
+    {title, images, prevId, nextId, content, catIds, blog_tag, spruceups} = projects[projectIndex]
     prev = projects[prevId]
     next = projects[nextId]
 
@@ -31,6 +32,8 @@ module.exports = React.createClass
           <h2>{ title }</h2>
 
           <div dangerouslySetInnerHTML={ __html: content }/>
+
+          { if spruceups then React.createElement(SpruceUps, spruceups) else false }
 
           { if blog_tag then React.createElement(Blog, {tag: blog_tag}) else false }
 
