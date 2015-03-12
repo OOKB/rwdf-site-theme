@@ -12,9 +12,11 @@ module.exports = React.createClass
       imgSrc = false
 
     <div className="imagewrapper">
+
       <div className="leadimage">
         <div className="singleimage">
           <img src={imgSrc} alt={title} />
         </div>
       </div>
+
     </div>
