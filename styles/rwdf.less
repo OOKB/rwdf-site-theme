@@ -676,6 +676,8 @@ article.writeup ul {
       text-indent: 300%;
       white-space: nowrap;
       overflow: hidden;
+      min-height: 600px; // this was being done with JS before, there was some clever math going on to calculate the height of the content
+      margin-top: -600px; // this was being done with JS before, there was some clever math going on to calculate the height of the content
 
       &:hover {
         background-color: @rwdf-blue-hex;
@@ -883,6 +885,16 @@ p.project-content {
   }
 }
 
+.row.project {
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}
+
 /* Slideshow Stuff */
 /*=========================*/
 .imagewrapper {
@@ -973,10 +985,6 @@ p.project-content {
   background-image: none;
   background-position: center center;
   background-repeat: no-repeat !important;
-}
-
-.carousel-control.left,
-.carousel-control.right {
   opacity: .33;
   filter: none;
   filter: alpha(opacity=33);
@@ -990,9 +998,7 @@ p.project-content {
   background-image: url("../media/arrow-sm-r-gy.png");
 }
 
-.carousel-control:hover,
-.carousel-control.left:hover,
-.carousel-control.right:hover {
+.carousel-control:hover {
   color:@rwdf-green-hex;
   color:@rwdf-green-rgb;
   opacity: 1;
