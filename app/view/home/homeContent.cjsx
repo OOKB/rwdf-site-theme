@@ -6,7 +6,7 @@ Row = React.createClass
     {link, title, content} = @props
     <div className="col-xs-12 col-sm-6">
       <h3><Link to={link}>{ title }</Link></h3>
-      <span dangerouslySetInnerHTML={ __html: content }/>
+      <div dangerouslySetInnerHTML={ __html: content }/>
     </div>
 
 module.exports = React.createClass
