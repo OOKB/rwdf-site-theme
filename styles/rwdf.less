@@ -704,42 +704,41 @@ article.writeup ul {
 }
 
 @media (max-width: 767px) {
-  .controls div {
-    position: static;
-    z-index: 999;
-    height:200px;
-    margin-bottom: -3rem;
-  }
- .controls div a {
-    position: relative;
-    top:0 !important;
-    display: block;
-    z-index: 999;
-    text-indent: 100%;
-    white-space: nowrap;
-    height: 115px !important;
-    margin-top: .8rem;
-    border-top: .3rem solid @rwdf-lightgray-hex;
-    border-top: .3rem solid @rwdf-lightgray-rgb;
+  .controls {
+    div {
+      position: static;
+      height:200px;
+      margin-bottom: -3rem;
+      float:left;
+      margin-top: 3rem;
+      width: 50%;
 
-    &:hover {
-      background-color: @rwdf-blue-hex;
-      background-color: @rwdf-blue-rgb;
-      color: white;
-      text-decoration: none;
-      transition: all 300ms;
-      -moz-transition: all 300ms;
-      -webkit-transition: all 300ms;
+      a {
+        position: relative;
+        top:0 !important;
+        display: block;
+        text-indent: 100%;
+        white-space: nowrap;
+        height: 115px !important;
+        margin-top: .8rem;
+        border-top: .3rem solid @rwdf-lightgray-hex;
+        border-top: .3rem solid @rwdf-lightgray-rgb;
+
+        &:hover {
+          background-color: @rwdf-blue-hex;
+          background-color: @rwdf-blue-rgb;
+          color: white;
+          text-decoration: none;
+          transition: all 300ms;
+          -moz-transition: all 300ms;
+          -webkit-transition: all 300ms;
+        }
+      }
+
+      &::after {
+        clear:none;
+      }
     }
-
-  }
-  .controls div::after{
-    clear:none;
-  }
-  .controls div {
-    float:left;
-    margin-top: 3rem;
-    width: 50%;
   }
 }
 
@@ -790,7 +789,9 @@ div.spruceup {
 
 }
 
-.icons.categories.bottom { margin-top: 7.5rem;}
+.icons.categories.bottom {
+  .add-top;
+}
 
 .icons.categories li,
 .icons.categories li a,
@@ -876,7 +877,7 @@ p.project-content {
   max-width: 617px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: @width-medium) {
   p.project-content {
     max-width: 750px;
   }
