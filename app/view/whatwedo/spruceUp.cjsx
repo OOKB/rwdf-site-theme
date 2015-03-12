@@ -37,7 +37,6 @@ module.exports = React.createClass
       </h3>
       {
         if show
-          console.log title
           <div className="tabbable spruceuptabs row">
             <div className="spruceuplist col-xs-12 col-sm-4" id="myTab">
               <ul className="side-nav">

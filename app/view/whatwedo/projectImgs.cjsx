@@ -8,6 +8,7 @@ module.exports = React.createClass
     {images, title} = @props
     if len = images?.length
       if len is 1
+        imgSrc = images[0].url+'?size=l'
         imageContainer =
           <div className="leadimage">
             <div className="singleimage">
