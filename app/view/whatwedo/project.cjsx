@@ -60,10 +60,10 @@ module.exports = React.createClass
 
       <div className="row minus-top controls">
         <div className="prev previous col-xs-6 col-sm-2 ">
-          <Link to={prev.url} title={ prev.title } style={height: height, marginTop: height*-1}>&larr; Previous</Link>
+          <Link to={prev.url} title={ prev.title } style={height: height+60, marginTop: height*-1}>&larr; Previous</Link>
         </div>
         <div className="next col-xs-6 col-sm-2 col-sm-offset-8">
-          <Link to={next.url} title={ next.title } style={height: height, marginTop: height*-1}> Next &rarr; </Link>
+          <Link to={next.url} title={ next.title } style={height: height+60, marginTop: height*-1}> Next &rarr; </Link>
         </div>
       </div>
 

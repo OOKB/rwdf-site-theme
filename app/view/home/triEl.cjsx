@@ -26,9 +26,7 @@ module.exports = React.createClass
     else
       size = '?size=l'
       overlay =
-        <div className="text overlay">
-          <h3><Link to={linkUrl}> { titleTxt } </Link></h3>
-        </div>
+        <h3><Link to={linkUrl}> { titleTxt } </Link></h3>
 
     <div className={className}>
       <Link to={linkUrl}><img src={ imgSrc+size } alt={filename} /></Link>
