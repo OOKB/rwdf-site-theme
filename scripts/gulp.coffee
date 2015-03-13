@@ -54,7 +54,7 @@ gulp.task "browser-sync", ['compile-watch', 'styles', 'static'], ->
     #logLevel: 'debug'
   return
 
-# This generate js app file.
+# This generates the js app file.
 gulp.task 'compile', ->
   browserified = transform (filename) ->
     b = browserify {debug: true, extensions: ['.cjsx', '.coffee']}
@@ -147,7 +147,7 @@ gulp.task 'static', ->
 # - - - - prod - - - -
 
 gulp.task 'prod', ['prod_clean'], (cb) ->
-  runSequence ['static', 'serverData'], ['compile', 'styles'], cb
+  runSequence ['static'], ['compile', 'styles'], cb
 
 # Remove contents from public directory.
 gulp.task 'prod_clean', ->
