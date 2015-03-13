@@ -46,6 +46,7 @@ getData = (qid, next) ->
     getData = _.mapValues data.api, (url) ->
       (cb) ->
         Wreck.get url, {json: true}, (err, resp, payload) ->
+          console.log 'serverData is fresh for', qid
           cb err, payload
   else
     getData = {}
