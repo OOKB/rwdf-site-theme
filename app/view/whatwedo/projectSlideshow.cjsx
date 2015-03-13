@@ -18,12 +18,10 @@ module.exports = React.createClass
       e.preventDefault()
       nextIndex = if index is lastIndex then firstIndex else index + 1
       @setState index: nextIndex
-      return false
     goPrev = (e) =>
       e.preventDefault()
       prevIndex = if index is firstIndex then lastIndex else index - 1
       @setState index: prevIndex
-      return false
 
     <div id="img-carousel" className="carousel slide" data-ride="carousel">
 
