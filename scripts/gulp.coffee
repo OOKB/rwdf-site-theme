@@ -88,6 +88,7 @@ gulp.task 'bundle', ->
     .pipe browserSync.reload({stream:true})
 
 w.on 'update', () ->
+  # Remove the sorted set (from Redis) that contains all valid compiled routes.
   runSequence 'bundle'
 
 gulp.task 'compile-watch', (cb) ->
