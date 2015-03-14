@@ -1,7 +1,7 @@
 React = require 'react'
 {Link} = require 'react-router'
 _ = require 'lodash'
-HomeContent = require './HomeContent'
+HomeContent = require './homeContent'
 Tri = require './tri'
 TriEl = require './triEl'
 
