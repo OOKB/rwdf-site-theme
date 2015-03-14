@@ -56,7 +56,6 @@
     "gulp-debug": "1.x",
     "gulp-gh-pages": "0.x",
     "run-sequence": "1.x",
-    "yaml-front-matter": "3.x",
     "marked": "0.x",
     "marky-mark": "1.x",
     "watchify": "2.x",
