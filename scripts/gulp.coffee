@@ -28,9 +28,6 @@ browserify = require 'browserify'
 exorcist = require 'exorcist'
 watchify = require 'watchify'
 _ = require 'lodash'
-# Custom Helper Scripts
-serverData = require './serverData'
-#content = require './content'
 
 # Default gulp tasks watches files for changes
 gulp.task "default", ['browser-sync'], ->
