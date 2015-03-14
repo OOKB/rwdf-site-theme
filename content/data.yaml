@@ -1,2 +1,0 @@
-api:
-  db: http://db.rwdfoundation.org/_api?render=ezle&pick=nothing&merge-data=1&merge-content=1&without=media
