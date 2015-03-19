@@ -34,21 +34,14 @@ gulp.task "default", ['browser-sync'], ->
   #gulp.watch './app/**/*.*', ['templates', browserSync.reload]
   gulp.watch "styles/*.less", ["styles", browserSync.reload]
   gulp.watch 'static/**', ['static', browserSync.reload]
-  gulp.watch './content/**/*.md', ['serverData', browserSync.reload]
-  gulp.watch './content/**/*.yaml', ['serverData', browserSync.reload]
   return
 
 # For development.
 gulp.task "browser-sync", ['compile-watch', 'styles', 'static'], ->
   browserSync
-    # server:
-    #   baseDir: 'public'
-    # open: 'external'
-    # host: 'l.cape.io'
     proxy: "localhost:8088"
     logConnections: true
-    injectChanges: false
-    #logLevel: 'debug'
+    injectChanges: true
   return
 
 # This generates the js app file.
@@ -89,40 +82,10 @@ w.on 'update', () ->
   runSequence 'bundle'
 
 gulp.task 'compile-watch', (cb) ->
-  runSequence ['data'], 'bundle', cb
+  runSequence 'bundle', cb
   return
 # /WATCHIFY
 
-# Convert yaml files from the content dir to json files.
-gulp.task 'yaml2json', ->
-  gulp.src './content/**/*.yaml'
-    .pipe yaml()
-    .pipe gulp.dest('./app/data/')
-
-gulp.task 'data', ['yaml2json'], ->
-  gulp.src('./app/data/*.json')
-    .pipe gulp.dest('./public/')
-
-# Convert markdown files from content dir to json files.
-# gulp.task 'content', ->
-#   content()
-gulp.task 'content', ->
-  gulp.src './content/**/*.md'
-    .pipe markdown()
-    .pipe gulp.dest('./app/data/')
-
-gulp.task 'serverData', ['data', 'content'], (cb) ->
-  serverData cb
-
-# Compile the static html files.
-gulp.task 'templates', (cb) ->
-  filePath = 'public/index.html'
-  fs.mkdirsSync path.dirname(filePath)
-  markup = "<!DOCTYPE html>\n<html><head><script src=\"/assets/app.js\"></script></head><body></body>"
-  markup += '<!-- ' + _.random(0, 999999, true) + ' --></html>'
-  fs.writeFile(filePath, markup)
-  cb()
-  return
   # Calling an external script for this.
   # exec 'coffee ./scripts/renderMarkup.coffee', (err, stdout, stderr) ->
   #   if stdout
