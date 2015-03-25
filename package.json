@@ -1,20 +1,12 @@
 {
   "name": "rwdf",
+  "homepage": "http://www.rwdfoundation.org",
   "version": "0.0.1",
   "description": "RWDF",
   "main": "app/app.cjsx",
-  "browser": "app/app.cjsx",
-  "browserify": {
-    "extensions": [
-      ".coffee",
-      ".cjsx",
-      ".json"
-    ],
-    "transform": [
-      [
-        "coffee-reactify"
-      ]
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ookb/rwdf-site-theme"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,49 +20,14 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "3.x",
-    "react": "0.12.x",
-    "react-router": "0.x",
+    "react": "0.13.x",
+    "react-router": "0.13.x",
     "superagent": "0.x",
-    "jsonp": "^0.1.0"
+    "jsonp": "0.1.x"
   },
   "devDependencies": {
     "gulp": "3.x",
-    "browserify": "8.x",
-    "coffee-react": "2.x",
-    "coffee-reactify": "2.x",
-    "coffee-script": "1.x",
-    "vinyl-transform": "1.x",
-    "gulp-rename": "1.x",
-    "minifyify": "4.x",
-    "gulp-uglify": "1.x",
-    "exorcist": "*",
-    "browser-sync": "1.x",
-    "request": "*",
-    "gulp-data": "*",
-    "gulp-yaml": "*",
-    "gulp-less": "*",
-    "gulp-markdown-to-json": "*",
-    "async": "*",
-    "vinyl-source-stream": "1.x",
-    "fs-extra": "0.x",
-    "gulp-debug": "1.x",
-    "gulp-gh-pages": "0.x",
-    "run-sequence": "1.x",
-    "marked": "0.x",
-    "marky-mark": "1.x",
-    "watchify": "2.x",
-    "gulp-util": "3.x",
-    "vinyl-buffer": "1.x",
-    "gulp-sourcemaps": "1.x",
-    "minimist": "1.x",
-    "gulp-clean": "x",
-    "imgix": "0.0.1",
-    "queries": "0.0.3",
-    "hapi": "^8.3.1",
-    "good": "^5.1.2",
-    "good-console": "^4.1.0",
-    "catbox-redis": "^1.0.4",
-    "wreck": "^5.2.0",
-    "js-yaml": "^3.2.7"
+    "cape-gulp": "git+https://github.com/cape-io/cape-gulp.git",
+    "coffee-script": "1.x"
   }
 }
