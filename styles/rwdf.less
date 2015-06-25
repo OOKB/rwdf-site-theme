@@ -676,8 +676,6 @@ article.writeup ul {
       text-indent: 300%;
       white-space: nowrap;
       overflow: hidden;
-      min-height: 600px; // this was being done with JS before, there was some clever math going on to calculate the height of the content
-      margin-top: -600px; // this was being done with JS before, there was some clever math going on to calculate the height of the content
 
       &:hover {
         background-color: @rwdf-blue-hex;
@@ -717,7 +715,7 @@ article.writeup ul {
 
       a {
         position: relative;
-        top:0 !important;
+        top: initial;
         display: block;
         text-indent: 100%;
         white-space: nowrap;
