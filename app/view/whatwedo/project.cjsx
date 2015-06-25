@@ -7,6 +7,8 @@ ProjectIcons = require './projectIcons'
 Blog = require './blog'
 SpruceUps = require './spruceUp'
 
+LARGE_SCREEN_SIZE = 767
+
 module.exports = React.createClass
   mixins: [State]
   getInitialState: ->
@@ -14,9 +16,10 @@ module.exports = React.createClass
 
   handleResize: ->
     offsetHeight = document.getElementById('project-container')?.offsetHeight
-    if offsetHeight and @state.height isnt offsetHeight
-      @setState height: offsetHeight
-      console.log 'update height', offsetHeight
+    if window.innerWidth > LARGE_SCREEN_SIZE
+      if offsetHeight and @state.height isnt offsetHeight
+        @setState height: offsetHeight
+        console.log 'update height', offsetHeight
 
   componentDidMount: ->
     @handleResize()
