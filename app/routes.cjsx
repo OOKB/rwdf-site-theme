@@ -8,6 +8,7 @@ Homepage = require './view/home/home'
 About = require './view/about/whoweare'
 AboutTab = require './view/about/tab'
 WhatWeDo = require './view/whatwedo/whatwedo'
+Archive = require './view/archive/archive'
 Project = require './view/whatwedo/project'
 NotFound = require './view/notFound'
 
